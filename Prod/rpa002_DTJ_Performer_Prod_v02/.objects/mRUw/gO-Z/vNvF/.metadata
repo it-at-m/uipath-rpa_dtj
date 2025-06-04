@@ -1,0 +1,12 @@
+﻿{
+  "Name": "C31(1)/300 SAP Easy Access",
+  "Type": "Screen",
+  "Id": "vNvFoPONvUmeiuhnDFRjoQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/vNvFoPONvUmeiuhnDFRjoQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/gO-ZXKvoTEqPb3pma-qHKA",
+  "Created": "2024-10-15T11:25:12.8946538Z",
+  "Updated": "2024-10-15T11:25:12.8946538Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

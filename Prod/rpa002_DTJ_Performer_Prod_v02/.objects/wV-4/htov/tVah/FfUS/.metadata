@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Result Nachname",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "FfUSPUAA30qyk6hxEli9kw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/FfUSPUAA30qyk6hxEli9kw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:10:36.2830389Z",
+  "Updated": "2024-11-05T14:46:41.0963385Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

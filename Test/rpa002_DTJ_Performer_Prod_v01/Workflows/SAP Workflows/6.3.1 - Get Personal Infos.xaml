@@ -1,0 +1,188 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_3___Open_PA30" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_str_lastNameInSAP" Type="OutArgument(x:String)" />
+    <x:Property Name="out_str_FirstNameInSAP" Type="OutArgument(x:String)" />
+    <x:Property Name="out_str_birthDateInSAP" Type="OutArgument(x:String)" />
+    <x:Property Name="out_str_persNum" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1406.4,2327.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_3___Open_PA30_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="6.3.1 - Search for Personalnumber" sap:VirtualizedContainerService.HintSize="1110.4,2262.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="1048,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.3.1 - Get Personal Infos - START&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="C31(1)/300 Daten zur Person anzeigen" sap:VirtualizedContainerService.HintSize="1048,1833.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="0430bbef-8fce-45cc-842c-acebcfcd67c5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1014.4,1510.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Nachname'" sap:VirtualizedContainerService.HintSize="952,670.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0430bbef-8fce-45cc-842c-acebcfcd67c5" Timeout="60" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Fatal" Message="[&quot;Page is Properly Loaded&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Ziel wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="449.6,380" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Failed Loading Personal Info's Page after 60 seconds&quot;]" />
+                  <Throw Exception="[New SystemException(&quot;Failed Loading Personal Info's Page&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable ContentHash="jQ5_TYIcgkONq9oyEGnOaw" DesignTimeRectangle="545, 328, 259, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txtP0002-NACHN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtP0002-NACHN' check:text='Weindl' /&gt;" Guid="022a589d-597c-4b28-8cc6-36e3ea30b87d" InformativeScreenshot="6ff1f912a3a6806825325e632dd7c3bc.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/FyF1NPJuqEeddI2iatX9ww" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NGetText DisplayName="Get Text 'Nachname'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[out_str_lastNameInSAP]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable ContentHash="jQ5_TYIcgkONq9oyEGnOaw" DesignTimeRectangle="545, 328, 259, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txtP0002-NACHN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtP0002-NACHN' check:text='Weindl' /&gt;" Guid="022a589d-597c-4b28-8cc6-36e3ea30b87d" InformativeScreenshot="6ff1f912a3a6806825325e632dd7c3bc.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/FyF1NPJuqEeddI2iatX9ww" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Vorname'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" TextString="[out_str_FirstNameInSAP]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable ContentHash="Ewqvd4roHESNPaaisLSatQ" DesignTimeRectangle="545, 355, 259, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txtP0002-VORNA' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtP0002-VORNA' check:text='Stefan' /&gt;" Guid="d949d7e5-5668-45fd-8504-b6d3a5c908e7" InformativeScreenshot="cb9c3a06687e4794c819d3d2505d56b6.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/cxNQY3q9qk6J9hUJjJZKiw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Personalnummer'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_4" TextString="[out_str_persNum]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable ContentHash="BO1Qagy_aEGk6MGw7tLCfg" DesignTimeRectangle="534, 193, 89, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:?1PAPAXX?HDR_30001A:0100/txt$_DG09_300A01_DAT_P0000_PERNR' tooltip='Personalnummer' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:?1PAPAXX?HDR_30001A:0100/txt$_DG09_300A01_DAT_P0000_PERNR' tooltip='Personalnummer' check:text='117563' /&gt;" Guid="e1d2ae39-21c8-443c-ab75-33f27e080808" InformativeScreenshot="d92449eb47c863ef64eef11c4b6a1181.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/xfLHoCAbHkifWdhNp-_VJA" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Geb. Datum'" sap:VirtualizedContainerService.HintSize="952,182.4" sap2010:WorkflowViewState.IdRef="NGetText_3" TextString="[out_str_birthDateInSAP]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable ContentHash="33M33ViVu0ee_-z256Azsg" DesignTimeRectangle="545, 544, 109, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/ctxtP0002-GBDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtP0002-GBDAT' check:text='07.02.1982' /&gt;" Guid="ae2fca58-d4bf-4c26-9ad7-fca8ab4b7aca" InformativeScreenshot="4a77b6af031240a524dd98c3f49658e0.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/womaCclAwEOFnmYHE_Mv6Q" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="_Ko8x1d6n0upqm1PGAZB_g" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVFhH7ZVLTxNRGIaroiGhC5GE6GIoIEjYiAsTpMgtBFATjRv/hUIMGzUYFTUoAipqTClXY0BECoUWuZXSYoBCC70w0xoasN4g9IqSADX94pnpBKjYCGWIXcyTvNtznvnOec9wWFhYWFiCHKPRGEkQxJEgzGGU/RyLbUXZrrMamyeDIy0oozOLxNKyu9HlckVy+gmnJemZFrByzX9PdIUGcuvwZZHWqlxwufnUEQeTYHbNlFuks8qbWqVZt4tLQoJKMLsGhw6DXdEi7kmPjok9QMmRbBZUA1a2CyHXpeIrFoWSKjB4BqedE6NqA/9QRMReWs3LmmCZBhIfqyH7+QicqVRC3lMFc3migNQyOcSWKAB7NO4jl1Mz9avX5Bifnp2Po5V8WRdUw8V6PUx8ssOc4yejmfj4FQoEPRBzsxOwUhUlx0OFyKnFV1t1Vtl72VB6SIj3ym1io+ClV3qw2JaAKTweD8wtOOB6lRgSCxsAuytfmyAp905rk807V7OTT/H92CF2U/DbnA0KK99A3NVawIr7kdwYJXdaoIdOg00lkvRlnD13/sDB8HDa5i/shiAaHHxBclcqGuFovgCwe4NofXJyanTncJBPO8dsP9wnBNUN+2gN/zAtSB7r9wU7FFW1wbHLL9Hk+qi1eWhymcIptwR3qIzmzyfp7f8Nk4JeOQfcEIggIb8KsDu91ORIubw6fEVssMk7egZTQkND6d23wEbBPKEGxJoZGCZmYRjffpR6MxRVSyChAMnd6kZ3zttYVAh3i9Y60NQqyYqK4q0/wlthXVAD8eUq4JfLIO1BB6SViLed1PvtEH+t2VuIUrIQasgQGkCK24fau2RZPF60/7b6Y00QfSk5ReqrH46ijAQWUowsBForQzgF/SYHrifMSVwu1/cPsVV8BBkK9YdAx9qF25U6wnxc2j1A7xYATAuSfwhUiOW3k9aBdqksMyyMu4feKjCYFCQnlyk0uDtQW6lCBHLn/kRhclly0UVOfqHbcS7UEyDB7arO7sEUbLtt9YfFuvIaSX6QG507jnpmsc2EHmH0zu3sWFlYWFhYWBiCw/kNwktj2vnbK4wAAAAASUVORK5CYII=" InformativeScreenshot="a01b66cb72046106cc7e5de7d2eb26c2.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/QpWgeTx0SUaiakyRNJwUgQ" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Daten zur Person anzeigen' /&gt;" Title="C31(1)/300 Daten zur Person anzeigen" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log END" sap:VirtualizedContainerService.HintSize="1048,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.3.1 - Get Personal Infos - END&quot;]" />
+  </Sequence>
+</Activity>

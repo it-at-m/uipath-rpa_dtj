@@ -1,0 +1,13 @@
+﻿{
+  "Name": "CTextField Gültig bis",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "tJcfst2wZ06h3pMI2QLLTw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/tJcfst2wZ06h3pMI2QLLTw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/7PcMeSLcLUK8Rk6lDSLTrg",
+  "Created": "2024-10-18T14:12:31.9446673Z",
+  "Updated": "2024-10-18T14:12:31.9446673Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "SAP - Abmelden Pop-Up",
+  "Type": "Screen",
+  "Id": "Oj9RdECPCEiOCWBfR7Ng2g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/Oj9RdECPCEiOCWBfR7Ng2g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/KCVzcMbyA0GLBt6tLegxww",
+  "Created": "2024-11-12T17:20:03.2208165Z",
+  "Updated": "2024-11-12T17:20:03.2208165Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

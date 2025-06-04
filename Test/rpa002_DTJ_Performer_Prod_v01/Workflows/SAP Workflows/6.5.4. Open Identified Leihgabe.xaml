@@ -1,0 +1,182 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_5_4__Open_Identified_Leihgabe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_int_index" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1300,1464</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_5_4__Open_Identified_Leihgabe_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_5_4__Open_Identified_Leihgabe" sap:VirtualizedContainerService.HintSize="545.6,1399.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="0" Name="str_rowIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="483.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.5.4. Open Identified Leihgabe - START&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="483.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_rowIndex]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_int_index.ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Leihgaben Liste" sap:VirtualizedContainerService.HintSize="483.2,800.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6d39b64d-a90e-428c-bcc0-f3f594923c88" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,509.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Checkbox'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d39b64d-a90e-428c-bcc0-f3f594923c88" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="mSJQCeN7xEmfDJSo3TlXHA" DesignTimeRectangle="404, 381, 25, 25" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;sap id='usr/tblMP004000TC3000' tableRow='{0}' /&gt;&quot;, str_rowIndex)]" FuzzySelectorArgument="&lt;sap id='usr/tblMP004000TC3000' /&gt;" Guid="d5c5f3bd-5153-49a0-a1cd-6489e9507ed3" InformativeScreenshot="d605d1859cdf8403f2852f8b90d92c60.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/U2OmRr5YNk2mhZu7sNS5IQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Leihgaben Liste' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  Ändern (F6)'" sap:VirtualizedContainerService.HintSize="387.2,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Ändern   (F6)">
+              <ucas:ClickToolbarButton.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String xml:space="preserve">Anlegen   (F5)</x:String>
+                  <x:String xml:space="preserve">Ändern   (F6)</x:String>
+                  <x:String xml:space="preserve">Kopieren   (Umsch+F9)</x:String>
+                  <x:String xml:space="preserve">Löschen   (Umsch+F2)</x:String>
+                  <x:String xml:space="preserve">Sperren\/Entsperren   (Umsch+F12)</x:String>
+                  <x:String xml:space="preserve">Löschen   (Umsch+F2)</x:String>
+                  <x:String xml:space="preserve">Überblick   (Umsch+F8)</x:String>
+                </scg:List>
+              </ucas:ClickToolbarButton.Items>
+              <ucas:ClickToolbarButton.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fdb97de3-25ea-4e01-ab30-60ee2a8d93d1" InformativeScreenshot="6c6a247938162058405c53688e5aa0ac" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Leihgaben Liste' /&gt;&lt;sap id='tbar[1]' type='GuiToolbar' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ucas:ClickToolbarButton.Target>
+            </ucas:ClickToolbarButton>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="cvnuS1uMSEWY_wY3bG9jTQ" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVFhH7ZVLTxNRGIaroiGhC5GE6GIoIEjYiAsTpMgtBFATjRv/hUIMGzUYFTUoAipqTClXY0BECoUWuZXSYoBCC70w0xoasN4g9IqSADX94pnpBKjYCGWIXcyTvNtznvnOec9wWFhYWFiCHKPRGEkQxJEgzGGU/RyLbUXZrrMamyeDIy0oozOLxNKyu9HlckVy+gmnJemZFrByzX9PdIUGcuvwZZHWqlxwufnUEQeTYHbNlFuks8qbWqVZt4tLQoJKMLsGhw6DXdEi7kmPjok9QMmRbBZUA1a2CyHXpeIrFoWSKjB4BqedE6NqA/9QRMReWs3LmmCZBhIfqyH7+QicqVRC3lMFc3migNQyOcSWKAB7NO4jl1Mz9avX5Bifnp2Po5V8WRdUw8V6PUx8ssOc4yejmfj4FQoEPRBzsxOwUhUlx0OFyKnFV1t1Vtl72VB6SIj3ym1io+ClV3qw2JaAKTweD8wtOOB6lRgSCxsAuytfmyAp905rk807V7OTT/H92CF2U/DbnA0KK99A3NVawIr7kdwYJXdaoIdOg00lkvRlnD13/sDB8HDa5i/shiAaHHxBclcqGuFovgCwe4NofXJyanTncJBPO8dsP9wnBNUN+2gN/zAtSB7r9wU7FFW1wbHLL9Hk+qi1eWhymcIptwR3qIzmzyfp7f8Nk4JeOQfcEIggIb8KsDu91ORIubw6fEVssMk7egZTQkND6d23wEbBPKEGxJoZGCZmYRjffpR6MxRVSyChAMnd6kZ3zttYVAh3i9Y60NQqyYqK4q0/wlthXVAD8eUq4JfLIO1BB6SViLed1PvtEH+t2VuIUrIQasgQGkCK24fau2RZPF60/7b6Y00QfSk5ReqrH46ijAQWUowsBForQzgF/SYHrifMSVwu1/cPsVV8BBkK9YdAx9qF25U6wnxc2j1A7xYATAuSfwhUiOW3k9aBdqksMyyMu4feKjCYFCQnlyk0uDtQW6lCBHLn/kRhclly0UVOfqHbcS7UEyDB7arO7sEUbLtt9YfFuvIaSX6QG507jnpmsc2EHmH0zu3sWFlYWFhYWBiCw/kNwktj2vnbK4wAAAAASUVORK5CYII=" InformativeScreenshot="55a9bb9a1b25b947b67abb9be71fd703.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/VO5bhp_5-0-vJ8hE41Ed0g" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Leihgaben Liste' /&gt;" Title="C31(1)/300 Leihgaben Liste" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log END" sap:VirtualizedContainerService.HintSize="483.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.5.4. Open Identified Leihgabe - END&quot;]" />
+  </Sequence>
+</Activity>

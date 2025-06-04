@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Result Personalnummer",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "roZNRhFxOEqKDKYLcHUkOQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/roZNRhFxOEqKDKYLcHUkOQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:10:36.2392826Z",
+  "Updated": "2024-11-24T21:28:26.4984803Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

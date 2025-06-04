@@ -1,0 +1,12 @@
+﻿{
+  "Name": "SAP Login Screen",
+  "Type": "Screen",
+  "Id": "tZdgGS4cRk-Sy_DC_pdpmA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/tZdgGS4cRk-Sy_DC_pdpmA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/Nsr_H-a8yEy3P-FmdDLu0Q",
+  "Created": "2024-11-22T13:42:25.8902695Z",
+  "Updated": "2024-11-22T13:42:25.8902695Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zPrP5zVX006_gq18FMx40Q" Reference="t7RwvFqNE0WYNB6EkTbWkw/jTFRRtxWBk6PgY4IzRWRFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="80, 314, 170, 22" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" Guid="548687b8-4013-46b2-9b11-b800d5a6ec54" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="de54e3c6800447eba5de1e2da5244c64.png" xmlns="">0UtKKplcVR0eTX6Acx5qXuA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

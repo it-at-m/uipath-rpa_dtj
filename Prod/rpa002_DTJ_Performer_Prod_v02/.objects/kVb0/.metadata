@@ -1,0 +1,14 @@
+﻿{
+  "Name": "SAP General",
+  "Type": "App",
+  "Id": "kVb00iew5k-0z7DKG1SB9Q",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/kVb00iew5k-0z7DKG1SB9Q",
+  "Created": "2024-11-05T13:40:56.9567209Z",
+  "Updated": "2024-11-05T13:41:15.8748346Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

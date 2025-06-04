@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_3_3____Check_amount_of_Search_Results" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_int_rowCount" Type="OutArgument(x:Int32)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1406.4,1138.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_3_3____Check_amount_of_Search_Results_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_3_3____Check_amount_of_Search_Results" sap:VirtualizedContainerService.HintSize="512,1073.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.3.3. - Check amount of Search Results - START&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SAP General" sap:VirtualizedContainerService.HintSize="449.6,644.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="32b6839c-b6db-4a68-b64d-89f11255102a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="416,321.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:Int32" Attribute="RowCount" DisplayName="Get Attribute 'Results Table'" sap:VirtualizedContainerService.HintSize="353.6,232.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[out_int_rowCount]" ScopeIdentifier="32b6839c-b6db-4a68-b64d-89f11255102a" Version="V3">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable ContentHash="7H_abUK6dEClIDEOhKbTCg" DesignTimeRectangle="35, 375, 355, 619" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont/shell/shellcont[1]/shell' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont/shell/shellcont[1]/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="945f84cf-13ff-4887-9e9a-6624908cb6d7" InformativeScreenshot="352688615de5865bd6975274bca9179a.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/hOMn6r8uYUOTy6B84THZag" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="yCmoHx1-kUaaJ7QLRiDH9g" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVFhH7ZVLTxNRGIaroiGhC5GE6GIoIEjYiAsTpMgtBFATjRv/hUIMGzUYFTUoAipqTClXY0BECoUWuZXSYoBCC70w0xoasN4g9IqSADX94pnpBKjYCGWIXcyTvNtznvnOec9wWFhYWFiCHKPRGEkQxJEgzGGU/RyLbUXZrrMamyeDIy0oozOLxNKyu9HlckVy+gmnJemZFrByzX9PdIUGcuvwZZHWqlxwufnUEQeTYHbNlFuks8qbWqVZt4tLQoJKMLsGhw6DXdEi7kmPjok9QMmRbBZUA1a2CyHXpeIrFoWSKjB4BqedE6NqA/9QRMReWs3LmmCZBhIfqyH7+QicqVRC3lMFc3migNQyOcSWKAB7NO4jl1Mz9avX5Bifnp2Po5V8WRdUw8V6PUx8ssOc4yejmfj4FQoEPRBzsxOwUhUlx0OFyKnFV1t1Vtl72VB6SIj3ym1io+ClV3qw2JaAKTweD8wtOOB6lRgSCxsAuytfmyAp905rk807V7OTT/H92CF2U/DbnA0KK99A3NVawIr7kdwYJXdaoIdOg00lkvRlnD13/sDB8HDa5i/shiAaHHxBclcqGuFovgCwe4NofXJyanTncJBPO8dsP9wnBNUN+2gN/zAtSB7r9wU7FFW1wbHLL9Hk+qi1eWhymcIptwR3qIzmzyfp7f8Nk4JeOQfcEIggIb8KsDu91ORIubw6fEVssMk7egZTQkND6d23wEbBPKEGxJoZGCZmYRjffpR6MxRVSyChAMnd6kZ3zttYVAh3i9Y60NQqyYqK4q0/wlthXVAD8eUq4JfLIO1BB6SViLed1PvtEH+t2VuIUrIQasgQGkCK24fau2RZPF60/7b6Y00QfSk5ReqrH46ijAQWUowsBForQzgF/SYHrifMSVwu1/cPsVV8BBkK9YdAx9qF25U6wnxc2j1A7xYATAuSfwhUiOW3k9aBdqksMyyMu4feKjCYFCQnlyk0uDtQW6lCBHLn/kRhclly0UVOfqHbcS7UEyDB7arO7sEUbLtt9YfFuvIaSX6QG507jnpmsc2EHmH0zu3sWFlYWFhYWBiCw/kNwktj2vnbK4wAAAAASUVORK5CYII=" InformativeScreenshot="7b2bf2c08b15c9bc47c4e5414e38df9b.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/ccOQ4A17AEOCO0xnp21i_w" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' /&gt;" Title="K31(1)/300 Personalstammdaten pflegen" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log END" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.3.3. - Check amount of Search Results - END&quot;]" />
+  </Sequence>
+</Activity>

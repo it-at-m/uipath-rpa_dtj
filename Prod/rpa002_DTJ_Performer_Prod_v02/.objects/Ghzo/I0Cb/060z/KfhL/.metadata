@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Eingabe 'TextField Selektionsfeld'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "KfhLqUk86Ue0fCSq2D__3g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/KfhLqUk86Ue0fCSq2D__3g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/060zmjN6IEC1wM7gfECcnA",
+  "Created": "2024-10-15T13:27:01.4141584Z",
+  "Updated": "2024-10-15T13:27:01.4141584Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

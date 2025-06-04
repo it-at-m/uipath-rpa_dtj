@@ -1,0 +1,12 @@
+﻿{
+  "Name": "SAP - Startscreen",
+  "Type": "Screen",
+  "Id": "WIgFkmLhjUyu2z4xcQ7UsA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/WIgFkmLhjUyu2z4xcQ7UsA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/0rRH5qBGM0OaCHZvdytNXA",
+  "Created": "2024-11-12T17:09:21.424557Z",
+  "Updated": "2024-11-12T17:09:21.424557Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

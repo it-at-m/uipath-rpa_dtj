@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe Gültigkeitsende",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "t3ohQ1J9Nk-vNyuOLYmgVQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/t3ohQ1J9Nk-vNyuOLYmgVQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.1978034Z",
+  "Updated": "2024-11-05T13:24:26.1978034Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

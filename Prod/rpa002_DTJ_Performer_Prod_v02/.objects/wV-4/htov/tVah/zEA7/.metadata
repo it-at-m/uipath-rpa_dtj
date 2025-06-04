@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "zEA7srRWs0yZn1aI0Tz8OQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/zEA7srRWs0yZn1aI0Tz8OQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:25:45.2563668Z",
+  "Updated": "2024-11-05T13:25:45.2563668Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

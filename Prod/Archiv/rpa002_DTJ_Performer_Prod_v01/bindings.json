@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "resource": "queue",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa002_DTJ",
+          "isExpression": false,
+          "displayName": "Ordnerpfad"
+        }
+      }
+    },
+    {
+      "resource": "queue",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa002_DTJ",
+          "isExpression": false,
+          "displayName": "Ordnerpfad"
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa002_DTJ",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa002_DTJ",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa002_DTJ",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "folderPath": {
+          "defaultValue": "Test/POR/rpa003_Fahrtkostenzuschuss",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "rpa003_SAP-Account_K31",
+          "isExpression": false
+        }
+      }
+    }
+  ]
+}

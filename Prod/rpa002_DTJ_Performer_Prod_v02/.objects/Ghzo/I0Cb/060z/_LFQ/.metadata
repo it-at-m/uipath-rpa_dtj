@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Sammelsuchhilfe",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "_LFQU1vw5kSqPzYxQhthiw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/_LFQU1vw5kSqPzYxQhthiw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/060zmjN6IEC1wM7gfECcnA",
+  "Created": "2024-10-15T13:26:02.37956Z",
+  "Updated": "2024-10-15T13:26:02.37956Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Selektion Identifizierung der Leihgabe",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "S9T1Bp96hUGfxZhhXqnPIQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/S9T1Bp96hUGfxZhhXqnPIQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.2902289Z",
+  "Updated": "2024-11-05T13:24:26.2902289Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "0040_Leihgaben",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "h5ko5PFNYUKCoSelDhtx0Q",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/h5ko5PFNYUKCoSelDhtx0Q",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T15:13:01.7330271Z",
+  "Updated": "2024-11-05T15:13:01.7330271Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

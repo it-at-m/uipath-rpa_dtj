@@ -1,0 +1,12 @@
+﻿{
+  "Name": "C31(1)/300 Leihgaben anlegen",
+  "Type": "Screen",
+  "Id": "7PcMeSLcLUK8Rk6lDSLTrg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/7PcMeSLcLUK8Rk6lDSLTrg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/_hGstbMZsE6axmsHcnWVRA",
+  "Created": "2024-10-18T14:12:31.8200777Z",
+  "Updated": "2024-10-18T14:12:31.8200777Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

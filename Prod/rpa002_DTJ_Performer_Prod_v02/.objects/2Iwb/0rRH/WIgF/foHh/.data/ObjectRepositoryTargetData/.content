@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="06Ihd-0-IE-xTpZ31u72Qg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="8, 8, -1, -1" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='mbar/menu[4]' text='System' /&gt;" FuzzySelectorArgument="&lt;sap id='mbar/menu[4]' /&gt;" Guid="0c1694bb-fb7d-4a65-aa34-14d31bbd982f" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Easy Access  -  Benutzermenü für BOT dv.00001205' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="913868dcc1f880e671956d0d7f3f3734.png" xmlns="">05cG6KjG390WFhi463tmRiw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

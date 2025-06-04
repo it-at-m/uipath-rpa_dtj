@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3m3O8aU8cUGgU59P592n0g" Reference="t7RwvFqNE0WYNB6EkTbWkw/jHxaKJlToEKifo6XKgvnPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="589, 303, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' tooltip='Weiter   (Enter)' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' tooltip='Weiter   (Enter)' /&gt;" Guid="da5141d5-e276-4493-9904-cad8d609aa12" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='K31(1)/300 Wertebereich einschränken' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="34fa14dd5d8813834301469de11b73d7.png" xmlns="">0-pgptIT7LkeoekePwLUYSA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

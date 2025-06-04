@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Column Art der Leihgabe per Row",
+  "Type": "Element",
+  "TaxonomyType": "Table",
+  "Id": "1ARYFF00YEetMrFIWEnyPQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/1ARYFF00YEetMrFIWEnyPQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/VO5bhp_5-0-vJ8hE41Ed0g",
+  "Created": "2024-10-18T13:21:51.7146402Z",
+  "Updated": "2024-11-11T12:52:32.723733Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

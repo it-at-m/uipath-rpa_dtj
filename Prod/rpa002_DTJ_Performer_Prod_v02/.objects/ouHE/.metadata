@@ -1,0 +1,14 @@
+﻿{
+  "Name": "SAP Pop-up Aktuelles Bild verlassen",
+  "Type": "App",
+  "Id": "ouHE4uykq0qfC8Zxj0D34w",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/ouHE4uykq0qfC8Zxj0D34w",
+  "Created": "2024-11-11T16:46:54.4378932Z",
+  "Updated": "2024-11-11T16:48:37.1942396Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

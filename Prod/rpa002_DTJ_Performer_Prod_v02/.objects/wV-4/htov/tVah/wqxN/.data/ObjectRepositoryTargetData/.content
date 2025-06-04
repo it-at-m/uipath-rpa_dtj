@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="g14eEBKhMEuHEBMvumgOHw" Reference="t7RwvFqNE0WYNB6EkTbWkw/wqxNC_Gm8EOp5y-zIQ6WSw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="_aPd_AXxgkCqBhvsNJW8CQ" DesignTimeRectangle="326, 392, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="4cfe16ba-cdcd-460f-b1a4-37d257c430be" Reference="t7RwvFqNE0WYNB6EkTbWkw/wqxNC_Gm8EOp5y-zIQ6WSw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="03c4b78370d39e3b74acc798546ce490.png" xmlns="">0JDGsD6rFAEOoa0f5P9C8iQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

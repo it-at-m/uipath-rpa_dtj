@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RvjD13RjLk69fcHmac_sww" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="404, 220, 69, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/subSUBSCR_HEADER:?1PAPAXX?HDR_30060A:0100/lbl$_DG78_300A60_TXT_P0002_NACHN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCR_HEADER:?1PAPAXX?HDR_30060A:0100/lbl$_DG78_300A60_TXT_P0002_NACHN' /&gt;" Guid="2f8170e6-a585-44ea-b238-6e366bb3a87f" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Personalstammdaten pflegen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4bf325a3466a971249617e248994c275.png" xmlns="">0x0Qqfsr1FkGcrfNEeW6mVQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

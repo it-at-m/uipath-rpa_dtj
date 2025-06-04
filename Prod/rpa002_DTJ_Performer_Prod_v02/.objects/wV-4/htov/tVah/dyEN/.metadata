@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Treffermenge",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "dyENMbsgJ0WLV_XKr_0L_Q",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/dyENMbsgJ0WLV_XKr_0L_Q",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.3791303Z",
+  "Updated": "2024-11-05T13:24:26.3791303Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

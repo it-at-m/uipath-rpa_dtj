@@ -1,0 +1,11 @@
+﻿{
+  "Name": "C31(1)/300 Wertebereich einschränken app",
+  "Type": "App",
+  "Id": "mLq6EiaAdkCtSwXLyDE00A",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/mLq6EiaAdkCtSwXLyDE00A",
+  "Created": "2024-10-15T13:57:32.2225207Z",
+  "Updated": "2024-10-15T13:57:32.2225207Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

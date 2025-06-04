@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Übernehmen (F8)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "D_d5zdX6D02oQWpQzd-fEQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/D_d5zdX6D02oQWpQzd-fEQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/Kq6tzgi6Z0qC98hPsXqxiQ",
+  "Created": "2024-11-06T14:33:16.1036437Z",
+  "Updated": "2024-11-06T14:33:16.1036437Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

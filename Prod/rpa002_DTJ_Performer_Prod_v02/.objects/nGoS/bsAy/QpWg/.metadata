@@ -1,0 +1,15 @@
+﻿{
+  "Name": "C31(1)/300 Daten zur Person anzeigen",
+  "Type": "Screen",
+  "Id": "QpWgeTx0SUaiakyRNJwUgQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/QpWgeTx0SUaiakyRNJwUgQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/bsAy-_D-wEy1zYzpbDNyRQ",
+  "Created": "2024-10-15T12:03:12.3773088Z",
+  "Updated": "2024-11-11T16:22:13.7845434Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

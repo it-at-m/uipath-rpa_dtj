@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Ewqvd4roHESNPaaisLSatQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="545, 355, 259, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txtP0002-VORNA' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtP0002-VORNA' check:text='Stefan' /&gt;" Guid="d949d7e5-5668-45fd-8504-b6d3a5c908e7" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cb9c3a06687e4794c819d3d2505d56b6.png" xmlns="">07fcAiYrdMku5LMDe5srf2A</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

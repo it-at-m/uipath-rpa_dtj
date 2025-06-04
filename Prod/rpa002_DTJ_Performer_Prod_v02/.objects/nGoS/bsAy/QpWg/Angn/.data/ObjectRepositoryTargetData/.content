@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vhT7rygsV0KwT___IKizfg" Reference="t7RwvFqNE0WYNB6EkTbWkw/Angn6ghQR0Gg00lDsCK-FQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="Q1Gf8ArigUCGJpkFTo51Aw" DesignTimeRectangle="36, 446, 130, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="[string.Format(&quot;&lt;sap colName='ADD_FIELD1' id='shellcont/shell/shellcont[1]/shell' tableRow='{0}' /&gt;&quot;, in_int_index)]" FuzzySelectorArgument="&lt;sap colName='ADD_FIELD1' id='shellcont/shell/shellcont[1]/shell' /&gt;" Guid="70cbac0d-b248-4da6-b469-c0764c93ee6e" ImageBase64="" Reference="t7RwvFqNE0WYNB6EkTbWkw/Angn6ghQR0Gg00lDsCK-FQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7010635e4a9cb58c7722365dbdfe85f8.png" xmlns="">09OQXdsJxfky2VSKSiSl67A</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="0" Name="in_int_index" />
+    </scg:List>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

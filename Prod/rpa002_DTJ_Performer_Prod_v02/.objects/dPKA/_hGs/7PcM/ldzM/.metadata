@@ -1,0 +1,13 @@
+﻿{
+  "Name": "TextField Anzahl",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "ldzM-HXlsU-c30T2wqHRKw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/ldzM-HXlsU-c30T2wqHRKw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/7PcMeSLcLUK8Rk6lDSLTrg",
+  "Created": "2024-10-18T14:12:32.0126927Z",
+  "Updated": "2024-10-18T14:12:32.0126927Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

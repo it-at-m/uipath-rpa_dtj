@@ -1,0 +1,15 @@
+﻿{
+  "Name": "SAP - Startseite",
+  "Type": "Screen",
+  "Id": "VbajOC5eI0ORPkGbeBGUAQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/VbajOC5eI0ORPkGbeBGUAQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/X-Sh4opKsE66tiPxTtWmjA",
+  "Created": "2024-11-12T17:11:07.8956951Z",
+  "Updated": "2024-11-12T17:13:06.092005Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

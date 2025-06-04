@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QlyDZhG2AEixP1UxRbVmIw" Reference="t7RwvFqNE0WYNB6EkTbWkw/D_d5zdX6D02oQWpQzd-fEQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="625, 438, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[8]' tooltip='Übernehmen   (F8)' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[8]' tooltip='Übernehmen   (F8)' /&gt;" Guid="83330bbc-a7a8-4e6d-8169-871b1bf55548" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' title='*Mehrfachselektion für Nachname' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0e859ff2525aff2f567853091409b4b2.png" xmlns="">0Wqxfu8o3dUSdvnhsF3QArQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

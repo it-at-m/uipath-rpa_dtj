@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Input List",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Gs82TzpAb0G_YcJkXj2fZQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/Gs82TzpAb0G_YcJkXj2fZQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/Kq6tzgi6Z0qC98hPsXqxiQ",
+  "Created": "2024-10-15T14:05:01.0633868Z",
+  "Updated": "2024-10-15T14:05:01.0633868Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

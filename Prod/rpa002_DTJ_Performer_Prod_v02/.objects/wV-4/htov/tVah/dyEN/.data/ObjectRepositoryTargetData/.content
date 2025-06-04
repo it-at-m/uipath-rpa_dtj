@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lfoxoCkby0aTiwiulwVAVQ" Reference="t7RwvFqNE0WYNB6EkTbWkw/dyENMbsgJ0WLV_XKr_0L_Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="634, 627, 151, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_FOOTER:SAPLAQ_ADHOC:0320/btn?PB_SELECT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_FOOTER:SAPLAQ_ADHOC:0320/btn?PB_SELECT' check:text='Treffermenge' /&gt;" Guid="1d32f880-f72b-439e-ad22-fad908c961ff" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="256cec55d317408f10d25f05eff374ad.png" xmlns="">0aGuoNiiHqUKy47wyBwsjeQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

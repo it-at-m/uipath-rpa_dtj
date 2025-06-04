@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="P8EfVP9B8k2K465U3tM_kQ" Reference="t7RwvFqNE0WYNB6EkTbWkw/roZNRhFxOEqKDKYLcHUkOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="NKZjw7Fb6kGsyEev1Xl8GA" DesignTimeRectangle="30, 263, 99, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap colName='P0000-PERNR' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0000-PERNR' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="94753a66-acd2-4b8d-b88a-e161247c7cc9" Reference="t7RwvFqNE0WYNB6EkTbWkw/roZNRhFxOEqKDKYLcHUkOQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*SAP Query*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="624ee8e31d46fd5f2d881227b371896a.png" xmlns="">02SqKTEnCz0SnOH9Q8BEwbQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

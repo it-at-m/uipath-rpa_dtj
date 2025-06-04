@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Ausgabe Leihgabe",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "wqxNC_Gm8EOp5y-zIQ6WSw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/wqxNC_Gm8EOp5y-zIQ6WSw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.2513849Z",
+  "Updated": "2024-11-05T14:46:41.0459804Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

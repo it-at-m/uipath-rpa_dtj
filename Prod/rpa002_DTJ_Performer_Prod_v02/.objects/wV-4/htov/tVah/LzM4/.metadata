@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Ausgabe Gültigkeitsbeginn",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "LzM46by2HE22i1r_kfLdrw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/LzM46by2HE22i1r_kfLdrw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.084786Z",
+  "Updated": "2024-11-05T15:13:01.6102067Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

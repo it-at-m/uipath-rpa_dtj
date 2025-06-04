@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Result Vorname",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "sbqfLdvZiU-qY42QfqIABA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/sbqfLdvZiU-qY42QfqIABA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:10:36.3410348Z",
+  "Updated": "2024-11-05T14:10:36.3410348Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

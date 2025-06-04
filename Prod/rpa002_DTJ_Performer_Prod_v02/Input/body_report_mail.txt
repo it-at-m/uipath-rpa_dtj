@@ -1,0 +1,6 @@
+<Monat>;
+<Dateipfad>;
+Zusammenfassung:
+Gesamtfälle: <Gesamt>
+Erfolgreiche Fälle: <Erfolg>
+Fehlgeschlagene Fälle: <Fehlgeschlagen>

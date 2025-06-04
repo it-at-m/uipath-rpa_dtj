@@ -1,0 +1,13 @@
+﻿{
+  "Name": "CTextField Zeit-/Maßein…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "_LDPlJMubUGMOUZwR-1Xmw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/_LDPlJMubUGMOUZwR-1Xmw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/7PcMeSLcLUK8Rk6lDSLTrg",
+  "Created": "2024-10-18T14:12:32.0448964Z",
+  "Updated": "2024-10-18T14:12:32.0448964Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Toolbar tbar[0]",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "kchFNAXbeECgaIfUcxmz0Q",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/kchFNAXbeECgaIfUcxmz0Q",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/SZ2hM7zRQEK6ep0rShjl3A",
+  "Created": "2024-10-18T11:16:03.1281678Z",
+  "Updated": "2024-11-05T15:39:49.082811Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "TextField Leihgabennummer",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "qJ4PgNG71EawTdO36Vb3Eg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/qJ4PgNG71EawTdO36Vb3Eg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/7PcMeSLcLUK8Rk6lDSLTrg",
+  "Created": "2024-10-18T14:12:32.1117421Z",
+  "Updated": "2024-10-18T14:12:32.1117421Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

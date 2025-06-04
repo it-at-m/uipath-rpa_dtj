@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="7H_abUK6dEClIDEOhKbTCg" Reference="t7RwvFqNE0WYNB6EkTbWkw/hOMn6r8uYUOTy6B84THZag" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="MBWHg-C7OEO41_hsZSz2Aw" DesignTimeRectangle="35, 375, 355, 619" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont/shell/shellcont[1]/shell' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont/shell/shellcont[1]/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="945f84cf-13ff-4887-9e9a-6624908cb6d7" Reference="t7RwvFqNE0WYNB6EkTbWkw/hOMn6r8uYUOTy6B84THZag" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="352688615de5865bd6975274bca9179a.png" xmlns="">0zpdvWrVKQkewnd-PhX6ijQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe Identifizierung der Leihgabe",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "lj3X6MYo6UyIRTdOqoGQZQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/lj3X6MYo6UyIRTdOqoGQZQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:24:26.32472Z",
+  "Updated": "2024-11-05T13:24:26.32472Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

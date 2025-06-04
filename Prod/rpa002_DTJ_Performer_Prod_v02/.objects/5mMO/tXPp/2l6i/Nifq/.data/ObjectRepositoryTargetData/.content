@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bovUkHC_QEKe0F4vOETNZw" Reference="t7RwvFqNE0WYNB6EkTbWkw/Nifq6zUPSUu0DpP8KYyP2w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="94, 239, 209, 22" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' relpath='Benutzermenü für BOT dv.00001205/P4 - Auswertungen (Ad-hoc)' /&gt;&lt;sap itemId='1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' relpath='Benutzermenü für BOT dv.00001205/P4 - Auswertungen (Ad-hoc)' /&gt;&lt;sap itemId='1' /&gt;" Guid="076c2ed4-296e-491b-bbea-83799f0c1b29" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Easy Access  -  Benutzermenü für BOT dv.00001205' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b0decefc3a69919d101c52f82d9c8663.png" xmlns="">0aDtn1GcTNEeZIyJIfu2uJQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

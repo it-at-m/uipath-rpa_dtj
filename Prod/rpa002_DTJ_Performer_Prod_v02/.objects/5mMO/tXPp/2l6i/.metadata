@@ -1,0 +1,12 @@
+﻿{
+  "Name": "K31(1)/300 SAP Easy Access  -  Benutzermenü f",
+  "Type": "Screen",
+  "Id": "2l6izaysuEODmoNuHQFxpw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/2l6izaysuEODmoNuHQFxpw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tXPp6pfyhUywZ1WoL6RPQQ",
+  "Created": "2024-11-05T12:17:32.5993554Z",
+  "Updated": "2024-11-05T12:17:32.5993554Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

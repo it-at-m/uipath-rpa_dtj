@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Row Personalnummer",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "Angn6ghQR0Gg00lDsCK-FQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/Angn6ghQR0Gg00lDsCK-FQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/QpWgeTx0SUaiakyRNJwUgQ",
+  "Created": "2024-10-18T11:37:42.1454815Z",
+  "Updated": "2024-11-06T16:37:12.6909536Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

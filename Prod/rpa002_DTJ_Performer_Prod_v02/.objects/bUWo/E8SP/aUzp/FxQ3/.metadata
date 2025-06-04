@@ -1,0 +1,13 @@
+﻿{
+  "Name": "First Result Row Name Col",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "FxQ3YbdBrUaRnm_TjzRwFQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/FxQ3YbdBrUaRnm_TjzRwFQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-11-06T16:16:17.4847414Z",
+  "Updated": "2024-11-06T16:16:17.4847414Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

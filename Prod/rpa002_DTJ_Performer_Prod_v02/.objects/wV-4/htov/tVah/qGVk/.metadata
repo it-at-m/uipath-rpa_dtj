@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Eingabe Leihgabeidentifikation",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "qGVkzRvn9U2wVJBBPPsGlA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/qGVkzRvn9U2wVJBBPPsGlA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:25:45.1274745Z",
+  "Updated": "2024-11-05T13:25:45.1274745Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

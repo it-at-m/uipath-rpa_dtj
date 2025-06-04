@@ -1,0 +1,537 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_3___Open_PA30" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_leihgabenummer" Type="InArgument(x:String)" />
+    <x:Property Name="out_bool_matchFound" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_str_nachname" Type="OutArgument(x:String)" />
+    <x:Property Name="out_str_vorname" Type="OutArgument(x:String)" />
+    <x:Property Name="out_str_gebDatum" Type="OutArgument(x:String)" />
+    <x:Property Name="io_str_persNum" Type="InOutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>720.8,8025.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_3___Open_PA30_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="731.2,7960.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="668.8,7848.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="606.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.2.1 - Search with Abonummer- START&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SAP - Ad-hoc-Query" sap:VirtualizedContainerService.HintSize="606.4,7372" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="572.8,7040.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_statusMessage" />
+                <Variable x:TypeArguments="x:Int32" Name="int_numResults" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '0000_Maßnahmen'" sap:VirtualizedContainerService.HintSize="510.4,193.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ContentHash="ObGHudFalk6C22NafTbMqg" DesignTimeRectangle="80, 248, 135, 22" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0000_Maßnahmen' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0000_Maßnahmen' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" Guid="3ca372c4-6206-465c-b37b-fe4432f6e611" InformativeScreenshot="223042b60f6b66bcafb1c1a8485be051.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/HASDZszJyUSkspCH-yGu5A" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'ToolbarControl  SAP.Too...'" sap:VirtualizedContainerService.HintSize="510.4,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Teilbaum expandieren">
+                <ucas:ClickToolbarButton.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="8">
+                    <x:String>Teilbaum expandieren</x:String>
+                    <x:String>Teilbaum komprimieren</x:String>
+                    <x:String>Suchen</x:String>
+                    <x:String>Feldgruppen/Feldgruppen</x:String>
+                    <x:String>Feldgruppen/Struktur der logischen Datenbank</x:String>
+                    <x:String>Feldgruppen/Feldkatalog</x:String>
+                  </scg:List>
+                </ucas:ClickToolbarButton.Items>
+                <ucas:ClickToolbarButton.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="527c0b58-347e-466c-a281-0643ece3a578" InformativeScreenshot="53b76d60ac7616f6eb14e6600f0da19d" Selector="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[0]' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:ClickToolbarButton.Target>
+              </ucas:ClickToolbarButton>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ausgabe Personalnummer'" sap:VirtualizedContainerService.HintSize="510.4,193.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ContentHash="1dTojIGEY02Y5j7H9I1pjQ" DesignTimeRectangle="326, 234, 68, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0000_Maßnahmen/Personalnummer' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0000_Maßnahmen/Personalnummer' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="3287bfc2-1037-4435-a807-7579f9719cf3" InformativeScreenshot="f4969b1b53dd2414ca69958c1b387cce.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/iyWnJH8K1kKBn2-ujVNQNw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510.4,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="a" KeyModifiers="None">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="43951d0c-9364-431f-a815-8cb2b09281d8">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510.4,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="43951d0c-9364-431f-a815-8cb2b09281d8">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510.4,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="43951d0c-9364-431f-a815-8cb2b09281d8">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '0000_Maßnahmen'" sap:VirtualizedContainerService.HintSize="510.4,193.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ContentHash="zPrP5zVX006_gq18FMx40Q" DesignTimeRectangle="80, 314, 170, 22" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" Guid="548687b8-4013-46b2-9b11-b800d5a6ec54" InformativeScreenshot="de54e3c6800447eba5de1e2da5244c64.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/jTFRRtxWBk6PgY4IzRWRFA" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'ToolbarControl  SAP.Too...'" sap:VirtualizedContainerService.HintSize="510.4,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_2" Item="Teilbaum expandieren">
+                <ucas:ClickToolbarButton.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="8">
+                    <x:String>Teilbaum expandieren</x:String>
+                    <x:String>Teilbaum komprimieren</x:String>
+                    <x:String>Suchen</x:String>
+                    <x:String>Feldgruppen/Feldgruppen</x:String>
+                    <x:String>Feldgruppen/Struktur der logischen Datenbank</x:String>
+                    <x:String>Feldgruppen/Feldkatalog</x:String>
+                  </scg:List>
+                </ucas:ClickToolbarButton.Items>
+                <ucas:ClickToolbarButton.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="527c0b58-347e-466c-a281-0643ece3a578" InformativeScreenshot="53b76d60ac7616f6eb14e6600f0da19d" Selector="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[0]' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:ClickToolbarButton.Target>
+              </ucas:ClickToolbarButton>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Nachname'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_1" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="gxgxQooBa0mKbrrylKEV6Q" DesignTimeRectangle="326, 586, 68, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Nachname' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Nachname' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="bb977d28-411e-424c-a040-8cd5bc80c427" InformativeScreenshot="f6b8e6836907522e2e93ef07089c157b.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/zwjx6wzt2kmAeyKhBPO9rw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Vorname'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_2" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="oRAPhhWPXUOCalLNgH4ZHw" DesignTimeRectangle="326, 638, 68, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Vorname' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Vorname' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="aef78af8-cafe-47e5-8d5f-19c256bc2e3f" InformativeScreenshot="840639f0eb46f5f587dee16fd6848bd1.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/2QpZMBr_iE2hJO7wJcbVvQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Geburtsdatum'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_3" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="taB8Cw6SqUG8c83f6ZBjtw" DesignTimeRectangle="319, 587, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Geburtsdatum' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0002_Daten zur Person/Geburtsdatum' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="fad67b41-77a1-4f24-b48d-74550fe294bc" InformativeScreenshot="50723dd390da2736c44b2d82f5a93dc6.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/XKCpz0OE90OxOR6uRacB_g" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '0000_Maßnahmen'" sap:VirtualizedContainerService.HintSize="510.4,193.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ContentHash="RgCDkFcSvEqRg6pZZCdi7w" DesignTimeRectangle="78, 645, 121, 22" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" Guid="a1defa21-f618-4f44-85d0-9e5373823c21" InformativeScreenshot="d6f24cfed350ade115d285c8e86aa54c.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/h5ko5PFNYUKCoSelDhtx0Q" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'ToolbarControl  SAP.Too...'" sap:VirtualizedContainerService.HintSize="510.4,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_3" Item="Teilbaum expandieren">
+                <ucas:ClickToolbarButton.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="8">
+                    <x:String>Teilbaum expandieren</x:String>
+                    <x:String>Teilbaum komprimieren</x:String>
+                    <x:String>Suchen</x:String>
+                    <x:String>Feldgruppen/Feldgruppen</x:String>
+                    <x:String>Feldgruppen/Struktur der logischen Datenbank</x:String>
+                    <x:String>Feldgruppen/Feldkatalog</x:String>
+                  </scg:List>
+                </ucas:ClickToolbarButton.Items>
+                <ucas:ClickToolbarButton.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="527c0b58-347e-466c-a281-0643ece3a578" InformativeScreenshot="53b76d60ac7616f6eb14e6600f0da19d" Selector="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[0]' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:ClickToolbarButton.Target>
+              </ucas:ClickToolbarButton>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Gültigkeitsbeginn'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="vuYhPdQ9zkSkh5eeXQHYEQ" DesignTimeRectangle="326, 357, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Gültigkeitsbeginn' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Gültigkeitsbeginn' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="b3d45d7f-ed33-4e7b-b8ec-b2edce30637c" InformativeScreenshot="e9f1255242277224632cefc3d9845c77.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/LzM46by2HE22i1r_kfLdrw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Gültigkeitsende'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_5" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="yegTimd990KdydSVRQIpCg" DesignTimeRectangle="326, 374, 68, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Gültigkeitsende' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Gültigkeitsende' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="6aaf6100-9f7c-48d9-a777-b27de35f9037" InformativeScreenshot="1787f4838e4f9569a275f1cf1b4823f3.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/t3ohQ1J9Nk-vNyuOLYmgVQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Leihgabe'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_6" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="g14eEBKhMEuHEBMvumgOHw" DesignTimeRectangle="326, 392, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="4cfe16ba-cdcd-460f-b1a4-37d257c430be" InformativeScreenshot="03c4b78370d39e3b74acc798546ce490.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/wqxNC_Gm8EOp5y-zIQ6WSw" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Ausgabe Identifizierung der Leihgabe'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_7" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="KVVZP1Td9U2I9ExW8CAxRw" DesignTimeRectangle="326, 445, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Identifizierung der Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Identifizierung der Leihgabe' /&gt;&lt;sap itemId='C          4' /&gt;" Guid="beff3cb4-6b70-4ba8-b023-59ea4bcd3afa" InformativeScreenshot="73b6744acda275ab9857d69f4047cdd1.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/lj3X6MYo6UyIRTdOqoGQZQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Selektion Identifizierung der Leihgabe'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NCheck_8" Version="V3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable ContentHash="2mR1VbZpCEaFytXTqc50zg" DesignTimeRectangle="258, 445, 68, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Identifizierung der Leihgabe' /&gt;&lt;sap itemId='C          3' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont[1]/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='0040_Leihgaben/Identifizierung der Leihgabe' /&gt;&lt;sap itemId='C          3' /&gt;" Guid="b7c2de0d-5070-4bac-a7d4-38a5b8972637" InformativeScreenshot="81dda3f18e6253309f2c30baddd0e96d.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/S9T1Bp96hUGfxZhhXqnPIQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Eingabe Leihgabeidentifikation'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510.4,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_str_leihgabenummer]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable ContentHash="NyTfRtM2ukyR-7eccDUaCw" DesignTimeRectangle="987, 264, 88, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='LOW' id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_SELECTION:SAPLAQ_ADHOC:0310/cntlSEL_DEF_CONTAINER/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='LOW' id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_SELECTION:SAPLAQ_ADHOC:0310/cntlSEL_DEF_CONTAINER/shellcont/shell' /&gt;" Guid="84b9533d-87cd-4159-bc63-1bad2bf505df" InformativeScreenshot="180299dd7804a90898b9bc2ad3874c1f.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/qGVkzRvn9U2wVJBBPPsGlA" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Treffermenge'" sap:VirtualizedContainerService.HintSize="510.4,193.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ContentHash="lfoxoCkby0aTiwiulwVAVQ" DesignTimeRectangle="634, 627, 151, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_FOOTER:SAPLAQ_ADHOC:0320/btn?PB_SELECT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_FOOTER:SAPLAQ_ADHOC:0320/btn?PB_SELECT' check:text='Treffermenge' /&gt;" Guid="1d32f880-f72b-439e-ad22-fad908c961ff" InformativeScreenshot="256cec55d317408f10d25f05eff374ad.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/dyENMbsgJ0WLV_XKr_0L_Q" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar" sap:VirtualizedContainerService.HintSize="510.4,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_statusMessage]">
+                <ucas:ReadStatusbar.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" ContentHash="4riMOBGblkeqbUxEHlJ9Xw" Id="ff04a966-208b-4673-93fe-6bd0139354d6" InformativeScreenshot="542f6c25fc5e6eb6c9e152fec7ae87cd" Reference="t7RwvFqNE0WYNB6EkTbWkw/RW6MXeprhUKWymNPQ9bAlg" Selector="&lt;sap id='sbar/pane[0]' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:ReadStatusbar.Target>
+              </ucas:ReadStatusbar>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Status Message: &quot; + str_statusMessage]" />
+              <Assign sap:VirtualizedContainerService.HintSize="510.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[int_numResults]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[If(str_statusMessage.Contains("keine"), 0, CInt(System.Text.RegularExpressions.Regex.Match(str_statusMessage, "\d+").Value))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Num Of Results: '&quot; + int_numResults.ToString + &quot;'&quot;]" />
+              <If Condition="[int_numResults &lt;&gt; 1]" sap:VirtualizedContainerService.HintSize="510.4,1750.4" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[out_bool_matchFound]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="476.8,1396" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[out_bool_matchFound]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ausgabe'" sap:VirtualizedContainerService.HintSize="433.6,193.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="P3boqkVjt02sfvtpWHsx7g" DesignTimeRectangle="72, 119, 83, 21" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[8]' check:text='Ausgabe' /&gt;" Guid="60eecc02-49ba-40ba-ac45-77a547e19a25" InformativeScreenshot="c7c7e23894e0d7ac7344a1349b4f411c.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/zEA7srRWs0yZn1aI0Tz8OQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NGetText DisplayName="Get Text 'Result Personalnummer'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" TextString="[io_str_persNum]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="463, 210, 112, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='P0040-LOBNR' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0040-LOBNR' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="fbb1b9bc-0c76-4d71-8a13-145841782256" InformativeScreenshot="9437d21b4a62d9876b9e0c5a31e41cf7.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query 21.01.2025/16:04:12 RPA-BOT' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Result Nachname'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" TextString="[out_str_nachname]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="23, 210, 67, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='P0002-NACHN' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0002-NACHN' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="8aef731b-5c68-4cf1-b801-9967bdffddf5" InformativeScreenshot="38cafe0814ee38d6e8224162b47f9de4.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query 21.01.2025/16:04:12 RPA-BOT' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Result Vorname'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" TextString="[out_str_vorname]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="90, 210, 58, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='P0002-VORNA' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0002-VORNA' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="e0befa35-fb9f-435f-8e72-692b9e06f93b" InformativeScreenshot="0579ff5e171e5073c6ebf5a54394ad68.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query 21.01.2025/16:04:12 RPA-BOT' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Result Geb. Datum'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="a4e4f67d-de6f-4418-b871-e4f3cef0448d" TextString="[out_str_gebDatum]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="149, 210, 87, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='P0002-GBDAT' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0002-GBDAT' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="c1784606-a343-481a-8246-65289a534b1a" InformativeScreenshot="1bb598e3a1dcce120ff412cdb3646705.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query 21.01.2025/16:04:12 RPA-BOT' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Toolbar  tbar[0]'" sap:VirtualizedContainerService.HintSize="433.6,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_4" Item="Abbrechen   (F12)">
+                      <ucas:ClickToolbarButton.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="16">
+                          <x:String>Weiter</x:String>
+                          <x:String>Befehlsfeld schließen</x:String>
+                          <x:String xml:space="preserve">Zurück   (F3)</x:String>
+                          <x:String xml:space="preserve">Beenden   (Umsch+F3)</x:String>
+                          <x:String xml:space="preserve">Abbrechen   (F12)</x:String>
+                          <x:String xml:space="preserve">Drucken   (Strg+P)</x:String>
+                          <x:String xml:space="preserve">Suchen   (Strg+F)</x:String>
+                          <x:String>Neues GUI-Fenster</x:String>
+                          <x:String>Erstellt eine Verknüpfung</x:String>
+                          <x:String xml:space="preserve">Hilfe   (F1)</x:String>
+                          <x:String>Lok. Layout anpassen (Alt+F12)</x:String>
+                        </scg:List>
+                      </ucas:ClickToolbarButton.Items>
+                      <ucas:ClickToolbarButton.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e85dc381-3621-4ccc-b70d-d611eb970eb8" InformativeScreenshot="d4e645691764662909cf86d0486ddf01" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query*' /&gt;&lt;sap id='tbar[0]/btn[12]' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ucas:ClickToolbarButton.Target>
+                    </ucas:ClickToolbarButton>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Toolbar  tbar[0]'" sap:VirtualizedContainerService.HintSize="510.4,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_5" Item="Abbrechen   (F12)">
+                <ucas:ClickToolbarButton.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="16">
+                    <x:String>Weiter</x:String>
+                    <x:String>Befehlsfeld schließen</x:String>
+                    <x:String xml:space="preserve">Zurück   (F3)</x:String>
+                    <x:String xml:space="preserve">Beenden   (Umsch+F3)</x:String>
+                    <x:String xml:space="preserve">Abbrechen   (F12)</x:String>
+                    <x:String>Neues GUI-Fenster</x:String>
+                    <x:String>Erstellt eine Verknüpfung</x:String>
+                    <x:String xml:space="preserve">Hilfe   (F1)</x:String>
+                    <x:String>Lok. Layout anpassen (Alt+F12)</x:String>
+                  </scg:List>
+                </ucas:ClickToolbarButton.Items>
+                <ucas:ClickToolbarButton.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e85dc381-3621-4ccc-b70d-d611eb970eb8" InformativeScreenshot="8fc22cb653df4032425d49d8e2ade50d" Selector="&lt;sap id='tbar[0]/btn[12]' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:ClickToolbarButton.Target>
+              </ucas:ClickToolbarButton>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" ContentHash="OSEY91lALkOJ3qCQbz8Epw" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVFhH7ZVLTxNRGIaroiGhC5GE6GIoIEjYiAsTpMgtBFATjRv/hUIMGzUYFTUoAipqTClXY0BECoUWuZXSYoBCC70w0xoasN4g9IqSADX94pnpBKjYCGWIXcyTvNtznvnOec9wWFhYWFiCHKPRGEkQxJEgzGGU/RyLbUXZrrMamyeDIy0oozOLxNKyu9HlckVy+gmnJemZFrByzX9PdIUGcuvwZZHWqlxwufnUEQeTYHbNlFuks8qbWqVZt4tLQoJKMLsGhw6DXdEi7kmPjok9QMmRbBZUA1a2CyHXpeIrFoWSKjB4BqedE6NqA/9QRMReWs3LmmCZBhIfqyH7+QicqVRC3lMFc3migNQyOcSWKAB7NO4jl1Mz9avX5Bifnp2Po5V8WRdUw8V6PUx8ssOc4yejmfj4FQoEPRBzsxOwUhUlx0OFyKnFV1t1Vtl72VB6SIj3ym1io+ClV3qw2JaAKTweD8wtOOB6lRgSCxsAuytfmyAp905rk807V7OTT/H92CF2U/DbnA0KK99A3NVawIr7kdwYJXdaoIdOg00lkvRlnD13/sDB8HDa5i/shiAaHHxBclcqGuFovgCwe4NofXJyanTncJBPO8dsP9wnBNUN+2gN/zAtSB7r9wU7FFW1wbHLL9Hk+qi1eWhymcIptwR3qIzmzyfp7f8Nk4JeOQfcEIggIb8KsDu91ORIubw6fEVssMk7egZTQkND6d23wEbBPKEGxJoZGCZmYRjffpR6MxRVSyChAMnd6kZ3zttYVAh3i9Y60NQqyYqK4q0/wlthXVAD8eUq4JfLIO1BB6SViLed1PvtEH+t2VuIUrIQasgQGkCK24fau2RZPF60/7b6Y00QfSk5ReqrH46ijAQWUowsBForQzgF/SYHrifMSVwu1/cPsVV8BBkK9YdAx9qF25U6wnxc2j1A7xYATAuSfwhUiOW3k9aBdqksMyyMu4feKjCYFCQnlyk0uDtQW6lCBHLn/kRhclly0UVOfqHbcS7UEyDB7arO7sEUbLtt9YfFuvIaSX6QG507jnpmsc2EHmH0zu3sWFlYWFhYWBiCw/kNwktj2vnbK4wAAAAASUVORK5CYII=" InformativeScreenshot="593848817b8869ae1b14d38512d84c3e.png" Reference="t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" Title="K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen der Personalabrech" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="606.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.2.1 - Search with Abonummer - END&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>

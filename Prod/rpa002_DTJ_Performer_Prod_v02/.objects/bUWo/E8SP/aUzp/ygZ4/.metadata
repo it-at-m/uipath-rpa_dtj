@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Art",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "ygZ42XExrUutODfE24Ih3g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/ygZ42XExrUutODfE24Ih3g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-10-18T12:57:26.7828739Z",
+  "Updated": "2024-10-18T12:57:26.7828739Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

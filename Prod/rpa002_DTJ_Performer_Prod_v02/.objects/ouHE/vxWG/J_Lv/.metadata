@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Aktuelles Bild verlassen Pop-up",
+  "Type": "Screen",
+  "Id": "J_Lv1b6OEkui2sOyvO5DZA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/J_Lv1b6OEkui2sOyvO5DZA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/vxWGdKtKLUmkjeR-HBnKQw",
+  "Created": "2024-11-11T16:46:54.4774052Z",
+  "Updated": "2024-11-11T16:46:54.4774052Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿{
+  "Name": "SAP - Startseite",
+  "Type": "App",
+  "Id": "2UD7sn-9P0G9mSr_E4Ofrg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/2UD7sn-9P0G9mSr_E4Ofrg",
+  "Created": "2024-11-12T17:11:07.8865411Z",
+  "Updated": "2024-11-12T17:11:07.8865411Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

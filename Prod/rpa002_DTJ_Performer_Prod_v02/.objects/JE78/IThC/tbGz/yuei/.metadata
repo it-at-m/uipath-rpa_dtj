@@ -1,0 +1,13 @@
+﻿{
+  "Name": "TabStrip MENU_TABSTRIP",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "yueiXG_wfUWChlP_ByfsdQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/yueiXG_wfUWChlP_ByfsdQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tbGzGpmxlUWgg6m_SZN95Q",
+  "Created": "2024-10-15T14:53:53.1647667Z",
+  "Updated": "2024-10-15T14:53:53.1647667Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

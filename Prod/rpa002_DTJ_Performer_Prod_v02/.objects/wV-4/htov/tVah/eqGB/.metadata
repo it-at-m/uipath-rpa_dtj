@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Result Ende",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "eqGB8ukc_0up3xSd5SKbxg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/eqGB8ukc_0up3xSd5SKbxg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:11:58.8552112Z",
+  "Updated": "2024-11-05T14:11:58.8552112Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

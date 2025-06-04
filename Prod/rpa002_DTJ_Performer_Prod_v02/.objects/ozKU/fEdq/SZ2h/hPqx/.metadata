@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Abbrechen (F12)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "hPqxmk3KCE-7A3Qnqz-utA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/hPqxmk3KCE-7A3Qnqz-utA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/SZ2hM7zRQEK6ep0rShjl3A",
+  "Created": "2024-10-18T11:16:03.2674907Z",
+  "Updated": "2024-10-18T11:16:03.2674907Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

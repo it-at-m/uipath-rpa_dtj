@@ -1,0 +1,15 @@
+{
+  "Value": {
+    "Framework/GetTransactionData.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "8363e52b-66d3-4ce2-b65e-5095e049a573",
+        "ActivityIdRef": "GetQueueItem_4",
+        "ActivityId": "1.65",
+        "ActivityName": "Get Transaction Item",
+        "IsTransient": false
+      }
+    ]
+  }
+}

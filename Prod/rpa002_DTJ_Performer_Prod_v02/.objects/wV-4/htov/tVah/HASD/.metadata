@@ -1,0 +1,16 @@
+﻿{
+  "Name": "0000_Maßnahmen",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "HASDZszJyUSkspCH-yGu5A",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/HASDZszJyUSkspCH-yGu5A",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:51:18.7516121Z",
+  "Updated": "2024-11-24T21:28:26.4162714Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

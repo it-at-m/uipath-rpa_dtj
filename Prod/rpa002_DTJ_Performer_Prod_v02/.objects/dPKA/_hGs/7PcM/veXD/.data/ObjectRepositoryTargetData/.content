@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="of2aS5Y5DUeDvhHtas3vrw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="25, 55, 1888, 38" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;sap id='tbar[0]' type='GuiToolbar' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]' type='GuiToolbar' /&gt;" Guid="599292ad-1e57-47d1-9c71-c30cfd1930ff" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Leihgaben anlegen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4b88b0574225c330a4548c58ae0fa282.png" xmlns="">0pOvmjEQqB0G1GtwwXYuSzA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

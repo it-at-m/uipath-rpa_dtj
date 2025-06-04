@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Ja",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "AeZ0OFokP0emjKgW9n8CeA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/AeZ0OFokP0emjKgW9n8CeA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/Oj9RdECPCEiOCWBfR7Ng2g",
+  "Created": "2024-11-12T17:20:03.2583128Z",
+  "Updated": "2024-11-12T17:20:03.2583128Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4Et9ITNLqk-KifHGSqDa5Q" Reference="t7RwvFqNE0WYNB6EkTbWkw/AeZ0OFokP0emjKgW9n8CeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="65, 121, 119, 27" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;sap id='usr/btnSPOP-OPTION1' text='Ja' tooltip='Ja       ' type='GuiButton' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnSPOP-OPTION1' text='Ja' tooltip='Ja       ' type='GuiButton' check:text='Ja' /&gt;" Guid="20f7f704-9fd4-4c47-b159-ce77286db9f4" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='K31(1)/300 Abmelden' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f835cf96c49a73e58276d68f4bd57891.png" xmlns="">0em_0rVnpYkqm3rkA7UZBew</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

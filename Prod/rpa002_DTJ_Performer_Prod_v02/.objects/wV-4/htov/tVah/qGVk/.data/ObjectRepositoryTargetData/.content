@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NyTfRtM2ukyR-7eccDUaCw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="987, 264, 88, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap colName='LOW' id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_SELECTION:SAPLAQ_ADHOC:0310/cntlSEL_DEF_CONTAINER/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='LOW' id='usr/subSUB_MAIN:SAPLAQ_ADHOC:0210/subSUB_SELECTION:SAPLAQ_ADHOC:0310/cntlSEL_DEF_CONTAINER/shellcont/shell' /&gt;" Guid="84b9533d-87cd-4159-bc63-1bad2bf505df" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Ad-hoc-Query (InfoSet: Infoset für die SB_DV-Rollen d*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="180299dd7804a90898b9bc2ad3874c1f.png" xmlns="">0N49Yod4HAkyILZJhBBDoMw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

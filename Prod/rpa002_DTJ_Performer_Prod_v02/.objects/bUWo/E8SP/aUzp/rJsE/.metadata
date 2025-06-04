@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Anzeigen (F7)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "rJsEEyCLu0CO7fe3hv_fNQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/rJsEEyCLu0CO7fe3hv_fNQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-11-06T16:16:17.5245866Z",
+  "Updated": "2024-11-06T16:16:17.5245866Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

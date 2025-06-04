@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Zurück (F3)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "eULnQdbn6kuXmL9LhC9bpw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/eULnQdbn6kuXmL9LhC9bpw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/SZ2hM7zRQEK6ep0rShjl3A",
+  "Created": "2024-10-18T11:16:03.165539Z",
+  "Updated": "2024-10-18T11:16:03.165539Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "0002_Daten zur Person",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "jTFRRtxWBk6PgY4IzRWRFA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/jTFRRtxWBk6PgY4IzRWRFA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T15:13:01.6735034Z",
+  "Updated": "2024-11-05T15:13:01.6735034Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

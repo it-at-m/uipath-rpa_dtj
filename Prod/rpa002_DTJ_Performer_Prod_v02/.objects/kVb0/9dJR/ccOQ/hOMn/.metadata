@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Results Table",
+  "Type": "Element",
+  "TaxonomyType": "Table",
+  "Id": "hOMn6r8uYUOTy6B84THZag",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/hOMn6r8uYUOTy6B84THZag",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/ccOQ4A17AEOCO0xnp21i_w",
+  "Created": "2024-11-11T15:51:29.2481121Z",
+  "Updated": "2024-11-11T15:51:51.2109879Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

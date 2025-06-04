@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe Nachname",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "zwjx6wzt2kmAeyKhBPO9rw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/zwjx6wzt2kmAeyKhBPO9rw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:14:42.3760241Z",
+  "Updated": "2024-11-05T13:14:42.3760241Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

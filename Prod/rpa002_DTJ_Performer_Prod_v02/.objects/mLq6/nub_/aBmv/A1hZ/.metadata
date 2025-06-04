@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Mehrfachselektion Vorname",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "A1hZI-6lpEWU-79yJAXRNg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/A1hZI-6lpEWU-79yJAXRNg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aBmvGtAbFkOsscDgjDzkjw",
+  "Created": "2024-10-15T13:57:32.3214479Z",
+  "Updated": "2024-10-15T13:57:32.3214479Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

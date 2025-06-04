@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Abmelden",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "WPXTCZsgxUSely09EjFNWw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/WPXTCZsgxUSely09EjFNWw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/VbajOC5eI0ORPkGbeBGUAQ",
+  "Created": "2024-11-12T17:13:06.1749294Z",
+  "Updated": "2024-11-12T17:13:06.1749294Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

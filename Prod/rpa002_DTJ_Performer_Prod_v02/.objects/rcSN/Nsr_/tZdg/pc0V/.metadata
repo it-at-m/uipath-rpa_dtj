@@ -1,0 +1,14 @@
+﻿{
+  "Name": "SAP Login",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "pc0VXcJTXE6ch0vKA1ZRKA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/pc0VXcJTXE6ch0vKA1ZRKA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tZdgGS4cRk-Sy_DC_pdpmA",
+  "Created": "2024-11-22T13:43:07.5691121Z",
+  "Updated": "2024-11-22T13:43:07.5691121Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

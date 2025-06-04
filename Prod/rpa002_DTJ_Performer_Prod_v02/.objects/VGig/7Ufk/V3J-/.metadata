@@ -1,0 +1,12 @@
+﻿{
+  "Name": "C31(1)/000 SAP",
+  "Type": "Screen",
+  "Id": "V3J-KEMVaky5eCcDCPy00g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/V3J-KEMVaky5eCcDCPy00g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/7UfkHNhpWEaap3_MaoCVFw",
+  "Created": "2024-10-01T11:28:17.1511901Z",
+  "Updated": "2024-10-01T11:28:17.1511901Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

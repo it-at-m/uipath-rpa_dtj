@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe Geburtsdatum",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "XKCpz0OE90OxOR6uRacB_g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/XKCpz0OE90OxOR6uRacB_g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:33:23.8891889Z",
+  "Updated": "2024-11-05T13:33:23.8891889Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

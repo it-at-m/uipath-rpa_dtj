@@ -1,0 +1,12 @@
+﻿{
+  "Name": "C31(1)/300 Wertebereich einschränken",
+  "Type": "Screen",
+  "Id": "aBmvGtAbFkOsscDgjDzkjw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/aBmvGtAbFkOsscDgjDzkjw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/nub_k1Uu3UulGWY95sg0ag",
+  "Created": "2024-10-15T13:57:32.2311422Z",
+  "Updated": "2024-10-15T13:57:32.2311422Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

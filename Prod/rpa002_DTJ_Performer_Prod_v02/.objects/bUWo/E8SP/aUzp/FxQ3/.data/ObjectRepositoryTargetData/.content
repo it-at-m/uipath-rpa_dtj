@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tlwX7bSe10a_LbSh80gGQA" Reference="t7RwvFqNE0WYNB6EkTbWkw/FxQ3YbdBrUaRnm_TjzRwFQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="166, 459, 80, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap colName='ADD_FIELD2' id='shellcont/shell/shellcont[1]/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='ADD_FIELD2' id='shellcont/shell/shellcont[1]/shell' /&gt;" Guid="17396444-f045-482b-ad8d-ef6d63087c6c" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Personalstammdaten pflegen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4ba974456b7fba43e0e74eb6e4d380e4.png" xmlns="">0_ox3f2oOMk6G82jlBoK_jg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

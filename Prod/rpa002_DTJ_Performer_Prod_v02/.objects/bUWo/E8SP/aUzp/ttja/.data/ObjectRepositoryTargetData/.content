@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="er5e4Q_SQ0WwFvUEwlmf2Q" Reference="t7RwvFqNE0WYNB6EkTbWkw/ttjaV9RdWEyIns-GPQqq2w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="quZf8UiJwUuO8-sctXlJ6Q" DesignTimeRectangle="414, 382, 129, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/lblP0002-NACHN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/lblP0002-NACHN' /&gt;" Guid="cb6f18c8-a5ac-4912-be9b-5879bfc3f51b" Reference="t7RwvFqNE0WYNB6EkTbWkw/ttjaV9RdWEyIns-GPQqq2w" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e4d54bac89ff4f93a5a0d61fc403891c.png" xmlns="">0Pi4w5xPhuUetexW1XZc3rQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

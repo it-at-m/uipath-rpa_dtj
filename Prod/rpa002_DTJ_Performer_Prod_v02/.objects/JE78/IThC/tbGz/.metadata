@@ -1,0 +1,12 @@
+﻿{
+  "Name": "C31(1)/300 Personalstammdaten pflegen",
+  "Type": "Screen",
+  "Id": "tbGzGpmxlUWgg6m_SZN95Q",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/tbGzGpmxlUWgg6m_SZN95Q",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/IThCJo3zT0q7PyYvcLC1tg",
+  "Created": "2024-10-15T14:53:53.1250961Z",
+  "Updated": "2024-10-15T14:53:53.1250961Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

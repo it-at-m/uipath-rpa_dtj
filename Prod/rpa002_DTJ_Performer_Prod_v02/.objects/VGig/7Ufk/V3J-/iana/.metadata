@@ -1,0 +1,13 @@
+﻿{
+  "Name": "TextField Benutzername",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "ianaYUddTEa-bR-E2eS79g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/ianaYUddTEa-bR-E2eS79g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/V3J-KEMVaky5eCcDCPy00g",
+  "Created": "2024-10-01T11:28:17.2515927Z",
+  "Updated": "2024-10-01T11:28:17.2515927Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Input Geburtsdatum",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "EmI8_xuUo0q3L3EvzxMZiQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/EmI8_xuUo0q3L3EvzxMZiQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aBmvGtAbFkOsscDgjDzkjw",
+  "Created": "2024-10-18T11:20:15.4833021Z",
+  "Updated": "2024-10-18T11:20:29.124209Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mSJQCeN7xEmfDJSo3TlXHA" Reference="t7RwvFqNE0WYNB6EkTbWkw/U2OmRr5YNk2mhZu7sNS5IQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="404, 381, 25, 25" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;sap id='usr/tblMP004000TC3000' tableRow='{0}' /&gt;&quot;, str_rowIndex)]" FuzzySelectorArgument="&lt;sap id='usr/tblMP004000TC3000' /&gt;" Guid="d5c5f3bd-5153-49a0-a1cd-6489e9507ed3" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Leihgaben Liste' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d605d1859cdf8403f2852f8b90d92c60.png" xmlns="">0mHeruanBe02VNMIfMHGpjQ</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="0" Name="str_rowIndex" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

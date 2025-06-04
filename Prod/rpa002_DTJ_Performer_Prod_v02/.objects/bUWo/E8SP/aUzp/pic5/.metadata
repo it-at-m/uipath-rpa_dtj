@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Personalnummer Input",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "pic5fIr4A06-rEzoZLSNTw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/pic5fIr4A06-rEzoZLSNTw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-10-15T11:31:51.9484692Z",
+  "Updated": "2024-10-15T11:31:51.9484692Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

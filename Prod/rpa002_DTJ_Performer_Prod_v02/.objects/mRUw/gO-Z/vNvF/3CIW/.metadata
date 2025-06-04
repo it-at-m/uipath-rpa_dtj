@@ -1,0 +1,13 @@
+﻿{
+  "Name": "EasyAccess - Search",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "3CIWMxM4nUOD084CcGwkYg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/3CIWMxM4nUOD084CcGwkYg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/vNvFoPONvUmeiuhnDFRjoQ",
+  "Created": "2024-10-15T11:25:13.0292022Z",
+  "Updated": "2024-10-15T11:25:13.0292022Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

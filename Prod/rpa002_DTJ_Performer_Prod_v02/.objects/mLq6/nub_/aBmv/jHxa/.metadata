@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Button Weiter (Enter)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "jHxaKJlToEKifo6XKgvnPA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/jHxaKJlToEKifo6XKgvnPA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aBmvGtAbFkOsscDgjDzkjw",
+  "Created": "2024-11-06T14:36:34.8400685Z",
+  "Updated": "2024-11-06T14:36:34.8400685Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

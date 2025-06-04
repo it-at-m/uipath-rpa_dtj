@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-zpAxOGTQ0ameRgvo68-bQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="237, 272, 129, 25" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;sap id='usr/pwdRSYST-BCODE' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/pwdRSYST-BCODE' /&gt;" Guid="071cabd6-fdba-41c6-87ea-0344599dbf17" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/000 SAP' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="324ad2969d531ead201c4576543b3731.png" xmlns="">0AP6wkNXjHkq5a_UPUxBSXQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

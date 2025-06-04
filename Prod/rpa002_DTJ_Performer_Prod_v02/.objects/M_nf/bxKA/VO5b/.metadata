@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Leihgaben Liste",
+  "Type": "Screen",
+  "Id": "VO5bhp_5-0-vJ8hE41Ed0g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/VO5bhp_5-0-vJ8hE41Ed0g",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/bxKAYo4yQkat9gyBYiuPlw",
+  "Created": "2024-10-18T13:21:51.6766951Z",
+  "Updated": "2024-11-11T12:52:32.6476031Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SAP - Ad-hoc-Query",
+  "Type": "Screen",
+  "Id": "tVah9IroRUeWxgR_AkbjPQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/htovrC3wLEK2edZ5VG-AoA",
+  "Created": "2024-11-05T13:14:42.2122057Z",
+  "Updated": "2024-11-24T21:28:26.2612397Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VEDHcTRgU0yd76Sh8qNCVg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="207, 263, 73, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap colName='P0002-VORNA' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='P0002-VORNA' id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="cf3ae615-87ec-41b7-9503-e54a1ce67230" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='K31(1)/300 SAP Query 05.11.2024/14:56:06 RPA-BOT' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7babce3cfded4ad149fa527e6615e1c2.png" xmlns="">05chPW3KMpku4g9LsY6V02w</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

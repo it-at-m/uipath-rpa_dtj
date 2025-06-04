@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button Anlegen",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "bEjuTRwRVki3Utu5Gh956A",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/bEjuTRwRVki3Utu5Gh956A",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-10-18T14:07:52.45559Z",
+  "Updated": "2024-10-18T14:08:47.3727499Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

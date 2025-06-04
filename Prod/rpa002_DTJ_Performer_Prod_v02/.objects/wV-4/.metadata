@@ -1,0 +1,15 @@
+﻿{
+  "Name": "SAP - Ad-hoc-Query",
+  "Type": "App",
+  "Id": "wV-4FEOwoEyt6bkS1jZ90g",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/wV-4FEOwoEyt6bkS1jZ90g",
+  "Created": "2024-11-05T13:14:42.2007054Z",
+  "Updated": "2024-11-24T21:28:26.1080826Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

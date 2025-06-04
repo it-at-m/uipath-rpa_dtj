@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Result Beginn",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "FHMfPmtCa0G94hHmNXzFig",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/FHMfPmtCa0G94hHmNXzFig",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T14:11:58.7938337Z",
+  "Updated": "2024-11-05T14:11:58.7938337Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

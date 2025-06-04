@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Personalnummer",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "xfLHoCAbHkifWdhNp-_VJA",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/xfLHoCAbHkifWdhNp-_VJA",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/QpWgeTx0SUaiakyRNJwUgQ",
+  "Created": "2024-11-11T16:22:13.8213014Z",
+  "Updated": "2024-11-11T16:22:37.6433442Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

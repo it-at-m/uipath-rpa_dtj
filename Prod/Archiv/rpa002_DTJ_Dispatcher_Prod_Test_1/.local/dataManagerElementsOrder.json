@@ -1,0 +1,155 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_mailRecipient&Sequence_16",
+        "str_subjectLine&Sequence_16",
+        "str_Body&Sequence_16",
+        "list_attachments&Sequence_16",
+        "str_excelRowsFileToUpload&Sequence_1",
+        "str_WorkingFolder&Sequence_1",
+        "str_tempInputsFilesFolder&Sequence_1",
+        "str_dataFolder&Sequence_1",
+        "str_excelAllTransactionFilename&Sequence_1",
+        "str_tempInputFiles&Sequence_1",
+        "str_archiv&Sequence_1",
+        "str_data&Sequence_1",
+        "bool_foundInputFiles&Sequence_1",
+        "int_numOfRowsLeftToProcess&Sequence_1",
+        "bool_excelFileExists&Sequence_1",
+        "str_pathRowsToProcessFile&Sequence_1",
+        "list_filesToProcess&Sequence_1",
+        "str_mailRecipient&Sequence_3",
+        "str_subjectLine&Sequence_3",
+        "str_Body&Sequence_3",
+        "list_attachments&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "6.1.5. - Open SAP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sapConnectionName&Sequence_1",
+        "obj_sapClient&Sequence_1",
+        "str_username&Sequence_1",
+        "str_password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel_CopyInputFiles.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_allDataRows&Sequence_1",
+        "dt_FilteredDTJTeilnehmer&Sequence_1",
+        "dt_alleDTJTeilnehmer&Sequence_1",
+        "ExcelFilesList&Sequence_1",
+        "dt_FilteredneueZugaenge&Sequence_1",
+        "str_inputFile&Sequence_1",
+        "str_allRows&Sequence_1",
+        "sollSpaltenList&Sequence_1",
+        "dicGefundeneSpalten&Sequence_1",
+        "dt_kuendigungen&Sequence_1",
+        "str_DTJListe&Sequence_1",
+        "str_pattern&Sequence_1",
+        "str_match&Sequence_1",
+        "str_spaltenKuendigung&Sequence_1",
+        "FilteredDTJTeilnehmerRows&Sequence_1",
+        "str_neueZugaenge&Sequence_49",
+        "str_MatchedColumnName&Sequence_157",
+        "int_excelCounter&Sequence_131",
+        "str_pathInputFiles&Sequence_1",
+        "str_inputArchiveFolder&Sequence_1",
+        "str_excelAllTransactions&Sequence_1",
+        "int_filecounter&Sequence_1",
+        "str_pathTemplateFile&Sequence_1",
+        "list_workbookSheets&Sequence_1",
+        "str_dtCurrentFiltered&Sequence_1",
+        "str_WorkingFolder&Sequence_1",
+        "str_data&Sequence_1",
+        "str_tempInputFiles&Sequence_1",
+        "str_dataFolder&Sequence_1",
+        "str_tempInputsFilesFolder&Sequence_1",
+        "str_excelAllTransactionFilename&Sequence_1",
+        "str_archiv&Sequence_1",
+        "str_ArchivFolder&Sequence_1",
+        "str_inputFolder&Sequence_1",
+        "str_inputExcelFolder&Sequence_1",
+        "str_inputFileArchive&Sequence_1",
+        "str_OutputDtFiltered&Sequence_34",
+        "str_output_files&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_bool_inputFilesExist"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Mail_SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "secstr_roboterPassword&Sequence_1",
+        "str_roboterUser&Sequence_1",
+        "str_mailSenderFromMailId&Sequence_1",
+        "int_smtpPort&Sequence_1",
+        "str_smtpServer&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_recipientMailId",
+        "in_str_subjectLine",
+        "in_str_Body",
+        "in_list_attachments"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel_CreateTransactions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_tempInputArchivFolder&Sequence_1",
+        "int_filecounter&Sequence_1",
+        "str_excelTableRowsToProcess&Sequence_1",
+        "dt_fullRowsToProcess&Sequence_1",
+        "dt_filteredRowsToProcess&Sequence_1",
+        "int_cellRowCounter&Sequence_1",
+        "int_maxTransactionsPerRun&Sequence_1",
+        "int_transactionCounter&Sequence_1",
+        "int_remainingTransactions&Sequence_1",
+        "str_dataFolder&Sequence_1",
+        "str_data&Sequence_1",
+        "str_tempInputFiles&Sequence_1",
+        "str_excelAllTransactionFilename&Sequence_1",
+        "str_WorkingFolder&Sequence_1",
+        "str_tempInputsFilesFolder&Sequence_1",
+        "str_excelAllTransactions&Sequence_1",
+        "str_archiv&Sequence_1",
+        "str_inputFolder&Sequence_1",
+        "str_pathInputFiles&Sequence_1",
+        "str_inputExcelFolder&Sequence_1",
+        "str_inputFileArchive&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

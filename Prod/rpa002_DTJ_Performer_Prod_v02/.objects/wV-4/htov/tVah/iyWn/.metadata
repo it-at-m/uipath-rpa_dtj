@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Ausgabe Personalnummer",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "iyWnJH8K1kKBn2-ujVNQNw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/iyWnJH8K1kKBn2-ujVNQNw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/tVah9IroRUeWxgR_AkbjPQ",
+  "Created": "2024-11-05T13:14:42.3235472Z",
+  "Updated": "2024-11-05T13:14:42.3235472Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

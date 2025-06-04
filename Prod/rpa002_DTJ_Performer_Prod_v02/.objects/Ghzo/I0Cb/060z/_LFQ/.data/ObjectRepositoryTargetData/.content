@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mpHPeCc7e0eaEtrlq3_Sjg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="99, 272, 124, 22" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='          1/          2' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" FuzzySelectorArgument="&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell[1]' relpath='          1/          2' /&gt;&lt;sap itemId='&amp;amp;Hierarchy' /&gt;" Guid="127bcb85-82da-4125-a901-c3db64b2ef76" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Personalstammdaten pflegen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="470ab6ba7becda5ef3e4fda7dfcd9fb4.png" xmlns="">0SxG-eh-rZkiTy6X6q4IKpw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

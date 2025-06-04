@@ -1,0 +1,666 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "str_reportFilePath&StateMachine_1",
+        "str_mailRecipient&Sequence_37",
+        "str_subjectLine&Sequence_37",
+        "str_Body&Sequence_37",
+        "list_attachments&Sequence_37",
+        "ShouldStop&Sequence_25",
+        "TransactionRow&Sequence_28",
+        "str_personalNummer&Sequence_28",
+        "str_birthDate&Sequence_28",
+        "str_startDate&Sequence_28",
+        "str_kundDate&Sequence_28",
+        "int_numOfRowsLeftToProcess&Sequence_33",
+        "int_numSuccessfullCases&Sequence_34",
+        "int_numFaileCases&Sequence_34",
+        "int_numBeCases&Sequence_34",
+        "str_reportFilePathInArchive&Sequence_34",
+        "str_mailRecipient&Sequence_36",
+        "str_subjectLine&Sequence_36",
+        "str_Body&Sequence_36",
+        "list_attachments&Sequence_36",
+        "str_mailRecipient&Sequence_38",
+        "str_subjectLine&Sequence_38",
+        "str_Body&Sequence_38",
+        "list_attachments&Sequence_38"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.1.5. - Open SAP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sapConnectionName&Sequence_1",
+        "obj_sapClient&Sequence_1",
+        "str_username&Sequence_1",
+        "str_password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.2 - Open Ad-Hoc Query.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_adHocAuswertung&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.2.1 - Search with Abonummer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_statusMessage&Sequence_10",
+        "int_numResults&Sequence_10",
+        "str_statusMessage&Sequence_5",
+        "int_numResults&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_leihgabenummer",
+        "out_bool_matchFound",
+        "out_str_nachname",
+        "out_str_vorname",
+        "out_str_gebDatum",
+        "io_str_persNum"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3 - Open PA30.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.1 - Get Personal Infos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_str_lastNameInSAP",
+        "out_str_FirstNameInSAP",
+        "out_str_birthDateInSAP",
+        "out_str_persNum"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_statusMessage&",
+        "int_numResults&",
+        "list_filesToProcess&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/SAP_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "tmp_sap_Password&Sequence_1",
+        "str_sap_Username&Sequence_1",
+        "str_sap_Client&Sequence_1",
+        "str_sap_Language&Sequence_1",
+        "secstr_sap_Password&Sequence_1",
+        "str_sap_ConnectionName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/EMail Workflows/Mail_SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_user&Sequence_1",
+        "str_password&Sequence_1",
+        "str_mailSenderFromMailId&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_attachments",
+        "in_str_recipientMailId",
+        "in_str_subjectLine",
+        "in_str_Body",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionID",
+        "io_dt_TransactionData",
+        "out_str_fileName",
+        "out_str_rowIndex"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_allTransactions&Sequence_1",
+        "str_identifiedPersonFirstName&Sequence_1",
+        "str_identifiedPersonBirthDate&Sequence_1",
+        "str_identifiedPersonLastName&Sequence_1",
+        "int_rowCount&Sequence_1",
+        "str_finalPersonalNumber&Sequence_1",
+        "int_rowIndex&Sequence_1",
+        "str_lastNameSAP&Sequence_1",
+        "str_firstNameSAP&Sequence_1",
+        "str_birthDateSAP&Sequence_1",
+        "bool_isOnMainPage&Sequence_25",
+        "list_versionsVorname&Sequence_25",
+        "list_versionsNachname&Sequence_25",
+        "bool_personFound&Sequence_25",
+        "list_allFoundPersonalnumbers&Sequence_25",
+        "int_numberOfActivePersonsFound&Sequence_25",
+        "bool_leihgabeFound&Sequence_25",
+        "int_indexOfFirstLeihgabe&Sequence_25",
+        "list_workbookSheets&Sequence_25",
+        "dt_table&Sequence_25",
+        "str_rowsToProcessFile&Sequence_25",
+        "int_loopCounter&Sequence_36",
+        "str_rowPersonalNummer&Sequence_9",
+        "str_activStatus&Sequence_12",
+        "bool_endDateBeforeStartdate&Sequence_17",
+        "bool_isOnMainPage&Sequence_55",
+        "bool_isOnMainPage&Sequence_60"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "Transaction",
+        "out_str_peronalNummer",
+        "out_str_birthDateExcel",
+        "out_str_erstzugangExcel",
+        "out_str_kundDateExcel",
+        "in_str_reportFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/General Workflows/6.1.4. - General_GetDifferentVersionsOfName.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_NameWithoutUmlaut&Sequence_1",
+        "str_NameWithUmlaut&Sequence_1",
+        "str_NameWithHyphen&Sequence_1",
+        "str_NameWithSpace&Sequence_1",
+        "str_NameWithoutSecondPart&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_leihgabenummer",
+        "out_bool_matchFound",
+        "out_str_nachname",
+        "out_str_vorname",
+        "out_str_gebDatum",
+        "io_str_persNum",
+        "in_str_Name",
+        "out_list_NameVersions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/General Workflows/6.1.4. - General_GetDifferentVersionsOfPersonalnummer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_str_Personalnummer"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel Workflows/6.6.2. + 6.6.3 - Excel_CreateReportEntry.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_tempTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_ReportFilePath",
+        "in_str_Status",
+        "in_str_Bemerkung",
+        "in_str_Abonummer",
+        "in_str_Personalnummer",
+        "in_str_Vorname",
+        "in_str_Nachname",
+        "in_str_GebDatum",
+        "in_str_Erstzugang",
+        "in_str_Kündigungsdatum"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/SAP - Close.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sapConnectionName&Sequence_1",
+        "obj_sapClient&Sequence_1",
+        "str_username&Sequence_1",
+        "str_password&Sequence_1",
+        "bool_isOnMainPage&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11",
+        "int_numOfExcelFilesInReportFolder&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config",
+        "out_str_reportFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.4.4 - Get aktiv Status.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_FeldPernr_Aktiv&Sequence_2",
+        "bool_onCorrectPage&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_str_aktivStatus",
+        "in_str_perNum"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.1 - Search for Personalnumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_statusMessage&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_perNum",
+        "out_bool_personalNumFound"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.3. - Search for Firstname,Lastname and Birthdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_tableRow&Sequence_1",
+        "str_statusMessage&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_versionsLastname",
+        "in_list_versionsFirstname",
+        "in_str_birthDate",
+        "out_bool_foundResults"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Filesystem Workflows/6.6.4. - StoreProcessFilesInSDrive.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_FolderPath&Sequence_1",
+        "obj_CurrentFileInfo&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dict_Config",
+        "in_list_Files"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel Workflows/6.6.1 - Excel_CreateReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "allReportsArray&Sequence_1",
+        "str_reportingFile&Sequence_1",
+        "bool_reportingFolder&Sequence_1",
+        "str_workingFolderPath&Sequence_1",
+        "str_pathTempInputFiles&Sequence_1",
+        "str_excelRowsFileToUpload&Sequence_1",
+        "str_inputFileArchive&Sequence_1",
+        "str_excelTableRowsToProcess&Sequence_1",
+        "dt_fullRowsToProcess&Sequence_1",
+        "dt_filteredRowsToProcess&Sequence_1",
+        "int_cellRowCounter&Sequence_1",
+        "int_maxTransactionsPerRun&Sequence_1",
+        "int_transactionCounter&Sequence_1",
+        "int_remainingTransactions&Sequence_1",
+        "str_dataFolder&Sequence_1",
+        "str_data&Sequence_1",
+        "str_tempInputFiles&Sequence_1",
+        "str_excelAllTransactionFilename&Sequence_1",
+        "str_excelAllTransactions&Sequence_1",
+        "str_archivFolder&Sequence_1",
+        "str_archiv&Sequence_1",
+        "dt_templateFile&Sequence_1",
+        "str_templateFile&Sequence_1",
+        "str_templateName&Sequence_1",
+        "str_reportFile&Sequence_1",
+        "str_reporting&Sequence_1",
+        "str_inputFolder&Sequence_1",
+        "str_reportingFolder&Sequence_1",
+        "str_workingFolder&Sequence_1",
+        "str_input&Sequence_1",
+        "str_currentTimestamp&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_str_ReportFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel Workflows/6.6.4. - Excel_GetReportStatistics.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Report&Sequence_1",
+        "dt_SuccessReport&Sequence_1",
+        "dt_FailedReport&Sequence_1",
+        "dt_beReport&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dict_Config",
+        "in_str_ReportFilePath",
+        "out_int_NumSuccess",
+        "out_int_NumFailed",
+        "out_int_numBe"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Excel Workflows/Excel_CheckHowManyTransactionsLeft.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_excelTableRowsToProcess&Sequence_1",
+        "dt_RowsToProcess&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_reportFilePath",
+        "out_int_rowsToProcess",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.3 Open Create Leihgabe Window.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_isOnNextPage&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.3 - Create Leihgabe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_statusMessage&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_beginningDate",
+        "in_str_quittingDate",
+        "in_str_aboNumber"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.4. Open Identified Leihgabe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_rowIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_int_index"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.1 - Open IT 40.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_perNum",
+        "out_bool_leihgabeFound"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/General Workflows/6.3.1 - Check If Last Name Matches.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_lastNameOptions",
+        "in_str_lastNameSAP",
+        "out_bool_foundCorrectPerson"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/General Workflows/6.3.2 - Check If Birthdate Matches.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_bool_foundCorrectPerson",
+        "in_str_birthdateSAP",
+        "in_str_birthdateExcel"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.3. - Open Advanced Search.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.3. - Check amount of Search Results.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_int_rowCount"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.3.3. - Open Search Result.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.4.4. - Get Personalnummer From Search Results.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_str_personalNumber",
+        "in_int_index"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.2. Check if there is a Leihgabe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list_leihgabenIndexes&Sequence_1",
+        "int_rowIndex&Sequence_2",
+        "str_leihgabe&Sequence_2",
+        "str_rowIndex&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_int_first94IndexFound",
+        "out_bool_leihgabe94WasFound"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/6.5.4 Check Enddate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_leihgabeEndDateSAP&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_leihgabeStartDate",
+        "out_bool_endDatebeforeStart"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SAP Workflows/SAP - Navigate One Page Back.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KoA3pmtmsEWY5ZIE8QoVqg" Reference="t7RwvFqNE0WYNB6EkTbWkw/1ARYFF00YEetMrFIWEnyPQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="16LvUkuHO0Oak3UXdR6HhA" DesignTimeRectangle="643, 381, 115, 25" DesignTimeScaleFactor="1.25" ElementType="Table" FullSelectorArgument="[string.Format(&quot;&lt;sap id='usr/tblMP004000TC3000/ctxtP0040-LEIHG[2,{0}]' /&gt;&quot;, str_rowIndex)]" FuzzySelectorArgument="&lt;sap id='usr/tblMP004000TC3000/ctxtP0040-LEIHG[2,0]' check:text='94' /&gt;" Guid="a99105c2-ff2e-4e77-904b-d04c752bc653" ImageBase64="" Reference="t7RwvFqNE0WYNB6EkTbWkw/1ARYFF00YEetMrFIWEnyPQ" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='C31(1)/300 Leihgaben Liste' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6f11878b1c47852642644a76fe50d508.png" xmlns="">05GYS8C0FbUOlAF4wOvj8lw</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="0" Name="str_rowIndex" />
+    </scg:List>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

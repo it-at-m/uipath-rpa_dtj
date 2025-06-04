@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BO1Qagy_aEGk6MGw7tLCfg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="534, 193, 89, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:?1PAPAXX?HDR_30001A:0100/txt$_DG09_300A01_DAT_P0000_PERNR' tooltip='Personalnummer' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:?1PAPAXX?HDR_30001A:0100/txt$_DG09_300A01_DAT_P0000_PERNR' tooltip='Personalnummer' check:text='117563' /&gt;" Guid="e1d2ae39-21c8-443c-ab75-33f27e080808" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Daten zur Person anzeigen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d92449eb47c863ef64eef11c4b6a1181.png" xmlns="">0Viq7aQTgfEuB4zBI2qLEtw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

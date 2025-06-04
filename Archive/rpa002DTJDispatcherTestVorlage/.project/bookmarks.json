@@ -1,0 +1,15 @@
+{
+  "Value": {
+    "Workflows/6.1.4 - Excel_ReadInputData.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "8065f539-c15b-4f34-9793-e829ce662b93",
+        "ActivityIdRef": "GetRobotAsset_1",
+        "ActivityId": "1.193",
+        "ActivityName": "Get Asset",
+        "IsTransient": false
+      }
+    ]
+  }
+}

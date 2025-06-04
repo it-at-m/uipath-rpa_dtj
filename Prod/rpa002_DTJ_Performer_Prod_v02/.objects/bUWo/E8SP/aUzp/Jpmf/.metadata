@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Aktiv",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "JpmfLVGBVUepnjprSgMAMw",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/JpmfLVGBVUepnjprSgMAMw",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/aUzpplIOOEilqmQvYNpFyQ",
+  "Created": "2024-10-18T12:31:24.15188Z",
+  "Updated": "2024-10-18T12:31:36.0425801Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

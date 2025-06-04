@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Statusbar",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "RW6MXeprhUKWymNPQ9bAlg",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/RW6MXeprhUKWymNPQ9bAlg",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/ccOQ4A17AEOCO0xnp21i_w",
+  "Created": "2024-11-05T13:40:57.0883729Z",
+  "Updated": "2024-11-05T13:40:57.0883729Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "Name": "C31(1)/300 Mehrfachselektion für Nachname",
+  "Type": "Screen",
+  "Id": "Kq6tzgi6Z0qC98hPsXqxiQ",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/Kq6tzgi6Z0qC98hPsXqxiQ",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/-LYIo4xMHUyFCoih1WxLrA",
+  "Created": "2024-10-15T14:05:00.975592Z",
+  "Updated": "2024-11-06T14:33:16.045898Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

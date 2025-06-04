@@ -1,0 +1,237 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Modules/Mail/Mail_SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_OrchestratorQueueName&Sequence_1",
+        "str_OrchestratorFolderName&Sequence_1",
+        "secstr_robotPassword&Sequence_1",
+        "str_robotUserID&Sequence_1",
+        "str_GroupMailBox&Sequence_1",
+        "list_attachments&Sequence_1",
+        "str_Body&Sequence_1",
+        "str_subjetctLine&Sequence_1",
+        "int_smtpPort&Sequence_1",
+        "str_smtpServer&Sequence_1",
+        "str_mailSenderFromMailId&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Modules/Excel/Excel_CopyInputFiles.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_FilteredCurrenttable&Sequence_20",
+        "str_InputDateienFolder&Sequence_1",
+        "str_inputFolder&Sequence_1",
+        "dt_currentTable&Sequence_1",
+        "list_workbookSheets&Sequence_1",
+        "arrColumnsNames&Sequence_1",
+        "str_dt_currentTable&Sequence_1",
+        "str_dt_current&Sequence_1",
+        "int_filecounter&Sequence_1",
+        "str_pathInputFiles&Sequence_1",
+        "str_OutputDtFiltered&Sequence_3",
+        "st_allRows&Sequence_4",
+        "str_inputFiles&Sequence_5",
+        "str_workingFolderPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Modules/Excel/Excel_CheckHowManyTransactionsLeft.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Modules/Excel/6.1.4_ExcelReadInputData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_InputFilerExist&Sequence_1",
+        "bool_FileExist&Sequence_2",
+        "str_listExcelFilesToProcess&Sequence_1",
+        "dt_currentTable&Sequence_1",
+        "dict_excelFile&Sequence_1",
+        "list_workbookSheets&Sequence_1",
+        "dt_InputFiles&Sequence_1",
+        "int_ColumnCounter&Sequence_1",
+        "str_currentTable&Sequence_1",
+        "arr_ColumnName&Sequence_1",
+        "arrColumns&Sequence_1",
+        "columnname&Sequence_5",
+        "Columnnames&Sequence_5",
+        "str_inputWorkingFolder&Sequence_1",
+        "arr_InputFiles&Sequence_1",
+        "str_ExcelWorkingFolder&Sequence_1",
+        "str_ExcelFiles&Sequence_1",
+        "dt_currentTable&Sequence_5",
+        "str_workingFolderPath&Sequence_1",
+        "str_OrchestratorQueueName&Sequence_1",
+        "str_OrchestratorFolderName&Sequence_1",
+        "str_pathInputFiles&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_list_ExcelFilesToProcess"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Modules/Excel/Excel_CreateTransactions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_workingFolderPath&Sequence_1",
+        "bool_queryFileExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_str_ExcelFiles",
+        "out_str_workingFolderPath",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

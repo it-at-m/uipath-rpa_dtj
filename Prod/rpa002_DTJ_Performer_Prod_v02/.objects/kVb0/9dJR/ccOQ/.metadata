@@ -1,0 +1,15 @@
+﻿{
+  "Name": "SAP General",
+  "Type": "Screen",
+  "Id": "ccOQ4A17AEOCO0xnp21i_w",
+  "Reference": "t7RwvFqNE0WYNB6EkTbWkw/ccOQ4A17AEOCO0xnp21i_w",
+  "ParentRef": "t7RwvFqNE0WYNB6EkTbWkw/9dJRGC64P0izcSiVrgqetg",
+  "Created": "2024-11-05T13:40:57.0373339Z",
+  "Updated": "2024-11-05T13:41:27.6065037Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
