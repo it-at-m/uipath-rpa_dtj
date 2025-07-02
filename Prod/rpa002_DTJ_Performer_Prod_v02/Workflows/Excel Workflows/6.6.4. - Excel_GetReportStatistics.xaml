@@ -105,7 +105,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="6.6.4. - Excel_GetReportStatistics" sap:VirtualizedContainerService.HintSize="540.8,1344" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="6.6.4. - Excel_GetReportStatistics" sap:VirtualizedContainerService.HintSize="885.6000000000001,1278.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Report" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_SuccessReport" />
@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.4. - Excel_GetReportStatistics - START&quot;]" />
+    <ui:LogMessage DisplayName="Log Start Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.4. - Excel_GetReportStatistics - START&quot;]" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Report]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Report" WorkbookPath="[in_str_ReportFilePath]" />
     <ui:FilterDataTable DataTable="[dt_Report]" DisplayName="Filter Report for successfull cases" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="478.4,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_SuccessReport]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
@@ -206,6 +206,6 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log END" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.4. - Excel_GetReportStatistics - END&quot;]" />
+    <ui:LogMessage DisplayName="Log End Message" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.4. - Excel_GetReportStatistics - END&quot;]" />
   </Sequence>
 </Activity>

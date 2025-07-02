@@ -103,7 +103,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="6.6.2. + 6.6.3 - Excel_CreateReportEntry" sap:VirtualizedContainerService.HintSize="540.8,796" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="6.6.2. + 6.6.3 - Excel_CreateReportEntry" sap:VirtualizedContainerService.HintSize="885.6000000000001,730.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_currentTimestamp" />
     </Sequence.Variables>
@@ -112,7 +112,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.1 - Excel_CreateReport- START&quot;]" />
+    <ui:LogMessage DisplayName="Log Start Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.1 - Excel_CreateReport- START&quot;]" />
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -141,6 +141,6 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="[out_str_ReportFilePath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="478.4,187.2" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[in_dict_Config(&quot;rpa002_Path_Report_Template&quot;).ToString]" />
-    <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.1 - Excel_CreateReport - END&quot;]" />
+    <ui:LogMessage DisplayName="Log End Message" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;6.6.1 - Excel_CreateReport - END&quot;]" />
   </Sequence>
 </Activity>
