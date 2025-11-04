@@ -1,7 +1,7 @@
 {
   "name": "rpa002_DTJ_Dispatcher",
   "projectId": "fbeecd37-dfbf-41cf-b735-bea20eff7dba",
-  "description": "Dispatcher des DTJs  für das Prod-System finale. Der Dispatcher hat für Aufgabe: \r\n- Daten sammeln (z. B. aus Excel).\r\n- Daten in die Orchestrator-Queue hochladen\r\n- Versendet E-Mails",
+  "description": "Dispatcher des DTJs  für das Prod-System finale. Der Dispatcher hat für Aufgabe: \r\n- Daten sammeln und vorbereiten (z. B. aus Excel).\r\n- Daten in die Orchestrator-Queue hochladen\r\n- Versendet E-Mails",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.28.1",
+  "projectVersion": "1.1.0.3",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

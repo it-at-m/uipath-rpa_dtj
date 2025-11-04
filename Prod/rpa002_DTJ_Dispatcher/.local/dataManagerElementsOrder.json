@@ -12,154 +12,158 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_body&Sequence_9",
-        "str_body&Sequence_10",
-        "bool_excelFileExists&Sequence_1",
-        "bool_foundInputFiles&Sequence_1",
-        "str_data&Sequence_1",
-        "str_tempInputFiles&Sequence_1",
-        "str_excelAllTransactionFilename&Sequence_1",
-        "str_WorkingFolder&Sequence_1",
-        "str_excelRowsFileToUpload&Sequence_1",
-        "str_mailRecipient&Sequence_9",
-        "str_subjectLine&Sequence_9",
-        "list_attachments&Sequence_9",
-        "str_mailRecipient&Sequence_10",
-        "str_subjectLine&Sequence_10",
-        "list_attachments&Sequence_10"
+        "sw_watch&Sequence_1",
+        "str_duration&Sequence_1",
+        "str_emailRecipient&Sequence_1",
+        "str_pathMainFolder&Sequence_1",
+        "str_formatPeriod&Sequence_1",
+        "str_period&Sequence_1",
+        "str_pathTeilnehmerlistenFolder&Sequence_1",
+        "str_pathTemplatesFolder&Sequence_1",
+        "jss_jsonSettings&Sequence_1",
+        "str_pathPeriodFolder&Sequence_1",
+        "int_countTotal&Sequence_1",
+        "int_countSuccess&Sequence_1",
+        "int_countFailed&Sequence_1",
+        "int_countSkipped&Sequence_1",
+        "str_pathPeriodTxnsJson&Sequence_1",
+        "str_pathPeriodReportXlsx&Sequence_1",
+        "str_pathPeriodArchivFolder&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "Workflows/6.1.4 - Excel_ReadInputData.xaml",
+      "Path": "Workflows/Consolidate Teilnehmerlisten.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_pathInputFiles&Sequence_1",
-        "list_workbookSheets&Sequence_6",
-        "dt_currentTable&Sequence_6",
-        "dict_excelFile&Sequence_6",
-        "test&Sequence_6",
-        "dt_currentTable&Sequence_7"
+        "dict_txns&Sequence_1",
+        "list_txnsItemTplValues&Sequence_1",
+        "list_txnsItemTplKeys&Sequence_1",
+        "dict_txnsItemTpl&Sequence_1",
+        "list_mapValues&Sequence_1",
+        "list_mapKeys&Sequence_1",
+        "dict_map&Sequence_1",
+        "dt_rawTL&Sequence_1",
+        "str_currentTLSheet&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "out_list_ExcelFilesToProcess"
+        "in_str_pathPeriodTxnsJson",
+        "in_str_pathPeriodArchivFolder",
+        "in_str_pathTeilnehmerlistenFolder",
+        "in_str_pathTemplatesFolder",
+        "in_str_period",
+        "in_jss_jsonSettings",
+        "io_int_countTotal"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "Workflows/Excel_CopyInputFiles.xaml",
+      "Path": "Workflows/Prepare Period Folder.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "FilesArray_Test&Sequence_1",
-        "int_filecounter&Sequence_1",
-        "str_pathInputFiles&Sequence_1",
-        "dt_allRows&Sequence_1",
-        "str_excelAllTransactions&Sequence_1",
-        "str_inputFileArchive&Sequence_1",
-        "dt_allDataRows&Sequence_1",
-        "list_workbookSheets&Sequence_1",
-        "str_ArchivFolder&Sequence_1",
-        "str_inputFolder&Sequence_1",
-        "str_inputExcelFolder&Sequence_1",
-        "str_inputFile&Sequence_1",
-        "FilteredDTJTeilnehmerRows&Sequence_21",
-        "dt_currentTable&Sequence_7",
-        "list_workbookSheets&Sequence_8",
-        "str_archiv&Sequence_1",
-        "str_excelAllTransactionFilename&Sequence_1",
-        "str_tempInputsFilesFolder&Sequence_1",
-        "str_dataFolder&Sequence_1",
-        "str_tempInputFiles&Sequence_1",
-        "str_data&Sequence_1",
-        "str_WorkingFolder&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "out_bool_inputFilesExist"
+        "in_str_pathTemplatesFolder",
+        "out_str_pathPeriodReportXlsx",
+        "out_str_pathPeriodTxnsJson",
+        "out_str_pathPeriodArchivFolder",
+        "out_str_pathPeriodFolder",
+        "in_str_pathMainFolder",
+        "in_str_period"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "Workflows/Excel_CreateTransactions.xaml",
+      "Path": "Workflows/Email - Send Email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "int_filecounter&Sequence_3",
-        "str_dataFolder&Sequence_3",
-        "str_data&Sequence_3",
-        "str_tempInputFiles&Sequence_3",
-        "str_excelAllTransactionFilename&Sequence_3",
-        "str_WorkingFolder&Sequence_3",
-        "str_tempInputsFilesFolder&Sequence_3",
-        "str_excelAllTransactions&Sequence_3",
-        "str_archiv&Sequence_3",
-        "str_tempInputArchivFolder&Sequence_3",
-        "str_inputFolder&Sequence_3",
-        "str_pathInputFiles&Sequence_3",
-        "str_inputExcelFolder&Sequence_3",
-        "str_inputFileArchive&Sequence_3",
-        "int_remainingTransactions&Sequence_1",
-        "str_excelTableRowsToProcess&Sequence_1",
-        "dt_fullRowsToProcess&Sequence_1",
-        "dt_filteredRowsToProcess&Sequence_1",
-        "int_cellRowCounter&Sequence_1",
-        "int_maxTransactionsPerRun&Sequence_1",
-        "int_transactionCounter&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Excel_CheckHowManyTransactionsLeft.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "int_filecounter&Sequence_2",
-        "dt_filteredRowsToProcess&Sequence_2",
-        "dt_fullRowsToProcess&Sequence_2",
-        "int_cellRowCounter&Sequence_2",
-        "int_maxTransactionsPerRun&Sequence_2",
-        "int_transactionCounter&Sequence_2",
-        "int_remainingTransactions&Sequence_2",
-        "str_dataFolder&Sequence_2",
-        "str_data&Sequence_2",
-        "str_tempInputFiles&Sequence_2",
-        "str_excelAllTransactionFilename&Sequence_2",
-        "str_WorkingFolder&Sequence_2",
-        "str_tempInputsFilesFolder&Sequence_2",
-        "str_excelAllTransactions&Sequence_2",
-        "str_archiv&Sequence_2",
-        "str_tempInputArchivFolder&Sequence_2",
-        "str_inputFolder&Sequence_2",
-        "str_pathInputFiles&Sequence_2",
-        "str_inputExcelFolder&Sequence_2",
-        "str_inputFileArchive&Sequence_2",
-        "dt_RowsToProcess&Sequence_1",
-        "str_excelTableRowsToProcess&Sequence_1"
+        "str_emailSenderEmail&Sequence_1",
+        "str_emailSenderPassword&Sequence_1",
+        "int_emailSmtpPort&Sequence_1",
+        "str_emailSmtpServer&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "out_int_rowsToProcess"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Mail_SendEmail.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_mailSenderFromMailId&Sequence_1",
-        "str_smtpServer&Sequence_1",
-        "int_smtpPort&Sequence_1",
-        "str_user&Sequence_1",
-        "str_password&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
+        "in_list_attachments",
         "in_str_body",
-        "in_str_recipientMailId",
-        "in_str_subjectLine",
-        "in_list_attachments"
+        "in_str_recipient",
+        "in_str_subject"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Queue - Upload Batch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict_txnsItem&Sequence_1",
+        "bool_currentBatchSuccess&Sequence_1",
+        "int_currentBatchRetry&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_pathPeriodTxnsJson",
+        "io_dict_txns",
+        "in_int_calcBatches",
+        "in_int_maxUploadRetry",
+        "in_int_currentBatchIndex",
+        "io_int_countFailed",
+        "io_int_countSuccess",
+        "io_dt_currentBatch",
+        "in_list_currentBatchIds"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Upload Transactions To Queue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict_txns&Sequence_1",
+        "dict_txnsItem&Sequence_1",
+        "dt_currentBatch&Sequence_1",
+        "list_currentBatchIds&Sequence_1",
+        "int_currentBatchIndex&Sequence_1",
+        "bool_shouldSave&Sequence_1",
+        "int_calcBatches&Sequence_1",
+        "int_calcMaxBatchSize&Sequence_1",
+        "int_calcWriteIntervals&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_pathPeriodTxnsJson",
+        "io_int_countSuccess",
+        "io_int_countFailed",
+        "io_int_countSkipped",
+        "in_int_countTotal",
+        "in_int_maxUploadRetry",
+        "in_jss_jsonSettings"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Calculator Automation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "winFolder&Sequence_1",
+        "resultValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Finalize Failed Transactions To Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict_txnsItem&Sequence_1",
+        "dt_report&Sequence_1",
+        "dict_txns&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_pathPeriodReportXlsx",
+        "in_str_pathPeriodTxnsJson"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
