@@ -117,7 +117,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="860,4343.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="860.0000000000001,3555.2000000000003" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:Stopwatch" Name="sw_watch" />
       <Variable x:TypeArguments="x:String" Name="str_duration" />
@@ -144,9 +144,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="513.6,4154.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="513.6,3366.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="512,3443.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="512,2655.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,11 +166,11 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <Sequence DisplayName="Init All Assets" sap:VirtualizedContainerService.HintSize="478.4,784" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Init All Assets" sap:VirtualizedContainerService.HintSize="478.4,100.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa002_Format_Period" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="416,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_12">
@@ -278,12 +278,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <If Condition="[Directory.EnumerateFiles(str_pathTeilnehmerlistenFolder, &quot;*.xlsx&quot;).Any()]" sap:VirtualizedContainerService.HintSize="478.4,1642.4" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[Directory.EnumerateFiles(str_pathTeilnehmerlistenFolder, &quot;*.xlsx&quot;).Any()]" sap:VirtualizedContainerService.HintSize="478.4,1537.6" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="451.2,1330.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Teilnehmerlisten in '&quot; &amp; str_pathTeilnehmerlistenFolder &amp; &quot;' found.&quot;]" />
@@ -352,13 +353,14 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="451.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="451.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Throw Exception="[New SystemException(&quot;Keine Teilnehmerlisten in '&quot; &amp; str_pathTeilnehmerlistenFolder &amp; &quot;' gefunden.&quot;)]" sap:VirtualizedContainerService.HintSize="417.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                <Throw Exception="[New SystemException(&quot;Keine Teilnehmerlisten in '&quot; &amp; str_pathTeilnehmerlistenFolder &amp; &quot;' gefunden.&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
               </Sequence>
             </If.Else>
           </If>

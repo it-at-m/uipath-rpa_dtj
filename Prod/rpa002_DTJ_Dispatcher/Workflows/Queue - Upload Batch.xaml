@@ -119,7 +119,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xD;&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xD;&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_currentBatchIds">[in_list_currentBatchIds]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_currentBatch">[io_dt_currentBatch]</InOutArgument>

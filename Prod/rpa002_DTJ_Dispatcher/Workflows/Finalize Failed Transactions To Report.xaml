@@ -184,15 +184,9 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim obj_rowValues() As Object = New Object(io_dt_toAppendingRows.Columns.Count - 1) {}&#xD;&#xA;&#xD;&#xA;For int_index As Integer = 0 To io_dt_toAppendingRows.Columns.Count - 1&#xD;&#xA;    Dim str_colName As String = io_dt_toAppendingRows.Columns(int_index).ColumnName&#xD;&#xA;    Dim val As Object = Nothing&#xD;&#xA;&#xD;&#xA;    If in_dict_txnsItem.TryGetValue(str_colName, val) Then&#xD;&#xA;        ' val ok&#xD;&#xA;    ElseIf str_colName.Equals(&quot;Reference&quot;, StringComparison.OrdinalIgnoreCase) Then&#xD;&#xA;        val = in_str_itemKey&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    obj_rowValues(int_index) = val&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;io_dt_toAppendingRows.Rows.Add(obj_rowValues)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="382.4,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                           <ui:InvokeCode.Arguments>
-                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_toAppendingRows">
-                              <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_toAppendingRows" />
-                            </InOutArgument>
-                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txnsItem">
-                              <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="dict_txnsItem" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_str_itemKey">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="kvp_currentTxnsItem.Key" />
-                            </InArgument>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_toAppendingRows">[dt_toAppendingRows]</InOutArgument>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txnsItem">[dict_txnsItem]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_str_itemKey">[kvp_currentTxnsItem.Key]</InArgument>
                           </ui:InvokeCode.Arguments>
                         </ui:InvokeCode>
                       </Sequence>
