@@ -5,9 +5,7 @@
     <x:Property Name="io_int_countFailed" Type="InOutArgument(x:Int32)" />
     <x:Property Name="io_int_countSkipped" Type="InOutArgument(x:Int32)" />
     <x:Property Name="in_int_countTotal" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_int_maxUploadRetry" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_str_pathPeriodTxnsJson" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_queueMain" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -36,9 +34,6 @@
       <x:String>System.Data</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Activities.System.Arrays</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,6 +104,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -117,7 +113,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Upload_Transactions_To_Queue" sap:VirtualizedContainerService.HintSize="860.0000000000001,4616" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Upload_Transactions_To_Queue" sap:VirtualizedContainerService.HintSize="824.8000000000001,4616" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txns" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_currentBatch" />
@@ -134,7 +130,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uploading transactions items to queue '&quot; &amp; in_str_queueMain &amp; &quot;' ...&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uploading transactions items to queue '&quot; &amp; in_Config(&quot;OrchestratorQueueName&quot;).ToString &amp; &quot;' ...&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -150,7 +146,7 @@
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dict_txns]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(File.ReadAllText(in_str_pathPeriodTxnsJson))]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(File.ReadAllText(in_Config("PathPeriodTxnsJson").ToString))]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_99">
@@ -158,7 +154,7 @@
               <OutArgument x:TypeArguments="x:Int32">[int_calcMaxBatchSize]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">[Math.Max(400, Math.Min(1200, CInt(Math.Round(in_int_countTotal / 75))))]</InArgument>
+              <InArgument x:TypeArguments="x:Int32">[Math.Max(750, Math.Min(1500, CInt(Math.Round(in_int_countTotal / 75))))]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_94">
@@ -247,18 +243,16 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Queue - Upload Batch - Invoke Workflow File (Workflows\Queue - Upload Batch.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Queue - Upload Batch.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Queue - Upload Batch - Invoke Workflow File (Workflows\Util Workflows\Queue - Upload Batch.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Queue - Upload Batch.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_currentBatchIds">[list_currentBatchIds]</InArgument>
                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_currentBatch">[dt_currentBatch]</InOutArgument>
                       <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countSuccess">[io_int_countSuccess]</InOutArgument>
                       <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countFailed">[io_int_countFailed]</InOutArgument>
                       <InArgument x:TypeArguments="x:Int32" x:Key="in_int_currentBatchIndex">[int_currentBatchIndex]</InArgument>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="in_int_maxUploadRetry">[in_int_maxUploadRetry]</InArgument>
                       <InArgument x:TypeArguments="x:Int32" x:Key="in_int_calcBatches">[int_calcBatches]</InArgument>
                       <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InOutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_pathPeriodTxnsJson">[in_str_pathPeriodTxnsJson]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_queueMain">[in_str_queueMain]</InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
@@ -297,7 +291,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_str_pathPeriodTxnsJson]" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_14" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
+                        <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_14" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -343,18 +337,16 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Queue - Upload Batch - Invoke Workflow File (Workflows\Queue - Upload Batch.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Queue - Upload Batch.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Queue - Upload Batch - Invoke Workflow File (Workflows\Util Workflows\Queue - Upload Batch.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Queue - Upload Batch.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_currentBatchIds">[list_currentBatchIds]</InArgument>
               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_currentBatch">[dt_currentBatch]</InOutArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countSuccess">[io_int_countSuccess]</InOutArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countFailed">[io_int_countFailed]</InOutArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_int_currentBatchIndex">[int_currentBatchIndex]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_maxUploadRetry">[in_int_maxUploadRetry]</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_int_calcBatches">[int_calcBatches]</InArgument>
               <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InOutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_pathPeriodTxnsJson">[in_str_pathPeriodTxnsJson]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_queueMain">[in_str_queueMain]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
@@ -393,7 +385,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_str_pathPeriodTxnsJson]" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_11" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
+                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_11" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -426,7 +418,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_str_pathPeriodTxnsJson]" sap:VirtualizedContainerService.HintSize="548.8,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_10" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="548.8,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_10" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

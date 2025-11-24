@@ -5,11 +5,9 @@
     <x:Property Name="io_int_countSuccess" Type="InOutArgument(x:Int32)" />
     <x:Property Name="io_int_countFailed" Type="InOutArgument(x:Int32)" />
     <x:Property Name="in_int_currentBatchIndex" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_int_maxUploadRetry" Type="InArgument(x:Int32)" />
     <x:Property Name="in_int_calcBatches" Type="InArgument(x:Int32)" />
     <x:Property Name="io_dict_txns" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_str_pathPeriodTxnsJson" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_queueMain" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -37,9 +35,6 @@
       <x:String>Newtonsoft.Json.Linq</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.IO</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,7 +103,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Queue___Upload_Batch" sap:VirtualizedContainerService.HintSize="860.0000000000001,2426.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Queue___Upload_Batch" sap:VirtualizedContainerService.HintSize="824.8000000000001,2426.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="int_currentBatchRetry" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txnsItem" />
@@ -119,14 +114,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xD;&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xD;&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_currentBatchIds">[in_list_currentBatchIds]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_currentBatch">[io_dt_currentBatch]</InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_filenamePeriodTxnsJson">[Path.GetFileName(in_str_pathPeriodTxnsJson)]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_filenamePeriodTxnsJson">[Path.GetFileName(in_Config("PathPeriodTxnsJson").ToString)]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not bool_currentBatchSuccess AndAlso int_currentBatchRetry &lt; in_int_maxUploadRetry]" DisplayName="While" sap:VirtualizedContainerService.HintSize="513.6,1584.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not bool_currentBatchSuccess AndAlso int_currentBatchRetry &lt; Cint(in_Config(&quot;MaxUploadRetry&quot;))]" DisplayName="While" sap:VirtualizedContainerService.HintSize="513.6,1584.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Text" sap:VirtualizedContainerService.HintSize="502.4,1454.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -150,7 +145,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BulkAddQueueItems TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Bulk Add Queue Items" sap:VirtualizedContainerService.HintSize="433.6,227.2" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_2" QueueItemsDataTable="[io_dt_currentBatch]" QueueName="[in_str_queueMain]" />
+                <ui:BulkAddQueueItems TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Bulk Add Queue Items" sap:VirtualizedContainerService.HintSize="433.6,227.2" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_2" QueueItemsDataTable="[io_dt_currentBatch]" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" />
                 <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_9">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[bool_currentBatchSuccess]</OutArgument>
@@ -173,7 +168,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[int_currentBatchRetry &lt; in_int_maxUploadRetry]" sap:VirtualizedContainerService.HintSize="433.6,580.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[int_currentBatchRetry &lt; Cint(in_Config(&quot;MaxUploadRetry&quot;))]" sap:VirtualizedContainerService.HintSize="433.6,580.8" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
@@ -181,7 +176,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[String.Format(&quot;Batch {0}/{1} failed =&gt; retrying ({2}/{3}) ...&quot;,&#xD;&#xA;                 in_int_currentBatchIndex + 1,&#xD;&#xA;                 in_int_calcBatches,&#xD;&#xA;                 int_currentBatchRetry + 1,&#xD;&#xA;                 in_int_maxUploadRetry)]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[String.Format(&quot;Batch {0}/{1} failed =&gt; retrying ({2}/{3}) ...&quot;,&#xA;                 in_int_currentBatchIndex + 1,&#xA;                 in_int_calcBatches,&#xA;                 int_currentBatchRetry + 1,&#xA;                 in_Config(&quot;MaxUploadRetry&quot;).ToString)]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -191,7 +186,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[String.Format(&quot;Batch {0}/{1} failed =&gt; moving to next batch. Message: {2}&quot;,&#xD;&#xA;                 in_int_currentBatchIndex + 1,&#xD;&#xA;                 in_int_calcBatches,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9; exception.Message)]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[String.Format(&quot;Batch {0}/{1} failed =&gt; moving to next batch. Message: {2}&quot;,&#xA;                 in_int_currentBatchIndex + 1,&#xA;                 in_int_calcBatches,&#xA;&#x9;&#x9;&#x9;&#x9; exception.Message)]" />
                         </Sequence>
                       </If.Else>
                     </If>
@@ -274,6 +269,6 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="513.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Format(&quot;Uploaded batch {0}/{1}=&gt; {2} items {3} after {4} attempt(s)&quot;,&#xA;              in_int_currentBatchIndex + 1,&#xA;              in_int_calcBatches,&#xA;              io_dt_currentBatch.Rows.Count,&#xA;              If(bool_currentBatchSuccess, &quot;successfully&quot;, &quot;failed&quot;),&#xA;              int_currentBatchRetry)]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="513.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Format(&quot;Uploaded batch {0}/{1} =&gt; {2} items {3} after {4} attempt(s)&quot;,&#xA;              in_int_currentBatchIndex + 1,&#xA;              in_int_calcBatches,&#xA;              io_dt_currentBatch.Rows.Count,&#xA;              If(bool_currentBatchSuccess, &quot;successfully&quot;, &quot;failed&quot;),&#xA;              int_currentBatchRetry)]" />
   </Sequence>
 </Activity>

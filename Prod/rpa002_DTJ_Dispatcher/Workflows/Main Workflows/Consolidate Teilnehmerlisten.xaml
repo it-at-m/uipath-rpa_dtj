@@ -2,11 +2,7 @@
   <x:Members>
     <x:Property Name="io_int_countTotal" Type="InOutArgument(x:Int32)" />
     <x:Property Name="in_jss_jsonSettings" Type="InArgument(nj:JsonSerializerSettings)" />
-    <x:Property Name="in_str_period" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_pathTemplatesFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_pathTeilnehmerlistenFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_pathPeriodArchivFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_pathPeriodTxnsJson" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -36,8 +32,6 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,7 +105,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Consolidate_Teilnehmerlisten" sap:VirtualizedContainerService.HintSize="860.0000000000001,2375.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Consolidate_Teilnehmerlisten" sap:VirtualizedContainerService.HintSize="824.8000000000001,2201.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dict_map" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txnsItemTpl" />
@@ -129,18 +123,18 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Consolidating all data from 'Teilnehmerlisten'  into transactions ...&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="550.4,336.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="550.4,336.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dict_map]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[JsonConvert.DeserializeObject(Of Dictionary(Of String,String))(File.ReadAllText(Path.Combine(in_str_pathTemplatesFolder, "mapping.json")))]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[JsonConvert.DeserializeObject(Of Dictionary(Of String,String))(File.ReadAllText(Path.Combine(in_Config("PathTemplatesFolder").ToString, "mapping.json")))]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dict_txns]</OutArgument>
             </ui:AssignOperation.To>
@@ -148,7 +142,7 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(Of String, Object)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[list_mapKeys]</OutArgument>
             </ui:AssignOperation.To>
@@ -156,7 +150,7 @@
               <InArgument x:TypeArguments="scg:List(x:String)">[dict_map.Keys.ToList()]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[list_mapValues]</OutArgument>
             </ui:AssignOperation.To>
@@ -164,15 +158,15 @@
               <InArgument x:TypeArguments="scg:List(x:String)">[dict_map.Values.ToList()]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dict_txnsItemTpl]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String,Object))(File.ReadAllText(Path.Combine(in_str_pathTemplatesFolder, "txns_item_tpl.json")))]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String,Object))(File.ReadAllText(Path.Combine(in_Config("PathTemplatesFolder").ToString, "txns_item_tpl.json")))]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[list_txnsItemTplKeys]</OutArgument>
             </ui:AssignOperation.To>
@@ -180,7 +174,7 @@
               <InArgument x:TypeArguments="scg:List(x:String)">[dict_txnsItemTpl.Keys.ToList()]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[list_txnsItemTplValues]</OutArgument>
             </ui:AssignOperation.To>
@@ -191,7 +185,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.xlsx" Folder="[in_str_pathTeilnehmerlistenFolder]" sap:VirtualizedContainerService.HintSize="550.4,1675.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.xlsx" Folder="[in_Config(&quot;PathTeilnehmerlistenFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="550.4,1667.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -232,9 +226,9 @@
               </ui:ExcelApplicationScope.Body>
             </ui:ExcelApplicationScope>
             <ui:ReadRange AddHeaders="True" DataTable="[dt_rawTL]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="483.2,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A3" SheetName="[str_currentTLSheet]" WorkbookPath="[file_currentTL.FullName]" />
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Vorbereitungen&#xD;&#xA;Dim int_tlTplKeysCount As Integer = in_list_tITplKeys.Count&#xD;&#xA;Dim int_mapKeysCount As Integer = in_list_mapKeys.Count&#xD;&#xA;io_dict_txns.EnsureCapacity(io_dict_txns.Count + in_dt_rawTL.Rows.Count)&#xD;&#xA;&#xD;&#xA;' Schleife über alle Zeilen der aktuellen Teilnehmerliste&#xD;&#xA;For Each drow_rawTL As DataRow In in_dt_rawTL.Rows&#x9;&#xD;&#xA;    ' Item vorbereiten: Kopie von Template&#xD;&#xA;    Dim dict_newRow As New Dictionary(Of String, String)(int_tlTplKeysCount)&#xD;&#xA;    For i As Integer = 0 To int_tlTplKeysCount - 1&#xD;&#xA;        dict_newRow(in_list_tITplKeys(i)) = in_list_tITplValues(i)&#xD;&#xA;    Next&#xD;&#xA;&#x9;' Item vorbereiten: Id und Status anlegen&#xD;&#xA;&#x9;Dim str_id As String = Guid.NewGuid().ToString()&#xD;&#xA;&#x9;dict_newRow(&quot;Status&quot;) = &quot;Neu&quot;&#xD;&#xA;&#x9;&#xD;&#xA;    ' Item richtige Werte von aktuellen Teilnehmerliste übergeben&#xD;&#xA;    For i As Integer = 0 To int_mapKeysCount - 1&#xD;&#xA;        Dim str_transCol As String = in_list_mapKeys(i)&#xD;&#xA;        Dim str_rawCol As String = in_list_mapValues(i)&#xD;&#xA;        Dim str_value As String = &quot;&quot;&#xD;&#xA;&#xD;&#xA;        If in_dt_rawTL.Columns.Contains(str_rawCol) Then&#xD;&#xA;            If drow_rawTL(str_rawCol) IsNot Nothing AndAlso Not Convert.IsDBNull(drow_rawTL(str_rawCol)) Then&#xD;&#xA;                str_value = Convert.ToString(drow_rawTL(str_rawCol), Globalization.CultureInfo.InvariantCulture).Trim()&#xD;&#xA;            End If&#xD;&#xA;        End If&#xD;&#xA;        dict_newRow(str_transCol) = str_value&#xD;&#xA;    Next&#xD;&#xA;&#xD;&#xA;    ' In Dictionary speichern&#xD;&#xA;    io_dict_txns(str_id) = dict_newRow&#xD;&#xA;&#x9;io_int_countTotal += 1&#xD;&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="483.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Vorbereitungen&#xA;Dim int_tlTplKeysCount As Integer = in_list_tITplKeys.Count&#xA;Dim int_mapKeysCount As Integer = in_list_mapKeys.Count&#xA;io_dict_txns.EnsureCapacity(io_dict_txns.Count + in_dt_rawTL.Rows.Count)&#xA;&#xA;' Schleife über alle Zeilen der aktuellen Teilnehmerliste&#xA;For Each drow_rawTL As DataRow In in_dt_rawTL.Rows&#x9;&#xA;    ' Item vorbereiten: Kopie von Template&#xA;    Dim dict_newRow As New Dictionary(Of String, String)(int_tlTplKeysCount)&#xA;    For i As Integer = 0 To int_tlTplKeysCount - 1&#xA;        dict_newRow(in_list_tITplKeys(i)) = in_list_tITplValues(i)&#xA;    Next&#xA;&#x9;' Item vorbereiten: Id und Status anlegen&#xA;&#x9;Dim str_id As String = Guid.NewGuid().ToString()&#xA;&#x9;dict_newRow(&quot;Status&quot;) = &quot;Neu&quot;&#xA;&#x9;&#xA;    ' Item richtige Werte von aktuellen Teilnehmerliste übergeben&#xA;    For i As Integer = 0 To int_mapKeysCount - 1&#xA;        Dim str_transCol As String = in_list_mapKeys(i)&#xA;        Dim str_rawCol As String = in_list_mapValues(i)&#xA;        Dim str_value As String = &quot;&quot;&#xA;&#xA;        If in_dt_rawTL.Columns.Contains(str_rawCol) Then&#xA;            If drow_rawTL(str_rawCol) IsNot Nothing AndAlso Not Convert.IsDBNull(drow_rawTL(str_rawCol)) Then&#xA;                str_value = Convert.ToString(drow_rawTL(str_rawCol), Globalization.CultureInfo.InvariantCulture).Trim()&#xA;            End If&#xA;        End If&#xA;        dict_newRow(str_transCol) = str_value&#xA;    Next&#xA;&#xA;    ' In Dictionary speichern&#xA;    io_dict_txns(str_id) = dict_newRow&#xA;&#x9;io_int_countTotal += 1&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="483.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
               <ui:InvokeCode.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InArgument>
+                <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InOutArgument>
                 <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_rawTL">[dt_rawTL]</InArgument>
                 <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_tITplKeys">[list_txnsItemTplKeys]</InArgument>
                 <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_tITplValues">[list_txnsItemTplValues]</InArgument>
@@ -243,9 +237,9 @@
                 <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countTotal">[io_int_countTotal]</InOutArgument>
               </ui:InvokeCode.Arguments>
             </ui:InvokeCode>
-            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_str_pathPeriodTxnsJson]" sap:VirtualizedContainerService.HintSize="483.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]" />
-            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(in_str_pathPeriodArchivFolder, &quot;extracted_&quot; &amp; Path.GetFileNameWithoutExtension(file_currentTL.FullName) &amp; &quot;.xlsx&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="483.2,192" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True" Path="[file_currentTL.FullName]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Moved '&quot; &amp; file_currentTL.Name.ToString &amp; &quot;' to '&quot; &amp; in_str_pathPeriodArchivFolder &amp; &quot;'.&quot;]">
+            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="483.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[JsonConvert.SerializeObject(dict_txns, in_jss_jsonSettings)]" />
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(in_Config(&quot;PathPeriodArchivFolder&quot;).ToString, &quot;extracted_&quot; &amp; Path.GetFileNameWithoutExtension(file_currentTL.FullName) &amp; &quot;.xlsx&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="483.2,192" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True" Path="[file_currentTL.FullName]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Moved '&quot; &amp; file_currentTL.Name.ToString &amp; &quot;' to '&quot; &amp; in_Config(&quot;PathPeriodArchivFolder&quot;).ToString &amp; &quot;'.&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -257,6 +251,5 @@
         </ActivityAction>
       </ui:ForEachFileX.Body>
     </ui:ForEachFileX>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Created new transactions count: &quot; &amp; io_int_countTotal]" />
   </Sequence>
 </Activity>

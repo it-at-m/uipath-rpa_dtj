@@ -12,164 +12,39 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "sw_watch&Sequence_1",
-        "str_duration&Sequence_1",
-        "str_emailRecipient&Sequence_1",
-        "str_pathMainFolder&Sequence_1",
-        "str_formatPeriod&Sequence_1",
-        "str_period&Sequence_1",
-        "str_pathTeilnehmerlistenFolder&Sequence_1",
-        "str_pathTemplatesFolder&Sequence_1",
-        "jss_jsonSettings&Sequence_1",
-        "str_pathPeriodFolder&Sequence_1",
-        "int_countTotal&Sequence_1",
-        "int_countSuccess&Sequence_1",
-        "int_countFailed&Sequence_1",
-        "int_countSkipped&Sequence_1",
-        "str_pathPeriodTxnsJson&Sequence_1",
-        "str_pathPeriodReportXlsx&Sequence_1",
-        "str_pathPeriodArchivFolder&Sequence_1",
-        "str_queueMain&Sequence_1",
-        "dt_reportHeader&Sequence_1"
+        "SystemException&StateMachine_1",
+        "Config&StateMachine_1",
+        "uie_sapWnd&StateMachine_1",
+        "dict_txns&StateMachine_1",
+        "sw_watch&StateMachine_1",
+        "jss_jsonSettings&StateMachine_1",
+        "dt_reportHeader&StateMachine_1",
+        "int_countFailed&StateMachine_1",
+        "int_countSkipped&StateMachine_1",
+        "int_countSuccess&StateMachine_1",
+        "int_countTotal&StateMachine_1",
+        "str_duration&StateMachine_1",
+        "bool_existsAlreadyPeriodFolder&StateMachine_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "Workflows/Consolidate Teilnehmerlisten.xaml",
+      "Path": "Framework/InitAllSettings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dict_txns&Sequence_1",
-        "list_txnsItemTplValues&Sequence_1",
-        "list_txnsItemTplKeys&Sequence_1",
-        "dict_txnsItemTpl&Sequence_1",
-        "list_mapValues&Sequence_1",
-        "list_mapKeys&Sequence_1",
-        "dict_map&Sequence_1",
-        "dt_rawTL&Sequence_1",
-        "str_currentTLSheet&Sequence_1"
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_str_pathPeriodTxnsJson",
-        "in_str_pathPeriodArchivFolder",
-        "in_str_pathTeilnehmerlistenFolder",
-        "in_str_pathTemplatesFolder",
-        "in_str_period",
-        "in_jss_jsonSettings",
-        "io_int_countTotal"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Prepare Period Folder.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config",
+        "out_jss_jsonSettings",
         "out_dt_reportHeader",
-        "in_str_pathTemplatesFolder",
-        "out_str_pathPeriodReportXlsx",
-        "out_str_pathPeriodTxnsJson",
-        "out_str_pathPeriodArchivFolder",
-        "out_str_pathPeriodFolder",
-        "in_str_pathMainFolder",
-        "in_str_period"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Email - Send Email.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_emailSenderEmail&Sequence_1",
-        "str_emailSenderPassword&Sequence_1",
-        "int_emailSmtpPort&Sequence_1",
-        "str_emailSmtpServer&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_list_attachments",
-        "in_str_body",
-        "in_str_recipient",
-        "in_str_subject"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Queue - Upload Batch.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dict_txnsItem&Sequence_1",
-        "bool_currentBatchSuccess&Sequence_1",
-        "int_currentBatchRetry&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_str_queueMain",
-        "in_str_pathPeriodTxnsJson",
-        "io_dict_txns",
-        "in_int_calcBatches",
-        "in_int_maxUploadRetry",
-        "in_int_currentBatchIndex",
-        "io_int_countFailed",
-        "io_int_countSuccess",
-        "io_dt_currentBatch",
-        "in_list_currentBatchIds"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Upload Transactions To Queue.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dict_txns&Sequence_1",
-        "dict_txnsItem&Sequence_1",
-        "dt_currentBatch&Sequence_1",
-        "list_currentBatchIds&Sequence_1",
-        "int_currentBatchIndex&Sequence_1",
-        "bool_shouldSave&Sequence_1",
-        "int_calcBatches&Sequence_1",
-        "int_calcMaxBatchSize&Sequence_1",
-        "int_calcWriteIntervals&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_str_queueMain",
-        "in_str_pathPeriodTxnsJson",
-        "io_int_countSuccess",
-        "io_int_countFailed",
-        "io_int_countSkipped",
-        "in_int_countTotal",
-        "in_int_maxUploadRetry",
-        "in_jss_jsonSettings"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "../../../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Calculator Automation.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "winFolder&Sequence_1",
-        "resultValue&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Workflows/Finalize Failed Transactions To Report.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_toAppendingRows&Sequence_1",
-        "dict_txnsItem&Sequence_1",
-        "dict_txns&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_dt_reportHeader",
-        "in_str_pathPeriodReportXlsx",
-        "in_str_pathPeriodTxnsJson"
+        "out_bool_existsAlreadyPeriodFolder"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
