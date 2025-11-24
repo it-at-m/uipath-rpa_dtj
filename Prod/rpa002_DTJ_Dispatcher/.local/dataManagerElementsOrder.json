@@ -14,8 +14,6 @@
       "VariablesSectionElementsOrder": [
         "SystemException&StateMachine_1",
         "Config&StateMachine_1",
-        "uie_sapWnd&StateMachine_1",
-        "dict_txns&StateMachine_1",
         "sw_watch&StateMachine_1",
         "jss_jsonSettings&StateMachine_1",
         "dt_reportHeader&StateMachine_1",
@@ -45,6 +43,184 @@
         "out_jss_jsonSettings",
         "out_dt_reportHeader",
         "out_bool_existsAlreadyPeriodFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Main Workflows/Prepare Period Folder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_jss_jsonSettings",
+        "io_int_countSuccess",
+        "io_int_countFailed",
+        "io_int_countSkipped",
+        "in_int_countTotal",
+        "out_dt_reportHeader",
+        "in_Config",
+        "out_bool_existsAlreadyPeriodFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Main Workflows/Finalize Failed Transactions To Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict_txns&Sequence_1",
+        "dict_txnsItem&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_reportHeader",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/File Workflows/Excel - Append Transaction To Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_toAppendingRows&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jss_jsonSettings",
+        "io_int_countTotal",
+        "io_int_countFailed",
+        "io_int_countSkipped",
+        "io_int_countSuccess",
+        "in_dict_txnsItem",
+        "in_Config",
+        "in_dt_reportHeader",
+        "in_str_txnsItemKey"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_jss_jsonSettings",
+        "io_int_countTotal",
+        "io_int_countFailed",
+        "io_int_countSkipped",
+        "io_int_countSuccess",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Main Workflows/Consolidate Teilnehmerlisten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict_map&Sequence_1",
+        "dict_txnsItemTpl&Sequence_1",
+        "str_currentTLSheet&Sequence_1",
+        "dt_rawTL&Sequence_1",
+        "list_txnsItemTplKeys&Sequence_1",
+        "list_txnsItemTplValues&Sequence_1",
+        "dict_txns&Sequence_1",
+        "list_mapKeys&Sequence_1",
+        "list_mapValues&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_int_countTotal",
+        "in_jss_jsonSettings"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Main Workflows/Upload Transactions To Queue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_currentBatchIds",
+        "io_dt_currentBatch",
+        "in_int_currentBatchIndex",
+        "in_int_calcBatches",
+        "io_dict_txns",
+        "in_jss_jsonSettings",
+        "io_int_countSuccess",
+        "io_int_countFailed",
+        "io_int_countSkipped",
+        "in_int_countTotal",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Main Workflows/Queue - Upload Batch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_currentBatchRetry&Sequence_1",
+        "dict_txnsItem&Sequence_1",
+        "bool_currentBatchSuccess&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jss_jsonSettings",
+        "io_int_countTotal",
+        "io_int_countSkipped",
+        "io_int_countSuccess",
+        "io_int_countFailed",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Email Workflows/Email - Send Email.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_emailSenderEmail&Sequence_1",
+        "str_emailSenderPassword&Sequence_1",
+        "int_emailSmtpPort&Sequence_1",
+        "str_emailSmtpServer&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_attachments",
+        "in_str_body",
+        "in_str_recipient",
+        "in_str_subject",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
