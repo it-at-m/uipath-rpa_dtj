@@ -5,6 +5,7 @@
     <x:Property Name="in_str_recipient" Type="InArgument(x:String)" />
     <x:Property Name="in_str_subject" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_str_senderEmail" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -93,37 +94,37 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email___Send_Email" sap:VirtualizedContainerService.HintSize="824.8000000000001,1356" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email___Send_Email" sap:VirtualizedContainerService.HintSize="860.0000000000001,1356" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_emailSenderEmail" />
-      <Variable x:TypeArguments="ss:SecureString" Name="str_emailSenderPassword" />
-      <Variable x:TypeArguments="x:Int32" Name="int_emailSmtpPort" />
-      <Variable x:TypeArguments="x:String" Name="str_emailSmtpServer" />
+      <Variable x:TypeArguments="x:String" Name="str_smptLoginUser" />
+      <Variable x:TypeArguments="ss:SecureString" Name="secstr_emailLoginPassword" />
+      <Variable x:TypeArguments="x:String" Name="str_senderNameFinal" />
+      <Variable x:TypeArguments="x:String" Name="str_senderEmailFinal" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Start Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sending Email ...&quot;]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;por_Account_Robot&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[str_emailSenderPassword]" Username="[str_emailSenderEmail]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sending email ...&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;por_Account_Robot&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_emailLoginPassword]" Username="[str_smptLoginUser]" />
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">[int_emailSmtpPort]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_senderNameFinal]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">[Cint(in_Config("EmailSmtpPort").ToString)]</InArgument>
+              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(in_str_senderEmail), str_smptLoginUser, in_str_senderEmail.Trim.Split("@"c)(0))]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_emailSmtpServer]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_senderEmailFinal]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_Config("EmailSmtpServer").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(in_str_senderEmail), str_smptLoginUser &amp; "@muenchen.de", in_str_senderEmail.Trim)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -137,7 +138,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Files="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[in_list_attachments]" Body="[in_str_body]" DisplayName="Send SMTP Mail Message" Email="[str_emailSenderEmail]" EnableSSL="True" From="[str_emailSenderEmail &amp; &quot;@muenchen.de&quot;]" sap:VirtualizedContainerService.HintSize="382.4,269.6" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="[str_emailSenderEmail]" Port="[int_emailSmtpPort]" SecureConnection="StartTlsWhenAvailable" SecurePassword="[str_emailSenderPassword]" Server="[str_emailSmtpServer]" Subject="[in_str_subject]" To="[in_str_recipient]">
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Files="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[in_list_attachments]" Body="[in_str_body]" DisplayName="Send SMTP Mail Message" Email="[str_smptLoginUser]" EnableSSL="True" From="[str_senderEmailFinal]" sap:VirtualizedContainerService.HintSize="382.4,269.6" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="[str_senderNameFinal]" Port="[Cint(in_Config(&quot;EmailSmtpPort&quot;).ToString)]" SecureConnection="StartTlsWhenAvailable" SecurePassword="[secstr_emailLoginPassword]" Server="[in_Config(&quot;EmailSmtpServer&quot;).ToString]" Subject="[in_str_subject]" To="[in_str_recipient]">
             <ui:SendMail.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
                 <usau:BackupSlot.BackupValues>

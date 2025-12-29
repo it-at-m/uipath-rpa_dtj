@@ -1,7 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:nj="clr-namespace:Newtonsoft.Json;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_jss_jsonSettings" Type="InArgument(nj:JsonSerializerSettings)" />
     <x:Property Name="io_int_countTotal" Type="InOutArgument(x:Int32)" />
     <x:Property Name="io_int_countFailed" Type="InOutArgument(x:Int32)" />
     <x:Property Name="io_int_countSkipped" Type="InOutArgument(x:Int32)" />
@@ -27,6 +26,9 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,36 +110,43 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="824.8000000000001,843.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="860.0000000000001,1049.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_results" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,820" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,1026.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="416,464" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="416,670.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Consolidate Teilnehmerlisten - Invoke Workflow File (Workflows\Main Workflows\Consolidate Teilnehmerlisten.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Consolidate Teilnehmerlisten.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract Teilnehmerlisten Results - Invoke Workflow File (Workflows\Main Workflows\Extract Teilnehmerlisten Results.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Extract Teilnehmerlisten Results.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countTotal">[io_int_countTotal]</InOutArgument>
-              <InArgument x:TypeArguments="nj:JsonSerializerSettings" x:Key="in_jss_jsonSettings">[in_jss_jsonSettings]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_results">[dt_results]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload Transactions To Queue - Invoke Workflow File (Workflows\Main Workflows\Upload Transactions To Queue.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Upload Transactions To Queue.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Json - Serialize Results - Invoke Workflow File (Workflows\File Workflows\Json - Serialize Results.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Workflows\File Workflows\Json - Serialize Results.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="nj:JsonSerializerSettings" x:Key="in_jss_jsonSettings">[in_jss_jsonSettings]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_results">[dt_results]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Prepare And Upload Transactions To Batches - Invoke Workflow File (Workflows\Main Workflows\Prepare And Upload Transactions To Batches.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\Prepare And Upload Transactions To Batches.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countSuccess">[io_int_countSuccess]</InOutArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countFailed">[io_int_countFailed]</InOutArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countSkipped">[io_int_countSkipped]</InOutArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_countTotal">[io_int_countTotal]</InArgument>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              <InOutArgument x:TypeArguments="x:Int32" x:Key="io_int_countTotal">[io_int_countTotal]</InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>

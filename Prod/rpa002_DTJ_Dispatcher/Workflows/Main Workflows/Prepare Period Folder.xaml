@@ -1,6 +1,5 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Prepare_Period_Folder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Prepare_Period_Folder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_dt_reportHeader" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="out_bool_existsAlreadyPeriodFolder" Type="OutArgument(x:Boolean)" />
   </x:Members>
@@ -23,12 +22,6 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.ComponentModel</x:String>
-      <x:String>System.Xml.Serialization</x:String>
-      <x:String>UiPath.Excel</x:String>
-      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,7 +93,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Prepare_Period_Folder" sap:VirtualizedContainerService.HintSize="824.8000000000001,1280.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Prepare_Period_Folder" sap:VirtualizedContainerService.HintSize="860.0000000000001,1160.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,9 +108,9 @@
         <InArgument x:TypeArguments="x:Boolean">[Directory.Exists(in_Config("PathPeriodFolder").ToString)]</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not out_bool_existsAlreadyPeriodFolder]" sap:VirtualizedContainerService.HintSize="433.6,969.6" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Not out_bool_existsAlreadyPeriodFolder]" sap:VirtualizedContainerService.HintSize="433.6,849.6" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,750.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,630.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,8 +119,7 @@
           <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="382.4,112.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[in_Config(&quot;PathPeriodFolder&quot;).ToString]" />
           <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="382.4,112.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_6" Path="[in_Config(&quot;PathPeriodArchivFolder&quot;).ToString]" />
           <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[Path.GetFileName(in_Config(&quot;PathPeriodTxnsJson&quot;).ToString)]" Path="[in_Config(&quot;PathPeriodFolder&quot;).ToString]" />
-          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_Config(&quot;PathPeriodReportXlsx&quot;).ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="382.4,187.2" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[Path.Combine(in_Config(&quot;PathTemplatesFolder&quot;).ToString, &quot;report_tpl.xlsx&quot;)]" />
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[out_dt_reportHeader]" DisplayName="Read Range Header" sap:VirtualizedContainerService.HintSize="382.4,111.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" SheetName="Report" WorkbookPath="[Path.Combine(in_Config(&quot;PathTemplatesFolder&quot;).ToString, &quot;report_tpl.xlsx&quot;)]" />
+          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_Config(&quot;PathPeriodReportXlsx&quot;).ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="382.4,178.4" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[Path.Combine(in_Config(&quot;PathTemplatesFolder&quot;).ToString, &quot;report_tpl.xlsx&quot;)]" />
         </Sequence>
       </If.Then>
       <If.Else>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Queue___Upload_Batch" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Upload_Batch_To_Queue" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_list_currentBatchIds" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="io_dt_currentBatch" Type="InOutArgument(sd:DataTable)" />
@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap2010:WorkflowViewState.IdRef>Queue___Upload_Batch_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.IdRef>Upload_Batch_To_Queue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -103,7 +103,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Queue___Upload_Batch" sap:VirtualizedContainerService.HintSize="824.8000000000001,2426.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Uploads the given batch with transactions to the queue and persist item back into in-memory." DisplayName="Upload_Batch_To_Queue" sap:VirtualizedContainerService.HintSize="860.0000000000001,2519.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="int_currentBatchRetry" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txnsItem" />
@@ -112,14 +112,20 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Maps items into DataTable for queue" Code="For Each str_currentBatchId As String In in_list_currentBatchIds&#xA;    io_dt_currentBatch.Rows.Add(str_currentBatchId, in_str_filenamePeriodTxnsJson)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="513.6,228" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_currentBatchIds">[in_list_currentBatchIds]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_currentBatch">[io_dt_currentBatch]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_filenamePeriodTxnsJson">[Path.GetFileName(in_Config("PathPeriodTxnsJson").ToString)]</InArgument>
       </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
     <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not bool_currentBatchSuccess AndAlso int_currentBatchRetry &lt; Cint(in_Config(&quot;MaxUploadRetry&quot;))]" DisplayName="While" sap:VirtualizedContainerService.HintSize="513.6,1584.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
@@ -207,19 +213,19 @@
         </Sequence>
       </ui:InterruptibleWhile.Body>
     </ui:InterruptibleWhile>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each str_currentBatchId" sap:VirtualizedContainerService.HintSize="513.6,456" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_list_currentBatchIds]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each str_currentBatchId" sap:VirtualizedContainerService.HintSize="513.6,486.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_list_currentBatchIds]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="str_currentBatchId" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="512,325.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="512,356" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,265.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,242.39999999999998" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -230,7 +236,7 @@
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[CType(io_dict_txns(str_currentBatchId), JObject).ToObject(Of Dictionary(Of String, Object))()]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                  <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_11">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:Object">[dict_txnsItem("Status")]</OutArgument>
                     </ui:AssignOperation.To>

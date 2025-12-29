@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Json___Serialize_Results" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_dt_results" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Json___Serialize_Results_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Json___Serialize_Results" sap:VirtualizedContainerService.HintSize="860.0000000000001,932.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txns" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dict_map" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="list_mapKeys" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="list_mapValues" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txnsItemTpl" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="list_txnsItemTplKeys" />
+      <Variable x:TypeArguments="scg:List(x:Object)" Name="list_txnsItemTplValues" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Serializing all results into json as transactions ...&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,336.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dict_map]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[JsonConvert.DeserializeObject(Of Dictionary(Of String, String))(File.ReadAllText(Path.Combine(in_Config("PathTemplatesFolder").ToString, "mapping.json")), CType(in_Config("JsonSerializerSettings"), JsonSerializerSettings))]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dict_txns]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(Of String, Object)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[list_mapKeys]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[dict_map.Keys.ToList()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[list_mapValues]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[dict_map.Values.ToList()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dict_txnsItemTpl]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(File.ReadAllText(Path.Combine(in_Config("PathTemplatesFolder").ToString, "txns_item_tpl.json")), CType(in_Config("JsonSerializerSettings"), JsonSerializerSettings))]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[list_txnsItemTplKeys]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[dict_txnsItemTpl.Keys.ToList()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:Object)">[list_txnsItemTplValues]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:Object)">[dict_txnsItemTpl.Values.ToList()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Prepares and maps results into correct transaction items." Code="Dim int_txnsItemTplKeysCount As Integer = in_list_txnsItemTplKeys.Count&#xA;Dim int_mapKeysCount As Integer = in_list_mapKeys.Count&#xA;' Reserve space to avoid rehashing while adding many items&#xA;io_dict_txns.EnsureCapacity(io_dict_txns.Count + in_dt_results.Rows.Count)&#xA;&#xA;' Build transaction item from each result row&#xA;For Each drow_rawResult As DataRow In in_dt_results.Rows&#x9;&#xA;    ' Init item from template defaults&#xA;    Dim dict_newRow As New Dictionary(Of String, Object)(int_txnsItemTplKeysCount)&#xA;    For i As Integer = 0 To int_txnsItemTplKeysCount - 1&#xA;        dict_newRow(in_list_txnsItemTplKeys(i)) = in_list_txnsItemTplValues(i)&#xA;    Next&#xA;&#x9;&#xA;&#x9;' Generate unique id and set default data&#xA;&#x9;Dim str_id As String = Guid.NewGuid().ToString()&#xA;&#x9;dict_newRow(&quot;Status&quot;) = &quot;Neu&quot;&#xA;&#x9;&#xA;    ' Map values for item from the current data table&#xA;    For i As Integer = 0 To int_mapKeysCount - 1&#xA;        Dim str_transCol As String = in_list_mapKeys(i)&#xA;        Dim str_rawCol As String = in_list_mapValues(i)&#xA;        Dim str_value As String = &quot;&quot;&#xA;&#xA;&#x9;&#x9;' Read value only if column exists and value is not DBNull&#xA;        If in_dt_results.Columns.Contains(str_rawCol) Then&#xA;            If drow_rawResult(str_rawCol) IsNot Nothing AndAlso Not Convert.IsDBNull(drow_rawResult(str_rawCol)) Then&#xA;                str_value = Convert.ToString(drow_rawResult(str_rawCol), Globalization.CultureInfo.InvariantCulture).Trim&#xA;            End If&#xA;        End If&#xA;        dict_newRow(str_transCol) = str_value&#xA;    Next&#xA;&#xA;    ' Persist item in cache&#xA;    io_dict_txns(str_id) = dict_newRow&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.4,240.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InOutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_results">[in_dt_results]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_txnsItemTplKeys">[list_txnsItemTplKeys]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:Object)" x:Key="in_list_txnsItemTplValues">[list_txnsItemTplValues]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_mapKeys">[list_mapKeys]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_mapValues">[list_mapValues]</InArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[JsonConvert.SerializeObject(dict_txns, CType(in_Config(&quot;JsonSerializerSettings&quot;), JsonSerializerSettings))]" />
+  </Sequence>
+</Activity>
