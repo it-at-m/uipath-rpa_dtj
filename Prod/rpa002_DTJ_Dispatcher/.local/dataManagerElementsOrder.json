@@ -14,7 +14,7 @@
       "VariablesSectionElementsOrder": [
         "SystemException&StateMachine_1",
         "Config&StateMachine_1",
-        "sw_watch&StateMachine_1",
+        "sw_jobWatch&StateMachine_1",
         "int_countFailed&StateMachine_1",
         "int_countSkipped&StateMachine_1",
         "int_countSuccess&StateMachine_1",
@@ -45,12 +45,11 @@
     {
       "Path": "Workflows/Main Workflows/Prepare Period Folder.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_SettingsAndConstants&Sequence_5",
-        "dt_Assets&Sequence_6",
-        "AssetValue&Sequence_11"
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_bool_existsAlreadyPeriodFolder"
       ],
-      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },

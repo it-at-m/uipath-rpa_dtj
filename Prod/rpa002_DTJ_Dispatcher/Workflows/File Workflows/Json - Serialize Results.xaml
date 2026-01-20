@@ -24,6 +24,8 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>Newtonsoft.Json</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Data</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,7 +90,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Json___Serialize_Results" sap:VirtualizedContainerService.HintSize="860.0000000000001,932.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Json___Serialize_Results" sap:VirtualizedContainerService.HintSize="876.0000000000001,932.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict_txns" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dict_map" />
@@ -166,7 +168,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Prepares and maps results into correct transaction items." Code="Dim int_txnsItemTplKeysCount As Integer = in_list_txnsItemTplKeys.Count&#xA;Dim int_mapKeysCount As Integer = in_list_mapKeys.Count&#xA;' Reserve space to avoid rehashing while adding many items&#xA;io_dict_txns.EnsureCapacity(io_dict_txns.Count + in_dt_results.Rows.Count)&#xA;&#xA;' Build transaction item from each result row&#xA;For Each drow_rawResult As DataRow In in_dt_results.Rows&#x9;&#xA;    ' Init item from template defaults&#xA;    Dim dict_newRow As New Dictionary(Of String, Object)(int_txnsItemTplKeysCount)&#xA;    For i As Integer = 0 To int_txnsItemTplKeysCount - 1&#xA;        dict_newRow(in_list_txnsItemTplKeys(i)) = in_list_txnsItemTplValues(i)&#xA;    Next&#xA;&#x9;&#xA;&#x9;' Generate unique id and set default data&#xA;&#x9;Dim str_id As String = Guid.NewGuid().ToString()&#xA;&#x9;dict_newRow(&quot;Status&quot;) = &quot;Neu&quot;&#xA;&#x9;&#xA;    ' Map values for item from the current data table&#xA;    For i As Integer = 0 To int_mapKeysCount - 1&#xA;        Dim str_transCol As String = in_list_mapKeys(i)&#xA;        Dim str_rawCol As String = in_list_mapValues(i)&#xA;        Dim str_value As String = &quot;&quot;&#xA;&#xA;&#x9;&#x9;' Read value only if column exists and value is not DBNull&#xA;        If in_dt_results.Columns.Contains(str_rawCol) Then&#xA;            If drow_rawResult(str_rawCol) IsNot Nothing AndAlso Not Convert.IsDBNull(drow_rawResult(str_rawCol)) Then&#xA;                str_value = Convert.ToString(drow_rawResult(str_rawCol), Globalization.CultureInfo.InvariantCulture).Trim&#xA;            End If&#xA;        End If&#xA;        dict_newRow(str_transCol) = str_value&#xA;    Next&#xA;&#xA;    ' Persist item in cache&#xA;    io_dict_txns(str_id) = dict_newRow&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.4,240.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode sap2010:Annotation.AnnotationText="Prepares and maps results into correct transaction items." Code="Dim int_txnsItemTplKeysCount As Integer = in_list_txnsItemTplKeys.Count&#xA;Dim int_mapKeysCount As Integer = in_list_mapKeys.Count&#xA;' Reserve space to avoid rehashing while adding many items&#xA;io_dict_txns.EnsureCapacity(io_dict_txns.Count + in_dt_results.Rows.Count)&#xA;&#xA;' Build transaction item from each result row&#xA;For Each drow_rawResult As DataRow In in_dt_results.Rows&#x9;&#xA;    ' Init item from template defaults&#xA;    Dim dict_newRow As New Dictionary(Of String, Object)(int_txnsItemTplKeysCount)&#xA;    For i As Integer = 0 To int_txnsItemTplKeysCount - 1&#xA;        dict_newRow(in_list_txnsItemTplKeys(i)) = in_list_txnsItemTplValues(i)&#xA;    Next&#xA;&#x9;&#xA;&#x9;' Generate unique id and set default data&#xA;&#x9;Dim str_id As String = Guid.NewGuid().ToString()&#xA;&#x9;dict_newRow(&quot;Status&quot;) = &quot;Neu&quot;&#xA;&#x9;&#xA;    ' Map values for item from the current data table&#xA;    For i As Integer = 0 To int_mapKeysCount - 1&#xA;        Dim str_transCol As String = in_list_mapKeys(i)&#xA;        Dim str_rawCol As String = in_list_mapValues(i)&#xA;        Dim str_value As String = &quot;&quot;&#xA;&#xA;&#x9;&#x9;' Read value only if column exists and value is not DBNull&#xA;        If in_dt_results.Columns.Contains(str_rawCol) Then&#xA;            If drow_rawResult(str_rawCol) IsNot Nothing AndAlso Not Convert.IsDBNull(drow_rawResult(str_rawCol)) Then&#xA;                str_value = Convert.ToString(drow_rawResult(str_rawCol), Globalization.CultureInfo.InvariantCulture).Trim&#xA;            End If&#xA;        End If&#xA;        dict_newRow(str_transCol) = str_value&#xA;    Next&#xA;&#xA;    ' Persist item in cache&#xA;    io_dict_txns(str_id) = dict_newRow&#xA;Next" ContinueOnError="{x:Null}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.4,240.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txns">[dict_txns]</InOutArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_results">[in_dt_results]</InArgument>
@@ -181,6 +183,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[JsonConvert.SerializeObject(dict_txns, CType(in_Config(&quot;JsonSerializerSettings&quot;), JsonSerializerSettings))]" />
+    <ui:WriteTextFile ContinueOnError="{x:Null}" DisplayName="Write Text File" Encoding="{x:Null}" File="{x:Null}" FileName="[in_Config(&quot;PathPeriodTxnsJson&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[JsonConvert.SerializeObject(dict_txns, CType(in_Config(&quot;JsonSerializerSettings&quot;), JsonSerializerSettings))]" />
   </Sequence>
 </Activity>
