@@ -1,7 +1,7 @@
 {
   "name": "rpa002_DTJ_Performer",
   "projectId": "7f749e1c-307e-4ab2-9fe9-aca6c9f0f841",
-  "description": "Robotic Enterprise Framework",
+  "description": "Performer des DTJs. für das Prod-System finale. Der Performer hat folgende Aufgabe:\r\n- Holen der Items aus der Queue\r\n- Bearbeitet die Items nach Vorlage des PDDs\r\n- Legt die bearbeiteten Items in den Report ab\r\n- Versendet E-Mails",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.24.3]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.1.0.19",
+  "projectVersion": "1.1.0.26",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

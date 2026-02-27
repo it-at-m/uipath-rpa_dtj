@@ -1,7 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Json___Update_Transactions_Statistics" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_dict_txns" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_dict_statistics" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_bool_shouldSumDuration" Type="InArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -22,15 +22,9 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>Newtonsoft.Json.Linq</x:String>
       <x:String>UiPath.Core</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>Newtonsoft.Json</x:String>
-      <x:String>System.Dynamic</x:String>
-      <x:String>System.ComponentModel</x:String>
-      <x:String>System.Collections.Specialized</x:String>
-      <x:String>System.Numerics</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,19 +82,34 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Json___Update_Transactions_Statistics" sap:VirtualizedContainerService.HintSize="841.6,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Json___Update_Transactions_Statistics" sap:VirtualizedContainerService.HintSize="892.8000000000001,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim dict_refTxns As New List(Of Dictionary(Of String, Object))&#xD;&#xA;&#xD;&#xA;For Each kvp In in_dict_txns&#xD;&#xA;    Dim val = kvp.Value&#xD;&#xA;    If TypeOf val Is JObject Then&#xD;&#xA;        dict_refTxns.Add(CType(val, JObject).ToObject(Of Dictionary(Of String, Object))())&#xD;&#xA;    ElseIf TypeOf val Is Dictionary(Of String, Object) Then&#xD;&#xA;        dict_refTxns.Add(DirectCast(val, Dictionary(Of String, Object)))&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;io_Config(&quot;CountTotal&quot;) = dict_refTxns.Count&#xD;&#xA;io_Config(&quot;CountSkipped&quot;) = dict_refTxns.Where(Function(v) v.ContainsKey(&quot;Status&quot;) AndAlso {&quot;Neu&quot;, &quot;Nicht Hochgeladen&quot;}.Contains(v(&quot;Status&quot;).ToString)).Count()&#xD;&#xA;io_Config(&quot;CountToProcess&quot;)  = dict_refTxns.Where(Function(v) v.ContainsKey(&quot;Status&quot;) AndAlso v(&quot;Status&quot;).ToString = &quot;Hochgeladen&quot;).Count()&#xD;&#xA;io_Config(&quot;CountSuccess&quot;)= dict_refTxns.Where(Function(v) v.ContainsKey(&quot;Status&quot;) AndAlso v(&quot;Status&quot;).ToString = &quot;Erfolgreich&quot;).Count()&#xD;&#xA;io_Config(&quot;CountBE&quot;) = dict_refTxns.Where(Function(v) v.ContainsKey(&quot;Status&quot;) AndAlso v(&quot;Status&quot;).ToString = &quot;Ausgesteuert&quot;).Count()&#xD;&#xA;io_Config(&quot;CountSE&quot;) = dict_refTxns.Where(Function(v) v.ContainsKey(&quot;Status&quot;) AndAlso v(&quot;Status&quot;).ToString = &quot;Systemfehler&quot;).Count()&#xD;&#xA;&#xD;&#xA;If in_bool_shouldSumDuration Then&#xD;&#xA;    Dim ts_totalDuration As New TimeSpan(0)&#xD;&#xA;    For Each dict_refTxnsItem As Dictionary(Of String, Object) In dict_refTxns&#xD;&#xA;        If dict_refTxnsItem.ContainsKey(&quot;Dauer&quot;) AndAlso dict_refTxnsItem(&quot;Dauer&quot;) IsNot Nothing Then&#xD;&#xA;            Dim str_refTxnsItemDuration As String = dict_refTxnsItem(&quot;Dauer&quot;).ToString.Trim&#xD;&#xA;            If str_refTxnsItemDuration &lt;&gt; &quot;&quot; Then&#xD;&#xA;                Dim ts As TimeSpan&#xD;&#xA;                If TimeSpan.TryParse(str_refTxnsItemDuration, ts) Then&#xD;&#xA;                    ts_totalDuration = ts_totalDuration.Add(ts)&#xD;&#xA;                End If&#xD;&#xA;            End If&#xD;&#xA;        End If&#xD;&#xA;    Next&#xD;&#xA;&#x9;io_Config(&quot;SumDuration&quot;) =  ts_totalDuration.ToString(&quot;hh\:mm\:ss&quot;)&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating Transactions Statistics ...&quot;]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Normalize to List(Of Dictionary)&#xD;&#xA;Dim dict_refTxns As New List(Of Dictionary(Of String, Object))&#xD;&#xA;For Each kvp In in_dict_txns&#xD;&#xA;    Dim val = kvp.Value&#xD;&#xA;    If TypeOf val Is JObject Then&#xD;&#xA;        dict_refTxns.Add(DirectCast(val, JObject).ToObject(Of Dictionary(Of String, Object))())&#xD;&#xA;    ElseIf TypeOf val Is Dictionary(Of String, Object) Then&#xD;&#xA;        dict_refTxns.Add(DirectCast(val, Dictionary(Of String, Object)))&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;Dim int_countSkipped, int_countOpen, int_countSuccess, int_countBE, int_countSE, int_countSendReminder As Integer&#xD;&#xA;Dim dbl_sumTotalDurationSeconds As Double = 0.0R&#xD;&#xA;&#xD;&#xA;For Each dict_txnsItem In dict_refTxns&#xD;&#xA;    ' Get Status&#xD;&#xA;    Dim str_status As String = If(dict_txnsItem.ContainsKey(&quot;Status&quot;) AndAlso dict_txnsItem(&quot;Status&quot;) IsNot Nothing, dict_txnsItem(&quot;Status&quot;).ToString, Nothing)&#xD;&#xA;&#xD;&#xA;&#x9; ' Count Status&#xD;&#xA;    Select Case str_status&#xD;&#xA;        Case &quot;Neu&quot;, &quot;Nicht Hochgeladen&quot;: int_countSkipped += 1&#xD;&#xA;        Case &quot;Hochgeladen&quot;: int_countOpen += 1&#xD;&#xA;        Case &quot;Erfolgreich&quot;: int_countSuccess += 1&#xD;&#xA;        Case &quot;Ausgesteuert&quot;: int_countBE += 1&#xD;&#xA;        Case &quot;Systemfehler&quot;: int_countSE += 1&#xD;&#xA;    End Select&#xD;&#xA;&#x9;&#xD;&#xA;&#x9; ' Sum Duration if should&#xD;&#xA;&#x9;If in_bool_shouldSumDuration AndAlso dict_txnsItem.ContainsKey(&quot;Dauer&quot;) AndAlso dict_txnsItem(&quot;Dauer&quot;) IsNot Nothing Then&#xD;&#xA;    &#x9;dbl_sumTotalDurationSeconds += Convert.ToDouble(dict_txnsItem(&quot;Dauer&quot;))&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;' Output&#xD;&#xA;io_dict_statistics(&quot;CountTotal&quot;) = dict_refTxns.Count&#xD;&#xA;io_dict_statistics(&quot;CountTotalProcessed&quot;) = dict_refTxns.Count - (int_countOpen + int_countSkipped)&#xD;&#xA;io_dict_statistics(&quot;SumTotalDurationSeconds&quot;) = dbl_sumTotalDurationSeconds&#xD;&#xA;io_dict_statistics(&quot;CountSkipped&quot;) = int_countSkipped&#xD;&#xA;io_dict_statistics(&quot;CountOpen&quot;) = int_countOpen&#xD;&#xA;io_dict_statistics(&quot;CountSuccess&quot;) = int_countSuccess&#xD;&#xA;io_dict_statistics(&quot;CountBE&quot;) = int_countBE&#xD;&#xA;io_dict_statistics(&quot;CountSE&quot;) = int_countSE" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[io_Config]</InOutArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txns">[in_dict_txns]</InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_shouldSumDuration">[in_bool_shouldSumDuration]</InArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_statistics">
+          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_dict_statistics" />
+        </InOutArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txns">
+          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_dict_txns" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_shouldSumDuration">
+          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_bool_shouldSumDuration" />
+        </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
   </Sequence>

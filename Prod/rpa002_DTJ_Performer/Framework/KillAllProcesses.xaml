@@ -10,17 +10,13 @@
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
-      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,34 +82,34 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Use the Kill Process activity to force the termination of the Windows processes representing applications used in the business process being automated.&#xA;Note that killing processes might have undesirable outcomes, such as losing unsaved changes to files." DisplayName="Kill All Processes" sap:VirtualizedContainerService.HintSize="876.8000000000001,913.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Use the Kill Process activity to force the termination of the Windows processes representing applications used in the business process being automated.&#xA;Note that killing processes might have undesirable outcomes, such as losing unsaved changes to files." DisplayName="Kill All Processes" sap:VirtualizedContainerService.HintSize="860.0000000000001,913.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Kill processes)" sap:VirtualizedContainerService.HintSize="452.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Killing all excel and sap processes ...&quot;]" />
-    <ui:ForEach x:TypeArguments="sd:Process" CurrentIndex="{x:Null}" DisplayName="For Each currentProcess" sap:VirtualizedContainerService.HintSize="452.8,672" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Process.GetProcesses().Where(Function(x) x.ProcessName.ToLowerInvariant Like &quot;*sap*&quot; Or x.ProcessName.ToLowerInvariant Like &quot;*excel*&quot;)]">
+    <ui:ForEach x:TypeArguments="sd:Process" CurrentIndex="{x:Null}" DisplayName="For Each currentProcess" sap:VirtualizedContainerService.HintSize="452.8,846.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Process.GetProcesses().Where(Function(x) x.ProcessName.ToLowerInvariant Like &quot;*sap*&quot; Or x.ProcessName.ToLowerInvariant Like &quot;*excel*&quot;)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sd:Process">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:Process" Name="currentProcess" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="451.2,550.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="451.2,724.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,490.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,664.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
               <TryCatch.Try>
-                <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="416,217.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="416,392" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Killing process: &quot; &amp; currentProcess.ProcessName]" />
                   <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" ProcessName="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="KillProcess_4" Process="[currentProcess]" />
                 </Sequence>
               </TryCatch.Try>

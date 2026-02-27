@@ -7,6 +7,7 @@
     <x:Property Name="in_str_abonumber" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="io_str_finalBemerkung" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_str_productCode" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -43,6 +44,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,7 +112,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_7___Maintain_Person_In_IT40" sap:VirtualizedContainerService.HintSize="824.8000000000001,5720.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_7___Maintain_Person_In_IT40" sap:VirtualizedContainerService.HintSize="856.0000000000001,5605.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_leihgaben" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_searchFound" />
@@ -130,13 +133,13 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_str_mainMenuDetails">[in_Config("SapMainMenu").toString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="712,4367.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="3e28ea97-2347-4c65-a2be-795a52428067" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="712,4368.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="3e28ea97-2347-4c65-a2be-795a52428067" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="678.4,4198.4" sap2010:WorkflowViewState.IdRef="Sequence_39">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="678.4,4200" sap2010:WorkflowViewState.IdRef="Sequence_39">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,12 +150,12 @@
                 <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_uie_sapWnd">[io_uie_sapWnd]</InOutArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_personalnumber">[in_str_personalnumber]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_infotype">Leihgaben</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_subtype">94</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_subtype">[in_str_productCode]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_str_sapStatusMessage" />
                 <OutArgument x:TypeArguments="x:Boolean" x:Key="out_bool_searchFound">[bool_searchFound]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <If Condition="[Not bool_searchFound]" sap:VirtualizedContainerService.HintSize="644.8,395.2" sap2010:WorkflowViewState.IdRef="If_15">
+            <If Condition="[Not bool_searchFound]" sap:VirtualizedContainerService.HintSize="644.8,336.8" sap2010:WorkflowViewState.IdRef="If_15">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_40">
                   <sap:WorkflowViewStateService.ViewState>
@@ -164,7 +167,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -190,9 +193,9 @@
               </uix:NClick.VerifyOptions>
             </uix:NClick>
             <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="title" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="644.8,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" InUiElement="[io_uie_sapWnd]" Result="[str_currentMenuTitle]" Version="V3" />
-            <If Condition="[str_currentMenuTitle.ToLowerInvariant.Contains(&quot;leihgaben liste&quot;)]" DisplayName="If on &quot;Leihgaben Liste&quot;-Menu" sap:VirtualizedContainerService.HintSize="644.8,3089.6" sap2010:WorkflowViewState.IdRef="If_16">
+            <If Condition="[str_currentMenuTitle.ToLowerInvariant.Contains(&quot;leihgaben liste&quot;)]" DisplayName="If on &quot;Leihgaben Liste&quot;-Menu" sap:VirtualizedContainerService.HintSize="644.8,3149.6" sap2010:WorkflowViewState.IdRef="If_16">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="643.2,2617.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="643.2,2677.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,35 +210,35 @@
                       </uix:TargetAnchorable>
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <If Condition="[dt_leihgaben IsNot Nothing AndAlso dt_leihgaben.Rows.Count &gt; 0]" DisplayName="If any entry exists" sap:VirtualizedContainerService.HintSize="609.6,2368" sap2010:WorkflowViewState.IdRef="If_17">
+                  <If Condition="[dt_leihgaben IsNot Nothing AndAlso dt_leihgaben.Rows.Count &gt; 0]" DisplayName="If any entry exists" sap:VirtualizedContainerService.HintSize="609.6,2428" sap2010:WorkflowViewState.IdRef="If_17">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1897.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1957.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_rowIndex]" DataTable="[dt_leihgaben]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574.4,1837.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_rowIndex]" DataTable="[dt_leihgaben]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574.4,1897.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="dtrow_currentLeihgabe" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Text" sap:VirtualizedContainerService.HintSize="572.8,1664.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                              <Sequence DisplayName="Text" sap:VirtualizedContainerService.HintSize="572.8,1724.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[dtrow_currentLeihgabe(&quot;Art der Leihgabe&quot;).ToString = &quot;94&quot;]" sap:VirtualizedContainerService.HintSize="539.2,1604.8" sap2010:WorkflowViewState.IdRef="If_18">
+                                <If Condition="[dtrow_currentLeihgabe(&quot;Art der Leihgabe&quot;).ToString = in_str_productCode]" sap:VirtualizedContainerService.HintSize="539.2,1664.8" sap2010:WorkflowViewState.IdRef="If_18">
                                   <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="537.6,1450.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="537.6,1510.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[dtrow_currentLeihgabe(&quot;Leihgabennummer&quot;).ToString.Trim() = in_str_abonumber.Trim() AndAlso&#xA;DateTime.ParseExact(in_str_startdate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Beginn&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) AndAlso&#xA;(&#xA;    (String.IsNullOrEmpty(in_str_enddate.Trim) AndAlso DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = New DateTime(9999, 12, 31)) OrElse&#xA;    (Not String.IsNullOrEmpty(in_str_enddate.Trim) AndAlso DateTime.ParseExact(in_str_enddate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)))&#xA;)]" DisplayName="If exactly the same leihgabe" sap:VirtualizedContainerService.HintSize="504,336.8" sap2010:WorkflowViewState.IdRef="If_20">
+                                      <If Condition="[dtrow_currentLeihgabe(&quot;Leihgabennummer&quot;).ToString.Trim = in_str_abonumber.Trim AndAlso&#xA;DateTime.ParseExact(in_str_startdate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Beginn&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) AndAlso&#xA;(&#xA;    (String.IsNullOrWhiteSpace(in_str_enddate.Trim) AndAlso DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = New DateTime(9999, 12, 31)) OrElse&#xA;    (Not String.IsNullOrWhiteSpace(in_str_enddate.Trim) AndAlso DateTime.ParseExact(in_str_enddate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) = DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)))&#xA;)]" DisplayName="If exactly the same leihgabe" sap:VirtualizedContainerService.HintSize="504,395.2" sap2010:WorkflowViewState.IdRef="If_20">
                                         <If.Then>
                                           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -247,7 +250,7 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -257,15 +260,15 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <If Condition="[DateTime.ParseExact(in_str_startdate.Trim(), &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) &gt; DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim(), &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;))]" DisplayName="If enddate sap before startdate excel " sap:VirtualizedContainerService.HintSize="504,1005.6" sap2010:WorkflowViewState.IdRef="If_19">
+                                      <If Condition="[DateTime.ParseExact(in_str_startdate.Trim(), &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) &gt; DateTime.ParseExact(dtrow_currentLeihgabe(&quot;Ende&quot;).ToString.Trim(), &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;))]" DisplayName="If enddate sap before startdate excel " sap:VirtualizedContainerService.HintSize="504,1007.2" sap2010:WorkflowViewState.IdRef="If_19">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502.4,339.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502.4,340.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log INFO Message" sap:VirtualizedContainerService.HintSize="468.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Leihgabe for this person is no longer active. Create new Leihgabe.&quot;]" />
+                                            <ui:LogMessage DisplayName="Log INFO Message" sap:VirtualizedContainerService.HintSize="468.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Leihgabe for this person is no longer active. Create new Leihgabe.&quot;]" />
                                             <Assign sap:VirtualizedContainerService.HintSize="468.8,104.8" sap2010:WorkflowViewState.IdRef="Assign_15">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:String">[str_action]</OutArgument>
@@ -283,7 +286,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <If Condition="[Not String.IsNullOrEmpty(in_str_enddate)]" DisplayName="If is a &quot;kündigung&quot;" sap:VirtualizedContainerService.HintSize="468.8,468" sap2010:WorkflowViewState.IdRef="If_21">
+                                            <If Condition="[Not String.IsNullOrWhiteSpace(in_str_enddate)]" DisplayName="If is a &quot;kündigung&quot;" sap:VirtualizedContainerService.HintSize="468.8,468" sap2010:WorkflowViewState.IdRef="If_21">
                                               <If.Then>
                                                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -382,7 +385,7 @@
         <uix:TargetApp Area="0, 0, 0, 0" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <If Condition="[Not String.IsNullOrEmpty(str_action) AndAlso str_action = &quot;create&quot;]" DisplayName="If should create" sap:VirtualizedContainerService.HintSize="712,479.2" sap2010:WorkflowViewState.IdRef="If_22">
+    <If Condition="[Not String.IsNullOrWhiteSpace(str_action) AndAlso str_action = &quot;create&quot;]" DisplayName="If should create" sap:VirtualizedContainerService.HintSize="712,420.8" sap2010:WorkflowViewState.IdRef="If_22">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,257.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
           <sap:WorkflowViewStateService.ViewState>
@@ -403,7 +406,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_57">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -413,7 +416,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not String.IsNullOrEmpty(str_action) AndAlso str_action = &quot;update&quot;]" DisplayName="If should update" sap:VirtualizedContainerService.HintSize="712,470.4" sap2010:WorkflowViewState.IdRef="If_23">
+    <If Condition="[Not String.IsNullOrWhiteSpace(str_action) AndAlso str_action = &quot;update&quot;]" DisplayName="If should update" sap:VirtualizedContainerService.HintSize="712,412" sap2010:WorkflowViewState.IdRef="If_23">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,257.6" sap2010:WorkflowViewState.IdRef="Sequence_58">
           <sap:WorkflowViewStateService.ViewState>
@@ -435,7 +438,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_59">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

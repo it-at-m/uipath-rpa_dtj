@@ -39,6 +39,7 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -115,7 +116,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_6_4___Matching_Data_With_Personalnumber___Lastname_Or_Birthdate" sap:VirtualizedContainerService.HintSize="824.8000000000001,3940.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_4___Matching_Data_With_Personalnumber___Lastname_Or_Birthdate" sap:VirtualizedContainerService.HintSize="796.0000000000001,1368.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_tempFirstnameSAP" />
       <Variable x:TypeArguments="x:String" Name="str_tempPersonalnumberSAP" />
@@ -129,14 +130,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Not io_str_personalnumber = &quot;00000000&quot;]" DisplayName="If valid personalnumber" sap:VirtualizedContainerService.HintSize="686.4,3917.6" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[Not io_str_personalnumber = &quot;00000000&quot;]" DisplayName="If valid personalnumber" sap:VirtualizedContainerService.HintSize="686.4,1345.6" sap2010:WorkflowViewState.IdRef="If_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="684.8,3562.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="684.8,990.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,7 +152,7 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_str_mainMenuDetails">[in_Config("SapMainMenu").toString]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser SAP" sap:VirtualizedContainerService.HintSize="651.2,3121.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="65106c46-c84e-470a-86bd-fc2dee9bca31" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser SAP" sap:VirtualizedContainerService.HintSize="651.2,549.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="65106c46-c84e-470a-86bd-fc2dee9bca31" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -162,13 +163,13 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="617.6,2961.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,349.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SAP - Search With Personal Data - Invoke Workflow File (Workflows\SAP Workflows\SAP - Search With Personal Data.xaml)" sap:VirtualizedContainerService.HintSize="584,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\SAP Workflows\SAP - Search With Personal Data.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SAP - Search With Personal Data - Invoke Workflow File (Workflows\SAP Workflows\SAP - Search With Personal Data.xaml)" sap:VirtualizedContainerService.HintSize="416,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\SAP Workflows\SAP - Search With Personal Data.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_uie_sapWnd">[io_uie_sapWnd]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_str_personalnumber">[io_str_personalnumber]</InArgument>
@@ -178,7 +179,7 @@
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_bool_searchFound">[bool_searchFound]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <If Condition="[bool_searchFound]" DisplayName="If found match for personalnumber" sap:VirtualizedContainerService.HintSize="584,2693.6" sap2010:WorkflowViewState.IdRef="If_9">
+                  <If Condition="[bool_searchFound]" DisplayName="If found match for personalnumber" sap:VirtualizedContainerService.HintSize="584,2668.8" sap2010:WorkflowViewState.IdRef="If_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -217,7 +218,7 @@
                             <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_uie_sapWnd">[io_uie_sapWnd]</InOutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="548.8,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
@@ -228,12 +229,12 @@
                                   <InArgument x:TypeArguments="x:String">[in_list_normalizedLastnames.FirstOrDefault(Function(str_nLn) str_nLn.Equals(str_tempLastnameSAP))]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                              <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_20">
                                 <ui:AssignOperation.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[io_bool_matchFound]</OutArgument>
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:Boolean">[Not String.IsNullOrEmpty(str_matchedLastname)]</InArgument>
+                                  <InArgument x:TypeArguments="x:Boolean">[Not String.IsNullOrWhiteSpace(str_matchedLastname)]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
                             </scg:List>

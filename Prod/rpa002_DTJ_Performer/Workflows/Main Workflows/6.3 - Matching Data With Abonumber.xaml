@@ -46,6 +46,7 @@
       <x:String>System.Security</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,7 +120,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_6_3___Matching_Data_With_Abonumber" sap:VirtualizedContainerService.HintSize="824.8000000000001,2736.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_3___Matching_Data_With_Abonumber" sap:VirtualizedContainerService.HintSize="865.6000000000001,2736.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_statusMessageSAP" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_searchResults" />
@@ -214,7 +215,7 @@
             </ucas:ReadStatusbar>
             <ui:UiElementExists DisplayName="Element Exists 'SAPGUI.GridVi...'" Exists="[bool_resultGridOpen]" sap:VirtualizedContainerService.HintSize="513.6,118.4" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5555206-9de5-47fa-b71e-104ad5bff917" Selector="&lt;sap id='usr/cntlGRID1/shellcont/shell' /&gt;" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5555206-9de5-47fa-b71e-104ad5bff917" Selector="&lt;sap id='usr/cntlGRID1/shellcont/shell' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
             <Assign sap:VirtualizedContainerService.HintSize="513.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -222,7 +223,7 @@
                 <OutArgument x:TypeArguments="x:Boolean">[io_bool_matchFound]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:Boolean">[bool_resultGridOpen AndAlso (String.IsNullOrEmpty(str_statusMessageSAP) OrElse Not str_statusMessageSAP.ToLowerInvariant.Contains("keine daten"))]</InArgument>
+                <InArgument x:TypeArguments="x:Boolean">[bool_resultGridOpen AndAlso (String.IsNullOrWhiteSpace(str_statusMessageSAP) OrElse Not str_statusMessageSAP.ToLowerInvariant.Contains("keine daten"))]</InArgument>
               </Assign.Value>
             </Assign>
             <If Condition="[io_bool_matchFound]" sap:VirtualizedContainerService.HintSize="513.6,873.6" sap2010:WorkflowViewState.IdRef="If_4">

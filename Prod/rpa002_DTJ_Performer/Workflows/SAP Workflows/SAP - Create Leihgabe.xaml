@@ -40,7 +40,6 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.Core.Activities.SAP</x:String>
-      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -179,7 +178,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'Gültigkeitse…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="987.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="f0166798-e04f-484c-8d59-6acf9a39b5ec" Text="[if(String.IsNullOrEmpty(in_str_enddate), &quot;31.12.9999&quot;, in_str_enddate)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'Gültigkeitse…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="987.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="f0166798-e04f-484c-8d59-6acf9a39b5ec" Text="[if(String.IsNullOrWhiteSpace(in_str_enddate), &quot;31.12.9999&quot;, in_str_enddate)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="725, 274, 109, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtP0040-ENDDA' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtP0040-ENDDA' /&gt;" Guid="2d9bd750-ad60-4f26-a1fa-e671f5c6742d" InformativeScreenshot="5f82f64658299a066ba6ee4c2cc4c52c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*Leihgaben anlegen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NTypeInto.Target>

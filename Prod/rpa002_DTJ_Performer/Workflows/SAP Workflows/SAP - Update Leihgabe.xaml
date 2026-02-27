@@ -42,7 +42,6 @@
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.Core.Activities.SAP</x:String>
-      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -105,7 +104,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP___Update_Leihgabe" sap:VirtualizedContainerService.HintSize="1054.4,5881.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SAP___Update_Leihgabe" sap:VirtualizedContainerService.HintSize="1054.4,5998.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_currentMenuTitle" />
       <Variable x:TypeArguments="x:String" Name="str_tempStartdate" />
@@ -120,13 +119,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log START" sap:VirtualizedContainerService.HintSize="1054.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating Leihgabe ...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1054.4,5684" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="f0166798-e04f-484c-8d59-6acf9a39b5ec" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1054.4,5800.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="f0166798-e04f-484c-8d59-6acf9a39b5ec" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1020.8,5524" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1020.8,5640.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -268,7 +267,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[DateTime.ParseExact(str_tempEnddate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) &lt;&gt; DateTime.ParseExact(in_str_enddate, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;))]" DisplayName="If not the same enddate" sap:VirtualizedContainerService.HintSize="987.2,614.4" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[DateTime.ParseExact(str_tempEnddate.Trim, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;)) &lt;&gt; DateTime.ParseExact(in_str_enddate, &quot;dd.MM.yyyy&quot;, Globalization.CultureInfo.GetCultureInfo(&quot;de-DE&quot;))]" DisplayName="If not the same enddate" sap:VirtualizedContainerService.HintSize="987.2,672.8" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,451.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -306,7 +305,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,83.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -316,7 +315,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[String.IsNullOrEmpty(str_tempAbonumber.Trim)]" DisplayName="If have not a abonumber" sap:VirtualizedContainerService.HintSize="987.2,614.4" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[String.IsNullOrWhiteSpace(str_tempAbonumber.Trim)]" DisplayName="If have not a abonumber" sap:VirtualizedContainerService.HintSize="987.2,672.8" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,451.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -354,7 +353,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,83.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
