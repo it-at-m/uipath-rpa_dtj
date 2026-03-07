@@ -38,6 +38,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,7 +110,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="876.0000000000001,2888.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="876.0000000000001,3771.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_sapUsername" />
       <Variable x:TypeArguments="x:String" Name="str_sapClient" />
@@ -118,15 +119,16 @@
       <Variable x:TypeArguments="x:String" Name="str_sapConnectionName" />
       <Variable x:TypeArguments="x:String" Name="str_sapSystemName" />
       <Variable x:TypeArguments="x:String" Name="str_currentMenuTitle" />
+      <Variable x:TypeArguments="x:String" Name="str_systemMessage" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting and login to SAP ...&quot;]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;rpa002_Account_SAP&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="520,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_sapPassword]" Username="[str_sapUsername]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="520,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting and login to SAP ...&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;rpa002_Account_SAP&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="560,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_sapPassword]" Username="[str_sapUsername]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="560,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -156,8 +158,8 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ucas:Logon Window="{x:Null}" ConnectionName="[str_sapConnectionName]" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="520,171.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" />
-    <ucas:Login Password="{x:Null}" Window="{x:Null}" Client="[str_sapClient]" DisplayName="SAP Login 'saplogon.exe *31(1)/000'" sap:VirtualizedContainerService.HintSize="520,401.6" sap2010:WorkflowViewState.IdRef="Login_4" IsSecure="True" Language="[str_sapLanguage]" MultiLogonOptionToChoose="Single" SecurePassword="[secstr_sapPassword]" Timeout="5000" Username="[str_sapUsername]">
+    <ucas:Logon Window="{x:Null}" ConnectionName="[str_sapConnectionName]" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="560,171.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" />
+    <ucas:Login Password="{x:Null}" Window="{x:Null}" Client="[str_sapClient]" DisplayName="SAP Login 'saplogon.exe *31(1)/000'" sap:VirtualizedContainerService.HintSize="560,401.6" sap2010:WorkflowViewState.IdRef="Login_4" IsSecure="True" Language="[str_sapLanguage]" MultiLogonOptionToChoose="Single" SecurePassword="[secstr_sapPassword]" Timeout="5000" Username="[str_sapUsername]">
       <ucas:Login.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88fbafb4-0df2-4146-971f-d02e9abec42b" InformativeScreenshot="7c8e90bfe6538838d40f969830e4d6a2" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*31(1)/000 SAP' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
@@ -166,24 +168,74 @@
         </ui:Target>
       </ucas:Login.Target>
     </ucas:Login>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP" sap:VirtualizedContainerService.HintSize="520,1731.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OutUiElement="[io_uie_sapWnd]" ScopeGuid="b17518df-1862-4c09-8f6e-8603823db618" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP" sap:VirtualizedContainerService.HintSize="560,2613.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OutUiElement="[io_uie_sapWnd]" ScopeGuid="b17518df-1862-4c09-8f6e-8603823db618" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="486.4,1416.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="526.4,2299.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="sapSysName" DisplayName="Get Attribute 'Menubar mbar'" sap:VirtualizedContainerService.HintSize="452.8,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[str_sapSystemName]" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Systemnachrichten'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,882.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="2" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,592" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Nachricht'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" TextString="[str_systemMessage]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1, 31, 658, 234" DesignTimeScaleFactor="1.25" ElementType="Container" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="0ddc9ed0-f78e-41fc-85f6-b066680459e8" InformativeScreenshot="4df484d271dc3eabc122773fcd94478f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='*Systemnachrichten*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Button Abbrechen (F12)'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="597, 276, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[12]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[12]' /&gt;" Guid="1d2f14e9-4d05-4744-8056-3da5e9d8760f" InformativeScreenshot="5e7ebe70db824aafcc0c124757f06bce.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='*Systemnachrichten*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <Throw Exception="[New SystemException(&quot;Dialog 'Systemnachrichten' wurde erkannt und geschlossen. Der Job wurde abgebrochen. Meldung: '&quot; &amp; If(String.IsNullOrWhiteSpace(str_systemMessage), &quot;&lt;kein Text&gt;&quot;, str_systemMessage.Trim) &amp; &quot;'.&quot;)]" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Ziel wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 660, 311" DesignTimeScaleFactor="1.25" Guid="e5c52c71-2444-4556-a0fe-c88eb751d52d" InformativeScreenshot="016f4ef242bd99fd5a682d72384620a6.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='*Systemnachrichten*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="sapSysName" DisplayName="Get Attribute 'Menubar mbar'" sap:VirtualizedContainerService.HintSize="492.8,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[str_sapSystemName]" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" Version="V3">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="54, 35, 1533, 18" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;sap id='mbar' /&gt;" FuzzySelectorArgument="&lt;sap id='mbar' /&gt;" Guid="11ce5a37-05e7-470d-a6d6-cf2305b51f39" InformativeScreenshot="59a00c458c72d5055c043571be1f087e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*SAP Easy Access*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <If Condition="[str_sapConnectionName.Split(&quot; &quot;c)(0) = str_sapSystemName]" sap:VirtualizedContainerService.HintSize="452.8,1115.2" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[str_sapConnectionName.Split(&quot; &quot;c)(0) = str_sapSystemName]" sap:VirtualizedContainerService.HintSize="492.8,1115.2" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="451.2,810.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
