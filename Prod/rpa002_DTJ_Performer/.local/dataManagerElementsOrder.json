@@ -482,6 +482,7 @@
       "Path": "Workflows/SAP Workflows/SAP - Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_systemMessage&Sequence_1",
         "str_sapUsername&Sequence_1",
         "str_sapClient&Sequence_1",
         "str_sapLanguage&Sequence_1",
