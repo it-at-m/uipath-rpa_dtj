@@ -45,9 +45,18 @@
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -56,61 +65,55 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Net.Primitives</AssemblyReference>
-      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
-      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
-      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
-      <AssemblyReference>System.Net.WebClient</AssemblyReference>
-      <AssemblyReference>System.Net.Requests</AssemblyReference>
-      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
-      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="876.0000000000001,3771.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="698,3936" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_sapUsername" />
       <Variable x:TypeArguments="x:String" Name="str_sapClient" />
@@ -168,21 +171,21 @@
         </ui:Target>
       </ucas:Login.Target>
     </ucas:Login>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP" sap:VirtualizedContainerService.HintSize="560,2613.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OutUiElement="[io_uie_sapWnd]" ScopeGuid="b17518df-1862-4c09-8f6e-8603823db618" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP" sap:VirtualizedContainerService.HintSize="560,2778.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OutUiElement="[io_uie_sapWnd]" ScopeGuid="b17518df-1862-4c09-8f6e-8603823db618" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="526.4,2299.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="526.4,2464" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Systemnachrichten'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,882.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="2" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Systemnachrichten'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,1048.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,592" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,798.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,6 +196,17 @@
                       <uix:TargetAnchorable DesignTimeRectangle="1, 31, 658, 234" DesignTimeScaleFactor="1.25" ElementType="Container" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="0ddc9ed0-f78e-41fc-85f6-b066680459e8" InformativeScreenshot="4df484d271dc3eabc122773fcd94478f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='*Systemnachrichten*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Webex - Send Message - Invoke Workflow File (Workflows\Webex Workflows\Webex - Send Message.xaml)" sap:VirtualizedContainerService.HintSize="416,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Webex Workflows\Webex - Send Message.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_WebexMessage" xml:space="preserve">["**RPA-Bot Rückfrage**" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+"In SAP wurde eine Systemnachricht erkannt." &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+"Es gab in SAP folgende Meldung:" &amp; Environment.NewLine &amp;
+"""" &amp; If(String.IsNullOrWhiteSpace(str_systemMessage), "&lt;kein Text&gt;", str_systemMessage.Trim) &amp; """" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+"Soll der Prozess dennoch ausgeführt werden?" &amp; Environment.NewLine &amp;
+"**Bitte mit Ja oder Nein antworten.**"]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
                   <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Button Abbrechen (F12)'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="597, 276, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[12]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[12]' /&gt;" Guid="1d2f14e9-4d05-4744-8056-3da5e9d8760f" InformativeScreenshot="5e7ebe70db824aafcc0c124757f06bce.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='*Systemnachrichten*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
@@ -229,6 +243,12 @@
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
             <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="sapSysName" DisplayName="Get Attribute 'Menubar mbar'" sap:VirtualizedContainerService.HintSize="492.8,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[str_sapSystemName]" ScopeIdentifier="b17518df-1862-4c09-8f6e-8603823db618" Version="V3">
               <uix:NGetAttributeGeneric.Target>
@@ -237,45 +257,45 @@
             </uix:NGetAttributeGeneric>
             <If Condition="[str_sapConnectionName.Split(&quot; &quot;c)(0) = str_sapSystemName]" sap:VirtualizedContainerService.HintSize="492.8,1115.2" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="451.2,810.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,810.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="title" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="417.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" InUiElement="[io_uie_sapWnd]" Result="[str_currentMenuTitle]" Version="V3" />
-                  <If Condition="[str_currentMenuTitle.ToLowerInvariant.Contains(in_Config(&quot;SapMainMenu&quot;).ToString.Split(&quot;|&quot;c, StringSplitOptions.None)(0).Trim.ToLowerInvariant)]" DisplayName="If on Main-Menu" sap:VirtualizedContainerService.HintSize="417.6,530.4" sap2010:WorkflowViewState.IdRef="If_4">
+                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="title" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="451.2,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" InUiElement="[io_uie_sapWnd]" Result="[str_currentMenuTitle]" Version="V3" />
+                  <If Condition="[str_currentMenuTitle.ToLowerInvariant.Contains(in_Config(&quot;SapMainMenu&quot;).ToString.Split(&quot;|&quot;c, StringSplitOptions.None)(0).Trim.ToLowerInvariant)]" DisplayName="If on Main-Menu" sap:VirtualizedContainerService.HintSize="451.2,530.4" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,227.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Successfully logged into SAP system: '&quot; &amp; str_sapConnectionName &amp; &quot;'.&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Successfully logged into SAP system: '&quot; &amp; str_sapConnectionName &amp; &quot;'.&quot;]" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw Exception="[New SystemException(&quot;Der Bot befindet sich nicht wie erwartet: 'Main'-Menu.&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                        <Throw Exception="[New SystemException(&quot;Der Bot befindet sich nicht wie erwartet: 'Main'-Menu.&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_4" />
                       </Sequence>
                     </If.Else>
                   </If>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="451.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,173.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[New SystemException(&quot;Falsches SAP-System. Erwartet: '&quot; &amp; str_sapConnectionName &amp; &quot;', erhalten: '&quot; &amp; str_sapSystemName &amp; &quot;'.&quot;)]" sap:VirtualizedContainerService.HintSize="417.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  <Throw Exception="[New SystemException(&quot;Falsches SAP-System. Erwartet: '&quot; &amp; str_sapConnectionName &amp; &quot;', erhalten: '&quot; &amp; str_sapSystemName &amp; &quot;'.&quot;)]" sap:VirtualizedContainerService.HintSize="451.2,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                 </Sequence>
               </If.Else>
             </If>

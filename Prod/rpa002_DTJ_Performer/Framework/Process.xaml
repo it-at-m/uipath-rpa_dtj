@@ -35,66 +35,67 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>rpa002_DTJ_Performer.Core</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
-      <AssemblyReference>rpa002_DTJ_Performer.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="860.0000000000001,4793.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -520,14 +521,10 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
-              <ui:InvokeCode ContinueOnError="{x:Null}" Code="If io_sw_txnWatch Is Nothing Then Return&#xD;&#xA;&#xD;&#xA;Try&#xD;&#xA;    If io_sw_txnWatch.IsRunning Then io_sw_txnWatch.Stop()&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;    Dim dbl_prevDuration As Double = Convert.ToDouble(io_dict_txnsItem(&quot;Dauer&quot;))&#xD;&#xA;&#x9;Dim dbl_currDuration As Double = io_sw_txnWatch.Elapsed.TotalSeconds&#xD;&#xA;&#x9;&#xD;&#xA;    io_dict_txnsItem(&quot;Dauer&quot;) = (dbl_prevDuration + dbl_currDuration)&#xD;&#xA;Catch&#xD;&#xA;    io_dict_txnsItem(&quot;Dauer&quot;) = 0R&#xD;&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="If io_sw_txnWatch Is Nothing Then Return&#xA;&#xA;Try&#xA;    If io_sw_txnWatch.IsRunning Then io_sw_txnWatch.Stop()&#xA;&#x9;&#x9;&#xA;    Dim dbl_prevDuration As Double = Convert.ToDouble(io_dict_txnsItem(&quot;Dauer&quot;))&#xA;&#x9;Dim dbl_currDuration As Double = io_sw_txnWatch.Elapsed.TotalSeconds&#xA;&#x9;&#xA;    io_dict_txnsItem(&quot;Dauer&quot;) = (dbl_prevDuration + dbl_currDuration)&#xA;Catch&#xA;    io_dict_txnsItem(&quot;Dauer&quot;) = 0R&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                 <ui:InvokeCode.Arguments>
-                  <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="io_sw_txnWatch">
-                    <VisualBasicReference x:TypeArguments="sd:Stopwatch" ExpressionText="io_sw_txnWatch" />
-                  </InOutArgument>
-                  <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txnsItem">
-                    <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_dict_txnsItem" />
-                  </InOutArgument>
+                  <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="io_sw_txnWatch">[io_sw_txnWatch]</InOutArgument>
+                  <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_txnsItem">[io_dict_txnsItem]</InOutArgument>
                 </ui:InvokeCode.Arguments>
               </ui:InvokeCode>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="Json - Persist Transaction In Txns And In-Memory - Invoke Workflow File (Workflows\File Workflows\Json - Persist Transaction In Txns And In-Memory.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Workflows\File Workflows\Json - Persist Transaction In Txns And In-Memory.xaml">

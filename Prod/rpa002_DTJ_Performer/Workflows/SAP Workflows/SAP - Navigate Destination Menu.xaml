@@ -38,11 +38,20 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -51,49 +60,41 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SAP___Navigate_Destination_Menu" sap:VirtualizedContainerService.HintSize="860.0000000000001,3601.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -113,24 +114,12 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim list_mainMenuTokens = in_str_mainMenuDetails.Split(&quot;|&quot;c, StringSplitOptions.None)&#xA;Dim list_destMenuTokens = in_str_destMenuDetails.Split(&quot;|&quot;c, StringSplitOptions.None)&#xA;&#xA;out_str_mainMenuTitle = list_mainMenuTokens(0).Trim.ToLowerInvariant&#xA;out_str_mainMenuCode = If(list_mainMenuTokens.Length &gt; 1, list_mainMenuTokens(1).Trim, &quot;&quot;)&#xA;&#xA;out_str_destMenuTitle = list_destMenuTokens(0).Trim.ToLowerInvariant&#xA;out_str_destMenuCode = If(list_destMenuTokens.Length &gt; 1, list_destMenuTokens(1).Trim, &quot;&quot;)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="616,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_str_destMenuTitle">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_destMenuTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_str_destMenuCode">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_destMenuCode" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_destMenuDetails">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_destMenuDetails" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_mainMenuDetails">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_mainMenuDetails" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_str_mainMenuTitle">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_mainMenuTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_str_mainMenuCode">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_mainMenuCode" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_str_destMenuTitle">[str_destMenuTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_str_destMenuCode">[str_destMenuCode]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_destMenuDetails">[in_str_destMenuDetails]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_mainMenuDetails">[in_str_mainMenuDetails]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_str_mainMenuTitle">[str_mainMenuTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_str_mainMenuCode">[str_mainMenuCode]</OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="616,3381.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_uie_sapWnd]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="682c037d-3813-436a-abe2-b0b432cce5ca" Version="V2">

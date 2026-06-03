@@ -1,0 +1,6 @@
+{
+  "Name": "rpa002_DTJ_Performer",
+  "ProjectType": "Process",
+  "Description": "Performer des DTJs. für das Prod-System finale. Der Performer hat folgende Aufgabe:\r\n- Holen der Items aus der Queue\r\n- Bearbeitet die Items nach Vorlage des PDDs\r\n- Legt die bearbeiteten Items in den Report ab\r\n- Versendet E-Mails",
+  "MainFile": "Main.xaml"
+}

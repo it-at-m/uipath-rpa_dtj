@@ -11,24 +11,7 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "TransactionItem&StateMachine_1",
-        "SystemException&StateMachine_1",
-        "BusinessException&StateMachine_1",
-        "TransactionNumber&StateMachine_1",
-        "Config&StateMachine_1",
-        "RetryNumber&StateMachine_1",
-        "TransactionID&StateMachine_1",
-        "ConsecutiveSystemExceptions&StateMachine_1",
-        "uie_sapWnd&StateMachine_1",
-        "dict_txns&StateMachine_1",
-        "sw_txnWatch&StateMachine_1",
-        "dict_txnsItem&StateMachine_1",
-        "sw_jobWatch&StateMachine_1",
-        "dict_statistics&StateMachine_1",
-        "ts_estimatedProcessingDuration&StateMachine_1",
-        "ShouldStop&Sequence_25"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -84,11 +67,7 @@
     {
       "Path": "Framework/InitAllSettings.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_SettingsAndConstants&Sequence_5",
-        "dt_Assets&Sequence_6",
-        "AssetValue&Sequence_11"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "out_dict_statistics",
         "in_ConfigFile",
@@ -481,16 +460,7 @@
     {
       "Path": "Workflows/SAP Workflows/SAP - Login.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_systemMessage&Sequence_1",
-        "str_sapUsername&Sequence_1",
-        "str_sapClient&Sequence_1",
-        "str_sapLanguage&Sequence_1",
-        "secstr_sapPassword&Sequence_1",
-        "str_sapConnectionName&Sequence_1",
-        "str_sapSystemName&Sequence_1",
-        "str_currentMenuTitle&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
         "io_uie_sapWnd"
@@ -555,6 +525,22 @@
         "in_dict_txns"
       ],
       "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Webex Workflows/Webex - Send Message.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Webex Workflows/Webex Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
   ]

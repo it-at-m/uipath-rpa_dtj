@@ -29,67 +29,68 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
-      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
-      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
-      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
-      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Json___Update_Transactions_Statistics" sap:VirtualizedContainerService.HintSize="892.8000000000001,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -99,17 +100,11 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating Transactions Statistics ...&quot;]" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Normalize to List(Of Dictionary)&#xD;&#xA;Dim dict_refTxns As New List(Of Dictionary(Of String, Object))&#xD;&#xA;For Each kvp In in_dict_txns&#xD;&#xA;    Dim val = kvp.Value&#xD;&#xA;    If TypeOf val Is JObject Then&#xD;&#xA;        dict_refTxns.Add(DirectCast(val, JObject).ToObject(Of Dictionary(Of String, Object))())&#xD;&#xA;    ElseIf TypeOf val Is Dictionary(Of String, Object) Then&#xD;&#xA;        dict_refTxns.Add(DirectCast(val, Dictionary(Of String, Object)))&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;Dim int_countSkipped, int_countOpen, int_countSuccess, int_countBE, int_countSE, int_countSendReminder As Integer&#xD;&#xA;Dim dbl_sumTotalDurationSeconds As Double = 0.0R&#xD;&#xA;&#xD;&#xA;For Each dict_txnsItem In dict_refTxns&#xD;&#xA;    ' Get Status&#xD;&#xA;    Dim str_status As String = If(dict_txnsItem.ContainsKey(&quot;Status&quot;) AndAlso dict_txnsItem(&quot;Status&quot;) IsNot Nothing, dict_txnsItem(&quot;Status&quot;).ToString, Nothing)&#xD;&#xA;&#xD;&#xA;&#x9; ' Count Status&#xD;&#xA;    Select Case str_status&#xD;&#xA;        Case &quot;Neu&quot;, &quot;Nicht Hochgeladen&quot;: int_countSkipped += 1&#xD;&#xA;        Case &quot;Hochgeladen&quot;: int_countOpen += 1&#xD;&#xA;        Case &quot;Erfolgreich&quot;: int_countSuccess += 1&#xD;&#xA;        Case &quot;Ausgesteuert&quot;: int_countBE += 1&#xD;&#xA;        Case &quot;Systemfehler&quot;: int_countSE += 1&#xD;&#xA;    End Select&#xD;&#xA;&#x9;&#xD;&#xA;&#x9; ' Sum Duration if should&#xD;&#xA;&#x9;If in_bool_shouldSumDuration AndAlso dict_txnsItem.ContainsKey(&quot;Dauer&quot;) AndAlso dict_txnsItem(&quot;Dauer&quot;) IsNot Nothing Then&#xD;&#xA;    &#x9;dbl_sumTotalDurationSeconds += Convert.ToDouble(dict_txnsItem(&quot;Dauer&quot;))&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;' Output&#xD;&#xA;io_dict_statistics(&quot;CountTotal&quot;) = dict_refTxns.Count&#xD;&#xA;io_dict_statistics(&quot;CountTotalProcessed&quot;) = dict_refTxns.Count - (int_countOpen + int_countSkipped)&#xD;&#xA;io_dict_statistics(&quot;SumTotalDurationSeconds&quot;) = dbl_sumTotalDurationSeconds&#xD;&#xA;io_dict_statistics(&quot;CountSkipped&quot;) = int_countSkipped&#xD;&#xA;io_dict_statistics(&quot;CountOpen&quot;) = int_countOpen&#xD;&#xA;io_dict_statistics(&quot;CountSuccess&quot;) = int_countSuccess&#xD;&#xA;io_dict_statistics(&quot;CountBE&quot;) = int_countBE&#xD;&#xA;io_dict_statistics(&quot;CountSE&quot;) = int_countSE" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Normalize to List(Of Dictionary)&#xA;Dim dict_refTxns As New List(Of Dictionary(Of String, Object))&#xA;For Each kvp In in_dict_txns&#xA;    Dim val = kvp.Value&#xA;    If TypeOf val Is JObject Then&#xA;        dict_refTxns.Add(DirectCast(val, JObject).ToObject(Of Dictionary(Of String, Object))())&#xA;    ElseIf TypeOf val Is Dictionary(Of String, Object) Then&#xA;        dict_refTxns.Add(DirectCast(val, Dictionary(Of String, Object)))&#xA;    End If&#xA;Next&#xA;&#xA;Dim int_countSkipped, int_countOpen, int_countSuccess, int_countBE, int_countSE, int_countSendReminder As Integer&#xA;Dim dbl_sumTotalDurationSeconds As Double = 0.0R&#xA;&#xA;For Each dict_txnsItem In dict_refTxns&#xA;    ' Get Status&#xA;    Dim str_status As String = If(dict_txnsItem.ContainsKey(&quot;Status&quot;) AndAlso dict_txnsItem(&quot;Status&quot;) IsNot Nothing, dict_txnsItem(&quot;Status&quot;).ToString, Nothing)&#xA;&#xA;&#x9; ' Count Status&#xA;    Select Case str_status&#xA;        Case &quot;Neu&quot;, &quot;Nicht Hochgeladen&quot;: int_countSkipped += 1&#xA;        Case &quot;Hochgeladen&quot;: int_countOpen += 1&#xA;        Case &quot;Erfolgreich&quot;: int_countSuccess += 1&#xA;        Case &quot;Ausgesteuert&quot;: int_countBE += 1&#xA;        Case &quot;Systemfehler&quot;: int_countSE += 1&#xA;    End Select&#xA;&#x9;&#xA;&#x9; ' Sum Duration if should&#xA;&#x9;If in_bool_shouldSumDuration AndAlso dict_txnsItem.ContainsKey(&quot;Dauer&quot;) AndAlso dict_txnsItem(&quot;Dauer&quot;) IsNot Nothing Then&#xA;    &#x9;dbl_sumTotalDurationSeconds += Convert.ToDouble(dict_txnsItem(&quot;Dauer&quot;))&#xA;&#x9;End If&#xA;&#x9;&#xA;Next&#xA;&#xA;' Output&#xA;io_dict_statistics(&quot;CountTotal&quot;) = dict_refTxns.Count&#xA;io_dict_statistics(&quot;CountTotalProcessed&quot;) = dict_refTxns.Count - (int_countOpen + int_countSkipped)&#xA;io_dict_statistics(&quot;SumTotalDurationSeconds&quot;) = dbl_sumTotalDurationSeconds&#xA;io_dict_statistics(&quot;CountSkipped&quot;) = int_countSkipped&#xA;io_dict_statistics(&quot;CountOpen&quot;) = int_countOpen&#xA;io_dict_statistics(&quot;CountSuccess&quot;) = int_countSuccess&#xA;io_dict_statistics(&quot;CountBE&quot;) = int_countBE&#xA;io_dict_statistics(&quot;CountSE&quot;) = int_countSE" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_statistics">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_dict_statistics" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txns">
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_dict_txns" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_shouldSumDuration">
-          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_bool_shouldSumDuration" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_statistics">[io_dict_statistics]</InOutArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_txns">[in_dict_txns]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_shouldSumDuration">[in_bool_shouldSumDuration]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
   </Sequence>

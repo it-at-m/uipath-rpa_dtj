@@ -27,11 +27,17 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -40,34 +46,29 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Normalize_Personalnumber" sap:VirtualizedContainerService.HintSize="812.8000000000001,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -76,7 +77,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Personalnummer normalisieren - Regeln:&#xD;&#xA;' - Nur Ziffern erlaubt&#xD;&#xA;' - Wenn leer oder ungültig -&gt; &quot;00000000&quot;&#xD;&#xA;' - Wenn länger als 8:&#xD;&#xA;'     - Ohne führende Null -&gt; ungültig&#xD;&#xA;'     - Mit führender Null -&gt; führende Nullen entfernen bis 8&#xD;&#xA;'     - Wenn danach immer noch &gt; 8 -&gt; ungültig&#xD;&#xA;' - Wenn kürzer -&gt; links mit Nullen auffüllen&#xD;&#xA;&#xD;&#xA;Dim str_tempPN As String = io_str_personalnumber?.Trim()&#xD;&#xA;&#xD;&#xA;' Prüfen auf Leerwert oder Whitespaces&#xD;&#xA;If String.IsNullOrWhiteSpace(str_tempPN) Then&#xD;&#xA;    io_str_personalnumber = &quot;00000000&quot;&#xD;&#xA;&#xD;&#xA;Else&#xD;&#xA;    ' Teil nach letztem &quot;/&quot; übernehmen&#xD;&#xA;    Dim int_index = str_tempPN.LastIndexOf(&quot;/&quot;c)&#xD;&#xA;    If int_index &gt;= 0 Then str_tempPN = str_tempPN.Substring(int_index + 1)&#xD;&#xA;&#xD;&#xA;    ' Nur Ziffern sind erlaubt&#xD;&#xA;    If Not System.Text.RegularExpressions.Regex.IsMatch(str_tempPN, &quot;^\d+$&quot;) Then&#xD;&#xA;        io_str_personalnumber = &quot;00000000&quot;&#xD;&#xA;&#xD;&#xA;    ' Wenn länger als 8 Zeichen&#xD;&#xA;    ElseIf str_tempPN.Length &gt; 8 Then&#xD;&#xA;        If Not str_tempPN.StartsWith(&quot;0&quot;c) Then&#xD;&#xA;            io_str_personalnumber = &quot;00000000&quot;&#xD;&#xA;        Else&#xD;&#xA;            ' Führende Nullen entfernen bis 8 Zeichen&#xD;&#xA;            While str_tempPN.StartsWith(&quot;0&quot;c) AndAlso str_tempPN.Length &gt; 8&#xD;&#xA;                str_tempPN = str_tempPN.Substring(1)&#xD;&#xA;            End While&#xD;&#xA;&#xD;&#xA;            ' Wenn nach Entfernen immer noch zu lang → ungültig&#xD;&#xA;            io_str_personalnumber = If(str_tempPN.Length &gt; 8, &quot;00000000&quot;, str_tempPN)&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;    ' Wenn kürzer oder gleich 8 Zeichen -&gt; links mit Nullen auffüllen&#xD;&#xA;    Else&#xD;&#xA;        io_str_personalnumber = str_tempPN.PadLeft(8, &quot;0&quot;c)&#xD;&#xA;    End If&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Personalnummer normalisieren - Regeln:&#xA;' - Nur Ziffern erlaubt&#xA;' - Wenn leer oder ungültig -&gt; &quot;00000000&quot;&#xA;' - Wenn länger als 8:&#xA;'     - Ohne führende Null -&gt; ungültig&#xA;'     - Mit führender Null -&gt; führende Nullen entfernen bis 8&#xA;'     - Wenn danach immer noch &gt; 8 -&gt; ungültig&#xA;' - Wenn kürzer -&gt; links mit Nullen auffüllen&#xA;&#xA;Dim str_tempPN As String = io_str_personalnumber?.Trim()&#xA;&#xA;' Prüfen auf Leerwert oder Whitespaces&#xA;If String.IsNullOrWhiteSpace(str_tempPN) Then&#xA;    io_str_personalnumber = &quot;00000000&quot;&#xA;&#xA;Else&#xA;    ' Teil nach letztem &quot;/&quot; übernehmen&#xA;    Dim int_index = str_tempPN.LastIndexOf(&quot;/&quot;c)&#xA;    If int_index &gt;= 0 Then str_tempPN = str_tempPN.Substring(int_index + 1)&#xA;&#xA;    ' Nur Ziffern sind erlaubt&#xA;    If Not System.Text.RegularExpressions.Regex.IsMatch(str_tempPN, &quot;^\d+$&quot;) Then&#xA;        io_str_personalnumber = &quot;00000000&quot;&#xA;&#xA;    ' Wenn länger als 8 Zeichen&#xA;    ElseIf str_tempPN.Length &gt; 8 Then&#xA;        If Not str_tempPN.StartsWith(&quot;0&quot;c) Then&#xA;            io_str_personalnumber = &quot;00000000&quot;&#xA;        Else&#xA;            ' Führende Nullen entfernen bis 8 Zeichen&#xA;            While str_tempPN.StartsWith(&quot;0&quot;c) AndAlso str_tempPN.Length &gt; 8&#xA;                str_tempPN = str_tempPN.Substring(1)&#xA;            End While&#xA;&#xA;            ' Wenn nach Entfernen immer noch zu lang → ungültig&#xA;            io_str_personalnumber = If(str_tempPN.Length &gt; 8, &quot;00000000&quot;, str_tempPN)&#xA;        End If&#xA;&#xA;    ' Wenn kürzer oder gleich 8 Zeichen -&gt; links mit Nullen auffüllen&#xA;    Else&#xA;        io_str_personalnumber = str_tempPN.PadLeft(8, &quot;0&quot;c)&#xA;    End If&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_str_personalnumber">[io_str_personalnumber]</InOutArgument>
       </ui:InvokeCode.Arguments>
