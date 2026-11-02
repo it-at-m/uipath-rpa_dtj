@@ -113,7 +113,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="698,3936" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="830.8000000000001,3936" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_sapUsername" />
       <Variable x:TypeArguments="x:String" Name="str_sapClient" />
@@ -161,7 +161,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ucas:Logon Window="{x:Null}" ConnectionName="[str_sapConnectionName]" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="560,171.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe" />
+    <ucas:Logon Window="{x:Null}" ConnectionName="[str_sapConnectionName]" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="560,171.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files\SAP\FrontEnd\SAPGUI\saplogon.exe" />
     <ucas:Login Password="{x:Null}" Window="{x:Null}" Client="[str_sapClient]" DisplayName="SAP Login 'saplogon.exe *31(1)/000'" sap:VirtualizedContainerService.HintSize="560,401.6" sap2010:WorkflowViewState.IdRef="Login_4" IsSecure="True" Language="[str_sapLanguage]" MultiLogonOptionToChoose="Single" SecurePassword="[secstr_sapPassword]" Timeout="5000" Username="[str_sapUsername]">
       <ucas:Login.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88fbafb4-0df2-4146-971f-d02e9abec42b" InformativeScreenshot="7c8e90bfe6538838d40f969830e4d6a2" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*31(1)/000 SAP' /&gt;" WaitForReady="INTERACTIVE">

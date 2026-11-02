@@ -11,16 +11,7 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "SystemException&StateMachine_1",
-        "Config&StateMachine_1",
-        "sw_jobWatch&StateMachine_1",
-        "int_countFailed&StateMachine_1",
-        "int_countSkipped&StateMachine_1",
-        "int_countSuccess&StateMachine_1",
-        "int_countTotal&StateMachine_1",
-        "bool_existsAlreadyPeriodFolder&StateMachine_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -88,10 +79,7 @@
     {
       "Path": "Workflows/Main Workflows/Extract Teilnehmerlisten Results.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_tempResults&Sequence_1",
-        "str_currentSheetName&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "out_dt_results",
         "in_Config"

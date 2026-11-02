@@ -35,7 +35,6 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
       <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
@@ -98,7 +97,12 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="860.0000000000001,4793.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="830.8000000000001,5839.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_abonumber" />
       <Variable x:TypeArguments="x:String" Name="str_personalnumber" />
@@ -118,9 +122,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="513.6,4770.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="513.6,5816" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="512,3107.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Versuchen" sap:VirtualizedContainerService.HintSize="512,4152.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,7 +154,10 @@
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Deutschlandticket Job", StringComparison.OrdinalIgnoreCase), "94", _
 If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Abo Job", StringComparison.OrdinalIgnoreCase), "95", _
-If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", StringComparison.OrdinalIgnoreCase), "96", "")))]</InArgument>
+If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermäßigungsticket Ausbildung", StringComparison.OrdinalIgnoreCase), "96", _
+If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermäßigungsticket Studierende", StringComparison.OrdinalIgnoreCase), "96", _
+If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermäßigungsticket", StringComparison.OrdinalIgnoreCase), "96", _
+If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", StringComparison.OrdinalIgnoreCase), "96", ""))))))]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -213,19 +225,19 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <If Condition="[String.IsNullOrWhiteSpace(str_productCode)]" DisplayName="If no product code was provided" sap:VirtualizedContainerService.HintSize="478.4,395.2" sap2010:WorkflowViewState.IdRef="If_3">
+          <If Condition="[String.IsNullOrWhiteSpace(str_productCode)]" DisplayName="If no product code was provided" sap:VirtualizedContainerService.HintSize="478.4,336.8" sap2010:WorkflowViewState.IdRef="If_3">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Throw Exception="[New BusinessRuleException(&quot;Es wurde kein Produkt übergeben oder das Produkt ist unbekannt.&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                <Throw Exception="[New BusinessRuleException(&quot;Es wurde kein Produkt übergeben oder das Produkt ist unbekannt.&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -235,10 +247,10 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               </Sequence>
             </If.Else>
           </If>
-          <Sequence DisplayName="Normalize Values" sap:VirtualizedContainerService.HintSize="478.4,100.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Normalize Values" sap:VirtualizedContainerService.HintSize="478.4,1321.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -288,15 +300,15 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If Condition="[Not bool_matchFound]" DisplayName="If not match with abonumber" sap:VirtualizedContainerService.HintSize="478.4,479.2" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[Not bool_matchFound]" DisplayName="If not match with abonumber" sap:VirtualizedContainerService.HintSize="478.4,420.8" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,257.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.4 - Matching Data With Personalnumber + Lastname Or Birthdate - Invoke Workflow File (Workflows\Main Workflows\6.4 - Matching Data With Personalnumber + Lastname Or Birthdate.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\6.4 - Matching Data With Personalnumber + Lastname Or Birthdate.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.4 - Matching Data With Personalnumber + Lastname Or Birthdate - Invoke Workflow File (Workflows\Main Workflows\6.4 - Matching Data With Personalnumber + Lastname Or Birthdate.xaml)" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\6.4 - Matching Data With Personalnumber + Lastname Or Birthdate.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_normalizedLastnames">[list_normalizedLastnames]</InArgument>
                     <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_uie_sapWnd">[io_uie_sapWnd]</InOutArgument>
@@ -312,7 +324,7 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -322,15 +334,15 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[Not bool_matchFound]" DisplayName="If not match with personalnumber + lastname or birthdate" sap:VirtualizedContainerService.HintSize="478.4,479.2" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[Not bool_matchFound]" DisplayName="If not match with personalnumber + lastname or birthdate" sap:VirtualizedContainerService.HintSize="478.4,420.8" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,257.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.5 - Matching Data With Firstname + Lastname + Birthdate - Invoke Workflow File (Workflows\Main Workflows\6.5 - Matching Data With Firstname + Lastname + Birthdate.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\6.5 - Matching Data With Firstname + Lastname + Birthdate.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.5 - Matching Data With Firstname + Lastname + Birthdate - Invoke Workflow File (Workflows\Main Workflows\6.5 - Matching Data With Firstname + Lastname + Birthdate.xaml)" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Main Workflows\6.5 - Matching Data With Firstname + Lastname + Birthdate.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_uie_sapWnd">[io_uie_sapWnd]</InOutArgument>
                     <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_normalizedFirstnames">[list_normalizedFirstnames]</InArgument>
@@ -347,7 +359,7 @@ If(io_dict_txnsItem("Produkt").ToString.Trim.Equals("Ermässigungsticket", Strin
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>

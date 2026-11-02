@@ -125,17 +125,7 @@
     {
       "Path": "Workflows/Main Workflows/6.4 - Matching Data With Personalnumber + Lastname Or Birthdate.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_tempFirstnameSAP&Sequence_1",
-        "str_tempPersonalnumberSAP&Sequence_1",
-        "str_tempLastnameSAP&Sequence_1",
-        "str_tempBirthdateSAP&Sequence_1",
-        "str_matchedLastname&Sequence_1",
-        "bool_searchFound&Sequence_1",
-        "str_statusMessageSAP&Sequence_1",
-        "dt_searchResults&Sequence_1",
-        "bool_resultGridOpen&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_str_abonumber",
         "in_list_normalizedLastnames",
@@ -280,20 +270,7 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_abonumber&Sequence_1",
-        "str_personalnumber&Sequence_1",
-        "str_lastname&Sequence_1",
-        "str_firstname&Sequence_1",
-        "str_birthdate&Sequence_1",
-        "str_startdate&Sequence_1",
-        "str_enddate&Sequence_1",
-        "list_normalizedLastnames&Sequence_1",
-        "list_normalizedFirstnames&Sequence_1",
-        "bool_matchFound&Sequence_1",
-        "str_finalBemerkung&Sequence_1",
-        "str_productCode&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
         "in_TransactionID",
