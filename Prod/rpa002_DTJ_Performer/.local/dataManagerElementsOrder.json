@@ -103,11 +103,7 @@
     {
       "Path": "Workflows/Main Workflows/6.3 - Matching Data With Abonumber.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_statusMessageSAP&Sequence_1",
-        "dt_searchResults&Sequence_1",
-        "bool_resultGridOpen&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "io_uie_sapWnd",
         "in_str_abonumber",
@@ -166,9 +162,7 @@
     {
       "Path": "Workflows/SAP Workflows/SAP - Search Advanced Search.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_statusMessageSAP&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_list_normalizedLastnames",
         "in_list_normalizedFirstnames",
@@ -394,14 +388,7 @@
     {
       "Path": "Workflows/SAP Workflows/SAP - Update Leihgabe.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_tempFinalBemerkung&Sequence_1",
-        "str_statusMessageSAP&Sequence_1",
-        "str_tempAbonumber&Sequence_1",
-        "str_tempEnddate&Sequence_1",
-        "str_tempStartdate&Sequence_1",
-        "str_currentMenuTitle&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_str_personalnumber",
         "io_str_finalBemerkung",
